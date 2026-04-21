@@ -20,7 +20,7 @@ html, body {
    BASE (ESTILO DOCS MODERNO)
 ========================= */
 body {
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: system-ui, sans-serif;
   line-height: 1.7;
   background-color: #ffffff;
   color: #1f1f1f;
