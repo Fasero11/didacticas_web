@@ -147,6 +147,28 @@ footer {
   padding: 0 1.5rem;
 }
 
+.layout-double {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+.sidebar-left {
+  width: 200px;
+  position: sticky;
+  top: 2rem;
+  align-self: flex-start;
+
+  font-size: 0.9rem;
+}
+
+.sidebar-left a {
+  display: block;
+  margin-bottom: 8px;
+}
 /* CONTENIDO PRINCIPAL */
 .contenido {
   flex: 1;
