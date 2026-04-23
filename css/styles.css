@@ -275,3 +275,59 @@ footer {
   color: #1a73e8;
   border-left: 2px solid #1a73e8;
 }
+/*Autevaluacion*/
+.quiz-container {
+    width: 75vw;      
+  max-width: 1000px;  
+  margin: 40px auto;
+  padding: 40px;
+ padding-left: 60px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+}
+
+.quiz-container h3 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.pregunta {
+  margin-bottom: 25px;
+}
+
+.pregunta p {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  padding-left: 5px;
+  cursor: pointer;
+}
+
+select {
+  margin-top: 10px;
+  padding: 5px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #2c7be5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1a5bb8;
+}
+
+#resultado {
+  margin-top: 20px;
+  font-weight: bold;
+  text-align: center;
+}
