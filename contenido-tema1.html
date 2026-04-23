@@ -55,31 +55,46 @@ sino que organiza la información dentro de una página web.
 A continuación puedes ver un video introductorio que explica su funcionamiento:
 </p>
 
-<iframe width="100%" height="315"
-src="https://www.dailymotion.com/embed/video/"
-title="Introducción a HTML"
-frameborder="0"
-allowfullscreen>
-</iframe>
+<video width="100%" controls>
+  <source src="video/Introducción_a_HTML.mp4" type="video/mp4">
+</video>
 
-<p><strong>Tarea:</strong> Explica con tus palabras :</p>
 
-<ol>
-  <li>¿Qué es HTML?</li>
-  <li>¿Para qué sirve HTML?</li>
-  <li>¿Dónde se utiliza HTML?</li>
-  <li>¿Quién usa HTML?</li>
-</ol>
+<div class="tabs">
+
+  <!-- Кнопки -->
+  <div class="tab-buttons">
+    <button onclick="openTab('tarea')">Tarea</button>
+    <button onclick="openTab('respuesta')">Respuesta</button>
+  </div>
+
+  <!-- Контент -->
+  <div id="tarea" class="tab-content">
+    <p><strong>Tarea:</strong> Explica con tus palabras:</p>
+    <ul>
+      <li>¿Qué es HTML?</li>
+      <li>¿Para qué sirve HTML?</li>
+      <li>¿Dónde se utiliza HTML?</li>
+      <li>¿Quién usa HTML?</li>
+    </ul>
+  </div>
+
+  <div id="respuesta" class="tab-content" style="display:none;">
+    <p><strong>Respuesta (ejemplo):</strong></p>
+    <ul>
+      <li>HTML es un lenguaje de marcado.</li>
+      <li>Sirve para crear páginas web.</li>
+      <li>Se utiliza en navegadores.</li>
+      <li>Lo usan desarrolladores web.</li>
+    </ul>
+  </div>
+
+</div>
 
 <!-- 2 -->
 <h3 id="parte2">2. Estructura básica de un documento HTML</h3>
 
-<p>
-Todo documento HTML sigue una estructura básica que el navegador interpreta para mostrar la página correctamente.
-</p>
 
-
- <h2>Estructura básica de un documento HTML</h2>
 
   <p>
     Un documento HTML tiene una estructura básica que permite al navegador entender
@@ -145,19 +160,42 @@ Todo documento HTML sigue una estructura básica que el navegador interpreta par
 </ul>
 
 
-<p><strong>Tarea:</strong></p>
+<div class="tabs">
 
-<ol>
-  <li>
-    Ordena correctamente las siguientes partes:
+ 
+  <div class="tab-buttons">
+    <button onclick="openTab('tarea2')">Tarea</button>
+    <button onclick="openTab('respuesta2')">Respuesta</button>
+  </div>
+
+
+  <div id="tarea2" class="tab-content">
+    <p><strong>Tarea:</strong></p>
+
+    <p>Ordena correctamente las siguientes partes:</p>
+
     <ul>
       <li>&lt;body&gt;</li>
       <li>&lt;html&gt;</li>
       <li>&lt;!DOCTYPE html&gt;</li>
       <li>&lt;head&gt;</li>
     </ul>
-  </li>
-</ol>
+  </div>
+
+  
+  <div id="respuesta2" class="tab-content" style="display:none;">
+    <p><strong>Respuesta:</strong></p>
+
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;&lt;/head&gt;
+  &lt;body&gt;&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+  </div>
+
+</div>
 
 
 <!-- 3 -->
@@ -195,7 +233,17 @@ width="100%">
   Como puedes ver, cada etiqueta tiene una función específica y cambia la forma en que se muestra el contenido en la página.
 </p>
 
-<p><strong>Tarea:</strong> Completa el siguiente código usando las etiquetas correctas:</p>
+<div class="tabs">
+
+  <!-- Botones -->
+  <div class="tab-buttons">
+    <button onclick="openTab('tarea3')">Tarea</button>
+    <button onclick="openTab('respuesta3')">Respuesta</button>
+  </div>
+
+  <!-- Tarea -->
+  <div id="tarea3" class="tab-content">
+    <p><strong>Tarea:</strong> Completa el siguiente código usando las etiquetas correctas:</p>
 
 <pre>
 &lt;body&gt;
@@ -214,8 +262,33 @@ width="100%">
   &lt;_____&gt;Texto importante&lt;/_____&gt;
 &lt;/body&gt;
 </pre>
+  </div>
 
----
+  <!-- Respuesta -->
+  <div id="respuesta3" class="tab-content" style="display:none;">
+    <p><strong>Respuesta:</strong></p>
+
+<pre>
+&lt;body&gt;
+  &lt;h1&gt;Este es un título&lt;/h1&gt;
+
+  &lt;p&gt;Este es un párrafo.&lt;/p&gt;
+
+  &lt;a href="https://example.com"&gt;Este es un enlace&lt;/a&gt;
+
+  &lt;i&gt;Texto en cursiva&lt;/i&gt;
+
+  &lt;em&gt;Texto enfatizado&lt;/em&gt;
+
+  &lt;b&gt;Texto en negrita&lt;/b&gt;
+
+  &lt;strong&gt;Texto importante&lt;/strong&gt;
+&lt;/body&gt;
+</pre>
+  </div>
+
+</div>
+
 
 <!-- 4 -->
 <h3 id="parte4">4. Enlaces en HTML</h3>
@@ -247,7 +320,17 @@ Los enlaces permiten conectar páginas entre sí. Son fundamentales para la nave
   </tr>
 </table>
 
-<p><strong>Tarea:</strong> Completa los siguientes enlaces con la información correcta:</p>
+<div class="tabs">
+
+  <!-- Botones -->
+  <div class="tab-buttons">
+    <button onclick="openTab('tarea4')">Tarea</button>
+    <button onclick="openTab('respuesta4')">Respuesta</button>
+  </div>
+
+  <!-- Tarea -->
+  <div id="tarea4" class="tab-content">
+    <p><strong>Tarea:</strong> Completa los siguientes enlaces con la información correcta:</p>
 
 <pre>
 &lt;!-- Enlace externo --&gt;
@@ -259,8 +342,26 @@ Los enlaces permiten conectar páginas entre sí. Son fundamentales para la nave
 &lt;!-- Enlace de correo --&gt;
 &lt;a href="__________"&gt;Enviar un correo&lt;/a&gt;
 </pre>
+  </div>
 
----
+  <!-- Respuesta -->
+  <div id="respuesta4" class="tab-content" style="display:none;">
+    <p><strong>Respuesta:</strong></p>
+
+<pre>
+&lt;!-- Enlace externo --&gt;
+&lt;a href="https://google.com"&gt;Ir a Google&lt;/a&gt;
+
+&lt;!-- Enlace interno --&gt;
+&lt;a href="contacto.html"&gt;Ir a la página de contacto&lt;/a&gt;
+
+&lt;!-- Enlace de correo --&gt;
+&lt;a href="mailto:correo@email.com"&gt;Enviar un correo&lt;/a&gt;
+</pre>
+  </div>
+
+</div>
+
 
 <!-- 5 -->
 <h3 id="parte5">5. Imágenes en HTML</h3>
@@ -305,15 +406,37 @@ Este método es muy útil para crear menús, índices o facilitar la navegación
 <img src="https://hostpro.ua/wiki/wp-content/uploads/2024/09/%D0%AF%D0%BA-%D0%B2%D1%81%D1%82%D0%B0%D0%B2%D0%B8%D1%82%D0%B8-%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D1%83-%D1%82%D0%B0-%D1%84%D0%BE%D0%BD%D0%BE%D0%B2%D0%B5-%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F-%D0%B2-HTML.png" 
 alt="Ejemplo de imagen HTML" width="100%">
 
-<p><strong>Tarea:</strong></p>
+<div class="tabs">
 
-<ol>
-  <li>Inserta una imagen usando la etiqueta <code>&lt;img&gt;</code>.</li>
-  <li>Añade un título con <code>id</code> para la imagen.</li>
-  <li>Crea un enlace que lleve a la imagen.</li>
-</ol>
+  <!-- Botones -->
+  <div class="tab-buttons">
+    <button onclick="openTab('tarea5')">Tarea</button>
+    <button onclick="openTab('respuesta5')">Respuesta</button>
+  </div>
 
-<p><strong>Ejemplo:</strong></p>
+  <!-- Tarea -->
+  <div id="tarea5" class="tab-content">
+    <p><strong>Tarea:</strong></p>
+
+    <ol>
+      <li>Inserta una imagen usando la etiqueta <code>&lt;img&gt;</code>.</li>
+      <li>Añade un título con <code>id</code> para la imagen.</li>
+      <li>Crea un enlace que lleve a la imagen.</li>
+    </ol>
+
+    <p>Completa el siguiente código:</p>
+
+<pre>
+&lt;a href="#__________"&gt;Ir a la imagen&lt;/a&gt;
+
+&lt;h3 id="__________"&gt;Mi imagen&lt;/h3&gt;
+&lt;img src="__________" alt="__________"&gt;
+</pre>
+  </div>
+
+  <!-- Respuesta -->
+  <div id="respuesta5" class="tab-content" style="display:none;">
+    <p><strong>Respuesta:</strong></p>
 
 <pre>
 &lt;a href="#imagen"&gt;Ir a la imagen&lt;/a&gt;
@@ -321,24 +444,27 @@ alt="Ejemplo de imagen HTML" width="100%">
 &lt;h3 id="imagen"&gt;Mi imagen&lt;/h3&gt;
 &lt;img src="imagen.jpg" alt="Mi imagen"&gt;
 </pre>
+  </div>
 
+</div>
 
-<<div class="nav-buttons">
+<div class="nav-buttons">
   <a href="contenido-tema2.html" class="next">Siguiente →</a>
 </div>
 
     </article>
 
     <!-- 📑 SIDEBAR DERECHA: índice interno -->
-    <aside class="sidebar">
-      <h3>Índice</h3>
+   <aside class="sidebar">
+  <h3>Índice</h3>
 
-      <a href="#inicio">Inicio</a>
-      <a href="#parte1">Parte 1</a>
-      <a href="#parte2">Parte 2</a>
-      <a href="#parte3">Parte 3</a>
-
-    </aside>
+  <a href="#inicio">Inicio</a>
+  <a href="#parte1">1. ¿Qué es HTML?</a>
+  <a href="#parte2">2. Estructura</a>
+  <a href="#parte3">3. Etiquetas de texto</a>
+  <a href="#parte4">4. Enlaces</a>
+  <a href="#parte5">5. Imágenes</a>
+</aside>
 
   </main>
 
@@ -346,6 +472,15 @@ alt="Ejemplo de imagen HTML" width="100%">
     <p>&copy; 2026 Mi Web</p>
   </footer>
 
+
+  <script>
+function openTab(tabId) {
+  const tabs = document.querySelectorAll(".tab-content");
+  tabs.forEach(tab => tab.style.display = "none");
+
+  document.getElementById(tabId).style.display = "block";
+}
+</script>
 </body>
 
 </html>
