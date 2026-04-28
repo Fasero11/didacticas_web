@@ -45,15 +45,33 @@
 
   <main class="layout-double">
 
-    <!-- 🔵 SIDEBAR IZQUIERDA: navegación entre páginas -->
-    <aside class="sidebar-left">
-      <h3>Temas</h3>
+      <!-- 🔵 SIDEBAR IZQUIERDA: navegación entre páginas -->
+  <aside class="sidebar-left">
+    <h3>Temas</h3>
 
-      <a href="contenido.html">Introducción</a>
+    <a href="contenido.html" class="sidebar-intro">Introducción general</a>
+
+    <div class="sidebar-group">
+      <p class="sidebar-group-title">HTML</p>
       <a href="contenido-intro_html.html">Introducción a HTML</a>
+      <!-- Futuras páginas HTML -->
+      <!-- <a href="contenido-html-etiquetas.html">Etiquetas básicas</a> -->
+    </div>
+
+    <div class="sidebar-group">
+      <p class="sidebar-group-title">CSS</p>
       <a href="contenido-intro_css.html">Introducción a CSS</a>
+      <!-- Futuras páginas CSS -->
+      <!-- <a href="contenido-css-selectores.html">Selectores</a> -->
+    </div>
+
+    <div class="sidebar-group">
+      <p class="sidebar-group-title">JavaScript</p>
       <a href="contenido-intro_javascript.html" class="active">Introducción a JavaScript</a>
-    </aside>
+      <!-- Futuras páginas JavaScript -->
+      <!-- <a href="contenido-js-variables.html">Variables</a> -->
+    </div>
+  </aside>
 
     <!-- 📄 CONTENIDO CENTRAL -->
     <article class="contenido">
