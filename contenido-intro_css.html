@@ -12,15 +12,36 @@
 <body>
 
   <!-- Header -->
-  <header>
-    <h1>Didácticas</h1>
-    <nav>
-      <a href="index.html">Inicio</a>
-      <a href="metodologia.html">Metodología</a>
-      <a href="contenido.html">Contenido</a>
-      <a href="autoevaluacion.html">Autoevaluación</a>
-    </nav>
-  </header>
+<header>
+  <h1>Didácticas</h1>
+
+  <nav>
+    <ul class="menu">
+      <li><a href="index.html">Inicio</a></li>
+
+      <li class="dropdown">
+        <a href="metodologia.html">Metodología</a>
+        <ul class="submenu">
+          <li><a href="puzzle-aronson.html">Puzzle de Aronson</a></li>
+          <li><a href="aula-invertida.html">Aula Invertida</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="contenido.html">Contenido</a>
+        <ul class="submenu">
+          <li><a href="contenido-intro_html.html">HTML</a></li>
+          <li><a href="contenido-intro_css.html">CSS</a></li>
+          <li><a href="contenido-intro_javascript.html">JavaScript</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="autoevaluacion.html">Autoevaluación</a>
+      </li>
+    </ul>
+  </nav>
+</header>
 
   <main class="layout-double">
 
@@ -30,25 +51,24 @@
 
       <a href="contenido.html">Introducción</a>
       <a href="contenido-tema1.html">Introducción a HTML</a>
-      <a href="contenido-tema2.html">Introducción a CSS</a>
-      <a href="contenido-tema3.html" class="active">Introducción a JavaScript</a>
+      <a href="contenido-tema2.html" class="active">Introducción a CSS</a>
+      <a href="contenido-tema3.html">Introducción a JavaScript</a>
     </aside>
 
     <!-- 📄 CONTENIDO CENTRAL -->
     <article class="contenido">
 
-      <h2 id="inicio">Tema 3: Introducción a JavaScript</h2>A
+      <h2 id="inicio">Tema 2: Introducción a CSS</h2>
 
       <p>
-        HTML (HyperText Markup Language) es el lenguaje básico que se utiliza para crear páginas web.
-        Permite estructurar el contenido mediante etiquetas, indicando qué es un título, un párrafo, una imagen o un enlace.
+       CSS
       </p>
 
      <!-- 1 -->
-<h3 id="parte1">1. ¿Qué es JavaScript?</h3>
+<h3 id="parte1">1. ¿Qué es CSS?</h3>
 
 <p>
-TExto de  javascript
+TExto de CSS
 </p>
 
 <p>
@@ -72,17 +92,20 @@ allowfullscreen>
 </ol>
 
 <!-- 2 -->
-<h3 id="parte2">2. Estructura básica de un documento JavaScript</h3>
+<h3 id="parte2">2. Estructura básica de un documento HTML</h3>
 
 <p>
 Texto
 </p>
 
 
-<div class="nav-buttons">
-  <a href="contenido-tema2.html" class="prev">← Anterior</a>
-</div>
 
+
+
+<div class="nav-buttons">
+  <a href="contenido-tema1.html" class="prev">← Anterior</a>
+  <a href="contenido-tema3.html" class="next">Siguiente →</a>
+</div>
     </article>
 
     <!-- 📑 SIDEBAR DERECHA: índice interno -->

@@ -10,15 +10,36 @@
 <body>
 
   <!-- Header -->
-  <header>
-    <h1>Didácticas</h1>
-    <nav>
-      <a href="index.html">Inicio</a>
-      <a href="metodologia.html">Metodología</a>
-      <a href="contenido.html">Contenido</a>
-      <a href="autoevaluacion.html">Autoevaluación</a>
-    </nav>
-  </header>
+<header>
+  <h1>Didácticas</h1>
+
+  <nav>
+    <ul class="menu">
+      <li><a href="index.html">Inicio</a></li>
+
+      <li class="dropdown">
+        <a href="metodologia.html">Metodología</a>
+        <ul class="submenu">
+          <li><a href="puzzle-aronson.html">Puzzle de Aronson</a></li>
+          <li><a href="aula-invertida.html">Aula Invertida</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="contenido.html">Contenido</a>
+        <ul class="submenu">
+          <li><a href="contenido-intro_html.html">HTML</a></li>
+          <li><a href="contenido-intro_css.html">CSS</a></li>
+          <li><a href="contenido-intro_javascript.html">JavaScript</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="autoevaluacion.html">Autoevaluación</a>
+      </li>
+    </ul>
+  </nav>
+</header>
 
 <main class="layout">
 
