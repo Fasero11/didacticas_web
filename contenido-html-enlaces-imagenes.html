@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contenido</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+<header>
+  <h1>Didácticas</h1>
+
+  <nav>
+    <ul class="menu">
+      <li><a href="index.html">Inicio</a></li>
+
+      <li class="dropdown">
+        <a href="metodologia.html">Metodologías</a>
+        <ul class="submenu">
+          <li><a href="puzzle-aronson.html">Puzzle de Aronson</a></li>
+          <li><a href="aula-invertida.html">Aula Invertida</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="contenido.html">Contenido</a>
+        <ul class="submenu">
+          <li><a href="contenido-intro_html.html">HTML</a></li>
+          <li><a href="contenido-intro_css.html">CSS</a></li>
+          <li><a href="contenido-intro_javascript.html">JavaScript</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="autoevaluacion.html">Autoevaluación</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+  <main class="layout-double">
+
+      <!-- 🔵 SIDEBAR IZQUIERDA: navegación entre páginas -->
+  <aside class="sidebar-left">
+    <h3>Temas</h3>
+
+    <a href="contenido.html" class="sidebar-intro">Introducción general</a>
+
+    <div class="sidebar-group">
+      <p class="sidebar-group-title">HTML</p>
+     <a href="contenido-intro_html.html">1. Introducción a HTML</a>
+<a href="contenido-html-estructura.html">2. Estructura y etiquetas básicas</a>
+<a href="contenido-html-texto.html">3. Etiquetas de texto</a>
+<a href="contenido-html-enlaces-imagenes.html">4. Enlaces e imágenes</a>
+    </div>
+
+    <div class="sidebar-group">
+      <p class="sidebar-group-title">CSS</p>
+      <a href="contenido-intro_css.html">Introducción a CSS</a>
+      <!-- Futuras páginas CSS -->
+      <!-- <a href="contenido-css-selectores.html">Selectores</a> -->
+    </div>
+
+    <div class="sidebar-group">
+      <p class="sidebar-group-title">JavaScript</p>
+      <a href="contenido-intro_javascript.html">Introducción a JavaScript</a>
+      <!-- Futuras páginas JavaScript -->
+      <!-- <a href="contenido-js-variables.html">Variables</a> -->
+    </div>
+  </aside>
+
+    <!-- 📄 CONTENIDO CENTRAL -->
+    <article class="contenido">
+
+    
+<!-- 4 -->
+<h2 id="inicio">Tema 4: Enlaces e imágenes en HTML</h2>
+
+<p>
+Los enlaces y las imágenes son elementos esenciales en cualquier página web.
+Gracias a ellos, las páginas pueden conectarse entre sí, facilitar la navegación
+y mostrar contenido visual que mejora la experiencia del usuario.
+</p>
+
+<p>
+Mientras que los enlaces permiten desplazarse entre páginas, secciones o recursos,
+las imágenes ayudan a representar información de forma visual y atractiva.
+</p>
+
+<h3 id="parte1">1. ¿Qué son los enlaces en HTML?</h3>
+
+<p>
+Los enlaces, también llamados hipervínculos, permiten conectar diferentes recursos
+dentro o fuera de una página web.
+</p>
+
+<p>
+Se crean mediante la etiqueta <code>&lt;a&gt;</code>, utilizando el atributo
+<code>href</code> para indicar el destino.
+</p>
+
+<p>
+Los enlaces son fundamentales para la navegación web, ya que permiten al usuario
+moverse fácilmente entre diferentes contenidos.
+</p>
+
+<h3 id="parte2">2. Tipos principales de enlaces</h3>
+
+<p>
+Existen varios tipos de enlaces según su función:
+</p>
+
+<table border="1" cellpadding="6">
+  <tr>
+    <th>Tipo de enlace</th>
+    <th>Ejemplo</th>
+    <th>Uso</th>
+  </tr>
+  <tr>
+    <td>Externo</td>
+    <td>&lt;a href="https://google.com"&gt;Google&lt;/a&gt;</td>
+    <td>Ir a otra página web</td>
+  </tr>
+  <tr>
+    <td>Interno</td>
+    <td>&lt;a href="contacto.html"&gt;Contacto&lt;/a&gt;</td>
+    <td>Ir a otra página del mismo sitio</td>
+  </tr>
+  <tr>
+    <td>Email</td>
+    <td>&lt;a href="mailto:correo@email.com"&gt;Enviar correo&lt;/a&gt;</td>
+    <td>Abrir cliente de correo</td>
+  </tr>
+  <tr>
+    <td>Ancla</td>
+    <td>&lt;a href="#seccion"&gt;Ir a sección&lt;/a&gt;</td>
+    <td>Navegar dentro de la misma página</td>
+  </tr>
+</table>
+
+<h3 id="parte3">3. Enlaces internos y anclas</h3>
+
+<p>
+Los enlaces internos permiten desplazarse dentro de una misma página utilizando
+identificadores únicos llamados <code>id</code>.
+</p>
+
+<p>
+Este sistema resulta muy útil para:
+</p>
+
+<ul>
+  <li>Índices de contenido</li>
+  <li>Menús de navegación</li>
+  <li>Páginas extensas</li>
+  <li>Documentación educativa</li>
+</ul>
+
+<p>
+Ejemplo:
+</p>
+
+<pre><code>&lt;a href="#imagen"&gt;Ir a la imagen&lt;/a&gt;
+
+&lt;h3 id="imagen"&gt;Mi imagen&lt;/h3&gt;</code></pre>
+
+<p>
+Cuando el usuario hace clic, el navegador se desplaza automáticamente
+hasta la sección indicada.
+</p>
+
+<p>
+A continuación, realiza la siguiente actividad práctica para comprobar si comprendes
+correctamente los diferentes tipos de enlaces en HTML y su uso dentro de páginas web.
+</p>
+
+<div class="tabs">
+
+  <div class="tab-buttons">
+    <button onclick="openTab('tarea4')">Tarea</button>
+    <button onclick="openTab('respuesta4')">Respuesta</button>
+  </div>
+
+  <div id="tarea4" class="tab-content">
+    <p><strong>Tarea:</strong> Completa los siguientes enlaces con la información correcta:</p>
+
+<pre>
+&lt;!-- Enlace externo --&gt;
+&lt;a href="__________"&gt;Ir a Google&lt;/a&gt;
+
+&lt;!-- Enlace interno --&gt;
+&lt;a href="__________"&gt;Ir a la página de contacto&lt;/a&gt;
+
+&lt;!-- Enlace de correo --&gt;
+&lt;a href="__________"&gt;Enviar un correo&lt;/a&gt;
+</pre>
+  </div>
+
+  <div id="respuesta4" class="tab-content" style="display:none;">
+    <p><strong>Respuesta:</strong></p>
+
+<pre>
+&lt;a href="https://google.com"&gt;Ir a Google&lt;/a&gt;
+
+&lt;a href="contacto.html"&gt;Ir a la página de contacto&lt;/a&gt;
+
+&lt;a href="mailto:correo@email.com"&gt;Enviar un correo&lt;/a&gt;
+</pre>
+  </div>
+
+</div>
+
+<h3 id="parte4">4. Imágenes en HTML</h3>
+
+<p>
+Las imágenes permiten añadir contenido visual a una página web y se insertan
+mediante la etiqueta <code>&lt;img&gt;</code>.
+</p>
+
+<p>
+Para funcionar correctamente, esta etiqueta necesita principalmente:
+</p>
+
+<ul>
+  <li><code>src</code> — ruta o dirección de la imagen</li>
+  <li><code>alt</code> — descripción alternativa</li>
+</ul>
+
+<p>
+Ejemplo:
+</p>
+
+<pre><code>&lt;img src="imagen.jpg" alt="Descripción de la imagen"&gt;</code></pre>
+
+<p>
+El atributo <code>alt</code> es importante para la accesibilidad y para mostrar
+información si la imagen no se carga correctamente.
+</p>
+
+<h3 id="parte5">5. Navegación hacia imágenes</h3>
+
+<p>
+Las imágenes también pueden formar parte de sistemas de navegación interna,
+permitiendo al usuario desplazarse rápidamente hacia secciones específicas.
+</p>
+
+<p>
+Por ejemplo:
+</p>
+
+<p>
+<a href="#ejemplo-imagen">Ir al ejemplo de imagen</a>
+</p>
+
+<h4 id="ejemplo-imagen">Ejemplo de imagen</h4>
+
+<img src="https://hostpro.ua/wiki/wp-content/uploads/2024/09/%D0%AF%D0%BA-%D0%B2%D1%81%D1%82%D0%B0%D0%B2%D0%B8%D1%82%D0%B8-%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D1%83-%D1%82%D0%B0-%D1%84%D0%BE%D0%BD%D0%BE%D0%B2%D0%B5-%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F-%D0%B2-HTML.png" 
+alt="Ejemplo de imagen HTML" width="100%">
+
+<p>
+Este sistema resulta especialmente útil en páginas largas o educativas,
+donde el usuario necesita localizar rápidamente ejemplos o recursos específicos.
+</p>
+
+<p>
+Ahora que conoces cómo insertar imágenes y crear navegación interna mediante anclas,
+completa esta actividad para practicar la integración de imágenes dentro de una página HTML.
+</p>
+
+<div class="tabs">
+
+  <div class="tab-buttons">
+    <button onclick="openTab('tarea5')">Tarea</button>
+    <button onclick="openTab('respuesta5')">Respuesta</button>
+  </div>
+
+  <div id="tarea5" class="tab-content">
+    <p><strong>Tarea:</strong></p>
+
+    <ol>
+      <li>Inserta una imagen usando la etiqueta <code>&lt;img&gt;</code>.</li>
+      <li>Añade un título con <code>id</code> para la imagen.</li>
+      <li>Crea un enlace que lleve a la imagen.</li>
+    </ol>
+
+<pre>
+&lt;a href="#__________"&gt;Ir a la imagen&lt;/a&gt;
+
+&lt;h3 id="__________"&gt;Mi imagen&lt;/h3&gt;
+&lt;img src="__________" alt="__________"&gt;
+</pre>
+  </div>
+
+  <div id="respuesta5" class="tab-content" style="display:none;">
+    <p><strong>Respuesta:</strong></p>
+
+<pre>
+&lt;a href="#imagen"&gt;Ir a la imagen&lt;/a&gt;
+
+&lt;h3 id="imagen"&gt;Mi imagen&lt;/h3&gt;
+&lt;img src="imagen.jpg" alt="Mi imagen"&gt;
+</pre>
+  </div>
+
+</div>
+
+
+<div class="nav-buttons">
+  <a href="contenido-html-texto.html" class="prev">← Anterior</a>
+  <a href="contenido-intro_css.html" class="next">Siguiente →</a>
+</div>
+
+    </article>
+
+    <!-- 📑 SIDEBAR DERECHA: índice interno -->
+   <aside class="sidebar">
+  <h3>Índice</h3>
+
+<a href="#inicio">Inicio</a>
+<a href="#parte1">1. ¿Qué son los enlaces en HTML?</a>
+<a href="#parte2">2. Tipos principales de enlaces</a>
+<a href="#parte3">3. Enlaces internos y anclas</a>
+<a href="#tarea4">Actividad: práctica de enlaces</a>
+<a href="#parte4">4. Imágenes en HTML</a>
+<a href="#parte5">5. Navegación hacia imágenes</a>
+<a href="#tarea5">Actividad: práctica de imágenes</a>
+</aside>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Mi Web</p>
+  </footer>
+
+
+  <script>
+function openTab(tabId) {
+  const tabs = document.querySelectorAll(".tab-content");
+  tabs.forEach(tab => tab.style.display = "none");
+
+  document.getElementById(tabId).style.display = "block";
+}
+</script>
+</body>
+
+</html>

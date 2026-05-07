@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contenido</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Didácticas</h1>
+
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+
+        <li class="dropdown">
+          <a href="metodologia.html">Metodologías</a>
+          <ul class="submenu">
+            <li><a href="puzzle-aronson.html">Puzzle de Aronson</a></li>
+            <li><a href="aula-invertida.html">Aula Invertida</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="contenido.html">Contenido</a>
+          <ul class="submenu">
+            <li><a href="contenido-intro_html.html">HTML</a></li>
+            <li><a href="contenido-intro_css.html">CSS</a></li>
+            <li><a href="contenido-intro_javascript.html">JavaScript</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="autoevaluacion.html">Autoevaluación</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="layout-double">
+
+    <!-- 🔵 SIDEBAR IZQUIERDA: navegación entre páginas -->
+    <aside class="sidebar-left">
+      <h3>Temas</h3>
+
+      <a href="contenido.html" class="sidebar-intro">Introducción general</a>
+
+      <div class="sidebar-group">
+        <p class="sidebar-group-title">HTML</p>
+     <a href="contenido-intro_html.html">1. Introducción a HTML</a>
+<a href="contenido-html-estructura.html">2. Estructura y etiquetas básicas</a>
+<a href="contenido-html-texto.html">3. Etiquetas de texto</a>
+<a href="contenido-html-enlaces-imagenes.html">4. Enlaces e imágenes</a>
+      </div>
+
+      <div class="sidebar-group">
+        <p class="sidebar-group-title">CSS</p>
+        <a href="contenido-intro_css.html">Introducción a CSS</a>
+        <!-- Futuras páginas CSS -->
+        <!-- <a href="contenido-css-selectores.html">Selectores</a> -->
+      </div>
+
+      <div class="sidebar-group">
+        <p class="sidebar-group-title">JavaScript</p>
+        <a href="contenido-intro_javascript.html">Introducción a JavaScript</a>
+        <!-- Futuras páginas JavaScript -->
+        <!-- <a href="contenido-js-variables.html">Variables</a> -->
+      </div>
+    </aside>
+
+    <!-- 📄 CONTENIDO CENTRAL -->
+    <article class="contenido">
+
+      <!-- 2 -->
+<h2 id="inicio">Tema 2: Estructura y etiquetas básicas</h2>
+
+<p>
+Todo documento HTML tiene una estructura organizada que permite al navegador leer,
+interpretar y mostrar correctamente el contenido de una página web.
+</p>
+
+<p>
+Esta estructura funciona como el esqueleto de la página: define qué información pertenece
+a la configuración interna del documento y qué contenido será visible para el usuario.
+</p>
+
+<h3 id="parte1">1. ¿Por qué es importante la estructura HTML?</h3>
+
+<p>
+La estructura HTML es importante porque ayuda a mantener el código ordenado,
+comprensible y fácil de modificar. Gracias a ella, el navegador puede identificar
+cada parte del documento y mostrar la página de forma correcta.
+</p>
+
+<p>
+Una página bien estructurada también facilita el trabajo con CSS y JavaScript,
+ya que cada elemento está colocado en el lugar adecuado.
+</p>
+
+<h3 id="parte2">2. Partes principales de un documento HTML</h3>
+
+<p>
+Un documento HTML básico está formado por cuatro partes principales:
+</p>
+
+<ol>
+  <li>
+    <strong>&lt;!DOCTYPE html&gt;</strong>
+    <p>
+      Indica al navegador que el documento utiliza HTML5. Siempre debe aparecer
+      en la primera línea del archivo.
+    </p>
+  </li>
+
+  <li>
+    <strong>&lt;html&gt;</strong>
+    <p>
+      Es la etiqueta raíz del documento. Dentro de ella se coloca todo el contenido
+      de la página.
+    </p>
+  </li>
+
+  <li>
+    <strong>&lt;head&gt;</strong>
+    <p>
+      Contiene información interna del documento, como el título de la página,
+      configuraciones y enlaces a archivos externos.
+    </p>
+  </li>
+
+  <li>
+    <strong>&lt;body&gt;</strong>
+    <p>
+      Contiene todo el contenido visible para el usuario: textos, imágenes,
+      enlaces, vídeos, botones y otros elementos.
+    </p>
+  </li>
+</ol>
+
+<h3 id="parte3">3. Ejemplo de estructura básica</h3>
+
+<p>
+El siguiente ejemplo muestra cómo se organizan estas partes dentro de un documento HTML:
+</p>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Mi primera página&lt;/title&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;h1&gt;Bienvenidos&lt;/h1&gt;
+    &lt;p&gt;Esta es mi primera página web.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<p>
+En este ejemplo, la parte <code>&lt;head&gt;</code> contiene información para el navegador,
+mientras que la parte <code>&lt;body&gt;</code> contiene el contenido que se muestra
+en la página.
+</p>
+
+<h3 id="parte4">4. Elementos dentro de &lt;head&gt;</h3>
+
+<p>
+La sección <code>&lt;head&gt;</code> no muestra contenido directamente en la página,
+pero contiene información necesaria para que el documento funcione correctamente.
+</p>
+
+<div class="bloque-etiquetas">
+  <ul>
+    <li>
+      <strong>&lt;title&gt;</strong>
+      <p>Define el título que aparece en la pestaña del navegador.</p>
+    </li>
+
+    <li>
+      <strong>&lt;meta&gt;</strong>
+      <p>Incluye configuraciones del documento, como la codificación de caracteres.</p>
+    </li>
+
+    <li>
+      <strong>&lt;link&gt;</strong>
+      <p>Conecta archivos externos, por ejemplo una hoja de estilos CSS.</p>
+    </li>
+
+    <li>
+      <strong>&lt;script&gt;</strong>
+      <p>Permite enlazar o escribir código JavaScript.</p>
+    </li>
+  </ul>
+</div>
+
+<h3 id="parte5">5. Elementos dentro de &lt;body&gt;</h3>
+
+<p>
+La sección <code>&lt;body&gt;</code> contiene todos los elementos que el usuario puede ver
+e interactuar dentro de la página web.
+</p>
+
+<div class="bloque-etiquetas">
+  <ul>
+    <li>
+      <strong>&lt;h1&gt; - &lt;h6&gt;</strong>
+      <p>Se utilizan para crear títulos y subtítulos.</p>
+    </li>
+
+    <li>
+      <strong>&lt;p&gt;</strong>
+      <p>Sirve para escribir párrafos de texto.</p>
+    </li>
+
+    <li>
+      <strong>&lt;img&gt;</strong>
+      <p>Permite insertar imágenes en la página.</p>
+    </li>
+
+    <li>
+      <strong>&lt;a&gt;</strong>
+      <p>Crea enlaces hacia otras páginas o sitios web.</p>
+    </li>
+
+    <li>
+      <strong>&lt;ul&gt; / &lt;ol&gt;</strong>
+      <p>Permiten crear listas no ordenadas y ordenadas.</p>
+    </li>
+
+    <li>
+      <strong>&lt;video&gt;</strong>
+      <p>Permite insertar vídeos en la página.</p>
+    </li>
+  </ul>
+</div>
+<h3 id="parte6">6. Resumen y actividad</h3>
+
+<p>
+La estructura básica de HTML permite organizar correctamente una página web.
+Cada etiqueta cumple una función concreta y ayuda al navegador a interpretar
+el contenido de forma adecuada.
+</p>
+
+<p>
+Comprender esta base es esencial para avanzar hacia temas más complejos como
+etiquetas de texto, enlaces, imágenes, diseño con CSS y programación con JavaScript.
+</p>
+
+<p>
+A continuación, realiza la actividad práctica propuesta para comprobar tu comprensión
+sobre la estructura básica de un documento HTML.
+</p>
+
+      <div class="tabs">
+
+        <div class="tab-buttons">
+          <button onclick="openTab('tarea2')">Tarea</button>
+          <button onclick="openTab('respuesta2')">Respuesta</button>
+        </div>
+
+
+        <div id="tarea2" class="tab-content">
+          <p><strong>Tarea:</strong></p>
+
+          <p>Ordena correctamente las siguientes partes:</p>
+
+          <ul>
+            <li>&lt;body&gt;</li>
+            <li>&lt;html&gt;</li>
+            <li>&lt;!DOCTYPE html&gt;</li>
+            <li>&lt;head&gt;</li>
+          </ul>
+        </div>
+
+
+        <div id="respuesta2" class="tab-content" style="display:none;">
+          <p><strong>Respuesta:</strong></p>
+
+          <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;&lt;/head&gt;
+  &lt;body&gt;&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+        </div>
+
+      </div>
+
+
+      <div class="nav-buttons">
+        <a href="contenido-intro_html.html" class="prev">← Anterior</a>
+        <a href="contenido-html-texto.html" class="next">Siguiente →</a>
+      </div>
+
+    </article>
+
+    <!-- 📑 SIDEBAR DERECHA: índice interno -->
+    <aside class="sidebar">
+      <h3>Índice</h3>
+<a href="#parte1">1. ¿Por qué es importante la estructura HTML?</a>
+<a href="#parte2">2. Partes principales de un documento HTML</a>
+<a href="#parte3">3. Ejemplo de estructura básica</a>
+<a href="#parte4">4. Elementos dentro de &lt;head&gt;</a>
+<a href="#parte5">5. Elementos dentro de &lt;body&gt;</a>
+<a href="#parte6">6. Resumen y actividad</a>
+    </aside>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Mi Web</p>
+  </footer>
+
+
+  <script>
+    function openTab(tabId) {
+      const tabs = document.querySelectorAll(".tab-content");
+      tabs.forEach(tab => tab.style.display = "none");
+
+      document.getElementById(tabId).style.display = "block";
+    }
+  </script>
+</body>
+
+</html>
