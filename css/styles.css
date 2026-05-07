@@ -466,3 +466,44 @@ footer {
   background-color: #1f1f1f;
   color: #fff;
 }
+
+/* =========================
+   TABLAS EN CONTENIDO
+========================= */
+.contenido table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 0.95rem;
+}
+
+.contenido th {
+  background-color: #1f1f1f;
+  color: #fff;
+  text-align: left;
+  padding: 0.8rem;
+}
+
+.contenido td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #eee;
+  color: #444;
+  vertical-align: top;
+}
+
+.contenido tr:last-child td {
+  border-bottom: none;
+}
+
+.contenido tr:hover {
+  background-color: rgba(26, 115, 232, 0.05);
+}
+
+.contenido td:nth-child(2) {
+  font-family: monospace;
+  font-size: 0.9rem;
+  background-color: #f7f7f7;
+}
