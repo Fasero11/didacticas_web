@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contenido</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Didácticas</h1>
+
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+
+                <li class="dropdown">
+                    <a href="metodologia.html">Metodologías</a>
+                    <ul class="submenu">
+                        <li><a href="puzzle-aronson.html">Puzzle de Aronson</a></li>
+                        <li><a href="aula-invertida.html">Aula Invertida</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="contenido.html">Contenido</a>
+                    <ul class="submenu">
+                        <li><a href="contenido-intro_html.html">HTML</a></li>
+                        <li><a href="contenido-intro_css.html">CSS</a></li>
+                        <li><a href="contenido-intro_javascript.html">JavaScript</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="autoevaluacion.html">Autoevaluación</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="layout-double">
+
+        <!-- 🔵 SIDEBAR IZQUIERDA: navegación entre páginas -->
+        <aside class="sidebar-left">
+            <h3>Temas</h3>
+
+            <a href="contenido.html" class="sidebar-intro">Introducción general</a>
+
+            <div class="sidebar-group">
+                <p class="sidebar-group-title">HTML</p>
+                <a href="contenido-intro_html.html">1. Introducción a HTML</a>
+                <a href="contenido-html-estructura.html">2. Estructura y etiquetas básicas</a>
+                <a href="contenido-html-texto.html">3. Etiquetas de texto</a>
+                <a href="contenido-html-enlaces-imagenes.html">4. Enlaces e imágenes</a>
+            </div>
+
+            <div class="sidebar-group">
+                <p class="sidebar-group-title">CSS</p>
+                <a href="contenido-intro_css.html">Introducción a CSS</a>
+                <!-- Futuras páginas CSS -->
+                <!-- <a href="contenido-css-selectores.html">Selectores</a> -->
+            </div>
+
+            <div class="sidebar-group">
+                <p class="sidebar-group-title">JavaScript</p>
+                <a href="contenido-intro_javascript.html" class="active">1. Introducción a JavaScript</a>
+                <a href="contenido-javascript-sintaxis.html">2. Lógica y sintaxis base</a>
+                <a href="contenido-javascript-dom.html">3. Interacción con el DOM</a>
+                <a href="contenido-javascript-funciones.html">4. Funciones y reutilización</a>
+            </div>
+        </aside>
+
+        <!-- 📄 CONTENIDO CENTRAL -->
+        <article class="contenido">
+
+            <h2 id="inicio">Tema 1: Introducción a JavaScript </h2>
+
+            <p>
+                JavaScript es el lenguaje que permite convertir páginas web estáticas en experiencias interactivas y
+                dinámicas. Mientras que el HTML construye la estructura de la web, JavaScript actúa como el sistema
+                nervioso que le da vida, permitiendo que la página reaccione a lo que el usuario hace en tiempo real.
+            </p>
+
+            <p>
+                Hoy en día, es una de las tecnologías más potentes del mundo, utilizada no solo para sitios web,
+                sino también para crear aplicaciones móviles y juegos complejos que funcionan directamente en el navegador.
+            </p>
+
+            <h3 id="parte1">1. ¿Qué es JavaScript?</h3>
+
+            <p>
+                JavaScript (JS) es un lenguaje de programación orientado a objetos que se utiliza para añadir funciones
+                complejas a una página web. A diferencia del HTML, que solo organiza contenido, JavaScript es capaz de
+                procesar datos, realizar cálculos y tomar decisiones lógicas.
+
+                Es un lenguaje de "lado del cliente", lo que significa que el código se descarga en la computadora del
+                usuario y el navegador lo ejecuta al instante sin necesidad de internet constante una vez cargado.
+            </p>
+
+            <p>
+                Por ejemplo, JavaScript permite indicar:
+            </p>
+
+            <ul>
+                <li>Cuándo debe mostrarse una ventana de alerta o un aviso.</li>
+                <li>Cómo debe reaccionar un botón al hacer clic sobre él.</li>
+                <li>Qué información debe validarse en un formulario antes de enviarlo.</li>
+                <li>Cómo actualizar parte del contenido de la página sin tener que recargarla entera.</li>
+            </ul>
+
+            <p>
+                Gracias a esto, el navegador puede ofrecer una experiencia mucho más fluida, convirtiendo
+                documentos estáticos en aplicaciones web interactivas.
+            </p>
+
+            <h3 id="parte2">2. Integración con HTML</h3>
+
+            <p>
+                Para que JavaScript funcione, debe conectarse al HTML. Existen dos formas principales:
+            </p>
+
+            <ul>
+                <li>Interna: El código se escribe directamente entre las etiquetas dentro del archivo HTML: </li>
+                <code>
+                    &lt;script&gt;&lt;/script&gt;
+                </code>
+                <li> Externa (Recomendada): Se crea un archivo separado (ejemplo: script.js) y se vincula usando: </li>
+                <code>
+                    &lt;script src="js/script.js"&gt;&lt;/script&gt;
+                </code>
+            </ul>
+
+            <p>
+                Consejo clave: Se recomienda colocar la etiqueta &lt;script&gt; justo antes de cerrar el
+                &lt;/body&gt; .Esto permite que la página cargue visualmente antes de ejecutar la lógica, mejorando la velocidad.
+            </p>
+
+            <h3 id="parte3">3. La consola del navegador</h3>
+
+            <p>
+                La consola es una herramienta fundamental incluida en navegadores como Google Chrome. Funciona como una ventana de
+                comunicación directa entre el programador y el navegador, permitiendo ver qué está ocurriendo "detrás de escena" en
+                tu código.
+            </p>
+
+            <p>
+                ¿Para qué sirve principalmente?
+            </p>
+
+            <ul>
+                <li>Visualizar resultados: Puedes enviar mensajes o valores de tus datos para comprobar que todo funciona bien.</li>
+                <li>
+                    Detectar errores: Si algo falla en tu código JavaScript, la consola te mostrará un mensaje en color rojo indicando
+                    exactamente en qué línea está el problema.
+                </li>
+                <li>
+                    Probar código rápido: Puedes escribir pequeñas instrucciones de JavaScript directamente en ella y ver el resultado
+                    al instante.
+                </li>
+            </ul>
+
+            <p>
+                ¿Cómo abrirla?
+            </p>
+
+            <p>
+                Para acceder a ella, solo tienes que hacer clic derecho en cualquier parte de tu página web, seleccionar "Inspeccionar"
+                y después hacer clic en la pestaña que dice "Console".
+            </p>
+
+            <p>
+                La instrucción estrella: console.log()
+            </p>
+
+            <p>
+                Es la herramienta más utilizada para imprimir información. Todo lo que pongas dentro de los paréntesis de un console.log()
+                aparecerá automáticamente en esa ventana gris del navegador, ayudándote a entender el flujo de tu programa.
+            </p>
+
+            <h3 id="parte4">4. Comentarios en JavaScript</h3>
+
+            <p>
+                Los comentarios se utilizan para explicar el funcionamiento del código o para dejar notas que no queremos que el navegador
+                ejecute. Son esenciales para mantener el código legible y ayudar a otros programadores (o a ti mismo en el futuro) a entender
+                qué hace cada parte.
+            </p>
+
+            <p>
+                Existen dos formas de escribirlos:
+            </p>
+
+            <ul>
+                <li>
+                    Comentario de una sola línea: Se utiliza colocando dos barras inclinadas //. Todo lo que escribas después de las barras
+                    en esa misma línea será ignorado por el navegador. Se usa para explicaciones rápidas.
+                </li>
+                <li>
+                    Comentario multilínea: Se abre con /* y se cierra con */. Es muy útil cuando necesitas escribir párrafos más largos o
+                    documentar una función compleja, ya que puede ocupar varias líneas.
+                </li>
+            </ul>
+
+            <p>
+                Un uso muy común: Además de explicar, los programadores usan los comentarios para "desactivar" temporalmente una línea de
+                código que está dando fallos sin necesidad de borrarla por completo.
+            </p>
+
+            <h3 id="parte5">5. Resumen</h3>
+
+            <p>
+                Hemos aprendido que JavaScript es el lenguaje que aporta interactividad a la web, funcionando como el "cerebro" que responde
+                a las acciones del usuario. Vimos cómo integrarlo en el HTML mediante etiquetas o archivos externos, y la importancia de
+                colocarlo al final del documento para optimizar la carga. También exploramos el uso de la consola para detectar errores en
+                tiempo real y cómo los comentarios ayudan a organizar y documentar nuestra lógica de programació
+            </p>
+
+            <h3 id="parte6">6. Infografía y actividad</h3>
+
+            <p>
+                A continuación puedes ver una infografía resumen de lo visto hasta ahora:
+            </p>
+
+            <img src="images/Introducción-JavaScript.png" width="600">
+
+            <div class="tabs">
+
+                <!-- Кнопки -->
+                <div class="tab-buttons">
+                    <button onclick="openTab('tarea')">Tarea</button>
+                    <button onclick="openTab('respuesta')">Respuesta</button>
+                </div>
+
+
+                <div id="tarea" class="tab-content">
+                    <p><strong>Tarea:</strong> Imagina que estás creando tu primera página interactiva. 
+                    Responde a las siguientes cuestiones:</p>
+                    <ul>
+                        <li>¿Qué etiqueta y atributo usarías para vincular un archivo llamado logica.js que 
+                        está dentro de una carpeta llamada scripts?</li>
+                        <li>Si quieres que un mensaje aparezca en la pestaña "Console" del navegador para
+                        verificar que el archivo funciona, ¿qué instrucción debes escribir?</li>
+                        <li>¿Cómo escribirías un comentario de una sola línea indicando que esa parte del
+                        código es "Configuración inicial"?</li>
+                    </ul>
+                </div>
+
+                <div id="respuesta" class="tab-content" style="display:none;">
+                    <p><strong>Respuesta (ejemplo):</strong></p>
+                    <ul>
+                        <li>La etiqueta es &lt;script&gt; y el atributo es src="scripts/logica.js".</li>
+                        <li>La instrucción es console.log("Mensaje de verificación");.</li>
+                        <li>Se escribe como // Configuración inicial.</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="nav-buttons">
+                <a href="contenido-javascript-sintaxis.html" class="next">Siguiente →</a>
+            </div>
+
+        </article>
+
+        <!-- 📑 SIDEBAR DERECHA: índice interno -->
+        <aside class="sidebar">
+            <h3>Índice</h3>
+
+            <a href="#inicio">Inicio</a>
+            <a href="#parte1">1. ¿Qué es JavaScript?</a>
+            <a href="#parte2">2. Integración con HTML</a>
+            <a href="#parte3">3. La consola del navegador</a>
+            <a href="#parte4">4. Comentarios en JavaSript</a>
+            <a href="#parte5">5. Resumen</a>
+            <a href="#parte6">6. Infografía y actividad</a>
+
+        </aside>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Mi Web</p>
+    </footer>
+
+    <script>
+        function openTab(tabId) {
+            const tabs = document.querySelectorAll(".tab-content");
+            tabs.forEach(tab => tab.style.display = "none");
+
+            document.getElementById(tabId).style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>

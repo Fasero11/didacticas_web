@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contenido</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+<header>
+  <h1>Didácticas</h1>
+
+  <nav>
+    <ul class="menu">
+      <li><a href="index.html">Inicio</a></li>
+
+      <li class="dropdown">
+        <a href="metodologia.html">Metodologías</a>
+        <ul class="submenu">
+          <li><a href="puzzle-aronson.html">Puzzle de Aronson</a></li>
+          <li><a href="aula-invertida.html">Aula Invertida</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="contenido.html">Contenido</a>
+        <ul class="submenu">
+          <li><a href="contenido-intro_html.html">HTML</a></li>
+          <li><a href="contenido-intro_css.html">CSS</a></li>
+          <li><a href="contenido-intro_javascript.html">JavaScript</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="autoevaluacion.html">Autoevaluación</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+  <main class="layout-double">
+
+      <!-- 🔵 SIDEBAR IZQUIERDA: navegación entre páginas -->
+      <aside class="sidebar-left">
+          <h3>Temas</h3>
+
+          <a href="contenido.html" class="sidebar-intro">Introducción general</a>
+
+          <div class="sidebar-group">
+              <p class="sidebar-group-title">HTML</p>
+              <a href="contenido-intro_html.html" class="active">1. Introducción a HTML</a>
+              <a href="contenido-html-estructura.html">2. Estructura y etiquetas básicas</a>
+              <a href="contenido-html-texto.html">3. Etiquetas de texto</a>
+              <a href="contenido-html-enlaces-imagenes.html">4. Enlaces e imágenes</a>
+          </div>
+
+          <div class="sidebar-group">
+              <p class="sidebar-group-title">CSS</p>
+              <a href="contenido-intro_css.html">Introducción a CSS</a>
+              <!-- Futuras páginas CSS -->
+              <!-- <a href="contenido-css-selectores.html">Selectores</a> -->
+          </div>
+
+          <div class="sidebar-group">
+              <p class="sidebar-group-title">JavaScript</p>
+              <a href="contenido-intro_javascript.html">1. Introducción a JavaScript</a>
+              <a href="contenido-javascript-sintaxis.html">2. Lógica y sintaxis base</a>
+              <a href="contenido-javascript-dom.html">3. Interacción con el DOM</a>
+              <a href="contenido-javascript-funciones.html">4. Funciones y reutilización</a>
+          </div>
+      </aside>
+
+    <!-- 📄 CONTENIDO CENTRAL -->
+    <article class="contenido">
+
+     <h2 id="inicio">Tema 1: Introducción a HTML</h2>
+
+<p>
+HTML (HyperText Markup Language) es el lenguaje de marcado estándar utilizado para crear
+páginas web. Su función principal es organizar y estructurar el contenido para que los
+navegadores puedan interpretarlo y mostrarlo correctamente.
+</p>
+
+<p>
+Con HTML se pueden definir títulos, párrafos, imágenes, vídeos, enlaces y otros elementos
+visuales que forman parte de una página web. Es la base fundamental del desarrollo web.
+</p>
+
+<h3 id="parte1">1. ¿Qué es HTML?</h3>
+
+<p>
+HTML significa HyperText Markup Language, que en español se traduce como
+Lenguaje de Marcado de Hipertexto.
+</p>
+
+<p>
+No es un lenguaje de programación, porque no ejecuta operaciones lógicas ni cálculos,
+sino que utiliza etiquetas para marcar y organizar el contenido.
+</p>
+
+<p>
+Por ejemplo, HTML permite indicar:
+</p>
+
+<ul>
+  <li>Qué texto es un título.</li>
+  <li>Qué texto forma un párrafo.</li>
+  <li>Dónde aparece una imagen.</li>
+  <li>Qué elemento funciona como enlace.</li>
+</ul>
+
+<p>
+Gracias a esto, el navegador entiende cómo mostrar correctamente cada elemento en pantalla.
+</p>
+
+<h3 id="parte2">2. ¿Para qué sirve HTML?</h3>
+
+<p>
+HTML sirve para construir la base estructural de cualquier página web.
+Es el lenguaje que define el contenido visible de un sitio.
+</p>
+
+<p>
+Entre sus funciones principales están:
+</p>
+
+<ul>
+  <li>Organizar información.</li>
+  <li>Crear documentos web.</li>
+  <li>Insertar recursos multimedia.</li>
+  <li>Conectar páginas mediante enlaces.</li>
+  <li>Preparar contenido para aplicar diseño con CSS.</li>
+</ul>
+
+<p>
+Sin HTML, una página web no tendría estructura ni contenido reconocible.
+</p>
+
+<h3 id="parte3">3. ¿Dónde se utiliza HTML?</h3>
+
+<p>
+HTML se utiliza en prácticamente todas las páginas web de Internet.
+Cada sitio web contiene documentos HTML que los navegadores interpretan.
+</p>
+
+<p>
+Se utiliza en:
+</p>
+
+<ul>
+  <li>Páginas educativas.</li>
+  <li>Blogs.</li>
+  <li>Tiendas online.</li>
+  <li>Redes sociales.</li>
+  <li>Aplicaciones web.</li>
+</ul>
+
+<p>
+Cada vez que visitas una página en tu navegador, estás interactuando con HTML.
+</p>
+
+<h3 id="parte4">4. ¿Quién utiliza HTML?</h3>
+
+<p>
+HTML es utilizado principalmente por desarrolladores web, diseñadores, profesores,
+estudiantes y creadores de contenido digital.
+</p>
+
+<p>
+Es una de las primeras tecnologías que se aprenden en desarrollo web porque constituye
+la base de sitios y aplicaciones.
+</p>
+
+<ul>
+  <li>Desarrolladores front-end.</li>
+  <li>Diseñadores web.</li>
+  <li>Estudiantes de informática.</li>
+  <li>Docentes de tecnología.</li>
+</ul>
+
+<h3 id="parte5">5. Ventajas de aprender HTML</h3>
+
+<p>
+Aprender HTML ofrece muchas ventajas para quienes desean comprender o crear páginas web.
+</p>
+
+<ul>
+  <li>Es fácil de aprender.</li>
+  <li>Es fundamental para desarrollo web.</li>
+  <li>Permite crear páginas básicas rápidamente.</li>
+  <li>Es compatible con todos los navegadores.</li>
+  <li>Sirve como base para aprender CSS y JavaScript.</li>
+</ul>
+
+<p>
+Por eso HTML suele ser el primer paso para iniciarse en programación y diseño web.
+</p>
+
+<h3 id="parte6">6. HTML en el desarrollo web moderno</h3>
+
+<p>
+Aunque existen muchas tecnologías modernas, HTML sigue siendo esencial.
+Todas las páginas web utilizan HTML como estructura principal, incluso cuando
+se combinan con frameworks avanzados.
+</p>
+
+<p>
+HTML trabaja junto a:
+</p>
+
+<ul>
+  <li>CSS → para diseño visual.</li>
+  <li>JavaScript → para interactividad.</li>
+</ul>
+
+<p>
+Juntos forman la base del desarrollo web moderno.
+</p>
+
+<h3 id="parte7">7. Resumen</h3>
+
+<p>
+HTML es el lenguaje que permite crear y organizar páginas web mediante etiquetas.
+No programa acciones complejas, pero sí define la estructura del contenido.
+</p>
+
+<p>
+Es una herramienta fundamental para cualquier persona interesada en tecnología,
+educación digital o creación web.
+</p>
+
+<p>
+Dominar HTML facilita el aprendizaje de tecnologías más avanzadas y permite
+comprender cómo funciona Internet desde dentro.
+</p>
+
+<h3 id="parte8">8. Video y actividad</h3>
+
+<p>
+A continuación puedes ver un video introductorio que explica su funcionamiento:
+</p>
+
+<video width="100%" controls>
+  <source src="video/Introducción_a_HTML.mp4" type="video/mp4">
+</video>
+
+
+<div class="tabs">
+
+  <!-- Кнопки -->
+  <div class="tab-buttons">
+    <button onclick="openTab('tarea')">Tarea</button>
+    <button onclick="openTab('respuesta')">Respuesta</button>
+  </div>
+
+
+  <div id="tarea" class="tab-content">
+    <p><strong>Tarea:</strong> Explica con tus palabras:</p>
+    <ul>
+      <li>¿Qué es HTML?</li>
+      <li>¿Para qué sirve HTML?</li>
+      <li>¿Dónde se utiliza HTML?</li>
+      <li>¿Quién usa HTML?</li>
+    </ul>
+  </div>
+
+  <div id="respuesta" class="tab-content" style="display:none;">
+    <p><strong>Respuesta (ejemplo):</strong></p>
+    <ul>
+      <li>HTML es un lenguaje de marcado.</li>
+      <li>Sirve para crear páginas web.</li>
+      <li>Se utiliza en navegadores.</li>
+      <li>Lo usan desarrolladores web.</li>
+    </ul>
+  </div>
+
+</div>
+
+
+<div class="nav-buttons">
+  <a href="contenido-html-estructura.html" class="next">Siguiente →</a>
+</div>
+
+    </article>
+
+    <!-- 📑 SIDEBAR DERECHA: índice interno -->
+   <aside class="sidebar">
+  <h3>Índice</h3>
+
+ <a href="#inicio">Inicio</a>
+<a href="#parte1">1. ¿Qué es HTML?</a>
+<a href="#parte2">2. ¿Para qué sirve HTML?</a>
+<a href="#parte3">3. ¿Dónde se utiliza HTML?</a>
+<a href="#parte4">4. ¿Quién utiliza HTML?</a>
+<a href="#parte5">5. Ventajas de aprender HTML</a>
+<a href="#parte6">6. HTML en el desarrollo web moderno</a>
+<a href="#parte7">7. Resumen</a>
+<a href="#parte8">8. Video y actividad</a>
+</aside>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Mi Web</p>
+  </footer>
+
+
+  <script>
+function openTab(tabId) {
+  const tabs = document.querySelectorAll(".tab-content");
+  tabs.forEach(tab => tab.style.display = "none");
+
+  document.getElementById(tabId).style.display = "block";
+}
+</script>
+</body>
+
+</html>
