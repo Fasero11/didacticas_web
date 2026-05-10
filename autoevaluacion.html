@@ -47,46 +47,80 @@
 
   <form id="quiz">
 
-    <div class="pregunta">
-  <p><strong>Pregunta 1</strong></p>
-  <p>
-    HTML es la base de todas las páginas web. 
-    ¿Cuál de las siguientes opciones describe correctamente qué es HTML?
-  </p>
+      <div class="pregunta">
+          <p><strong>Pregunta 1</strong></p>
+          <p>
+              HTML es la base de todas las páginas web.
+              ¿Cuál de las siguientes opciones describe correctamente qué es HTML?
+          </p>
 
-  <label><input type="radio" name="q1" value="0"> Un lenguaje de programación que permite crear lógica y funciones</label>
-  <label><input type="radio" name="q1" value="1"> Un lenguaje de marcado que se utiliza para estructurar el contenido de una página web</label>
-  <label><input type="radio" name="q1" value="0"> Un sistema operativo que controla el funcionamiento del navegador</label>
-</div>
+          <label><input type="radio" name="q1" value="0"> Un lenguaje de programación que permite crear lógica y funciones</label>
+          <label><input type="radio" name="q1" value="1"> Un lenguaje de marcado que se utiliza para estructurar el contenido de una página web</label>
+          <label><input type="radio" name="q1" value="0"> Un sistema operativo que controla el funcionamiento del navegador</label>
+      </div>
 
-<div class="pregunta">
-  <p><strong>Pregunta 2</strong></p>
-  <p>
-    Cuando creamos una página web, utilizamos HTML para organizar la información. 
-    ¿Para qué sirve principalmente HTML en el desarrollo web?
-  </p>
+      <div class="pregunta">
+          <p><strong>Pregunta 2</strong></p>
+          <p>
+              Cuando creamos una página web, utilizamos HTML para organizar la información.
+              ¿Para qué sirve principalmente HTML en el desarrollo web?
+          </p>
 
-  <select name="q2">
-    <option value="0">Selecciona una opción</option>
-    <option value="0">Para diseñar gráficos y editar imágenes</option>
-    <option value="1">Para estructurar y organizar el contenido de una página web</option>
-    <option value="0">Para programar videojuegos y aplicaciones complejas</option>
-  </select>
-</div>
+          <select name="q2">
+              <option value="Incorrecto">Selecciona una opción</option>
+              <option value="Incorrecto">Para diseñar gráficos y editar imágenes</option>
+              <option value="1">Para estructurar y organizar el contenido de una página web</option>
+              <option value="Incorrecto">Para programar videojuegos y aplicaciones complejas</option>
+          </select>
+      </div>
 
-<div class="pregunta">
-  <p><strong>Pregunta 3</strong></p>
-  <p>
-    En HTML se utilizan diferentes etiquetas para representar contenido en la página. 
-    Selecciona las opciones que corresponden a etiquetas reales de HTML:
-  </p>
+      <div class="pregunta">
+          <p><strong>Pregunta 3</strong></p>
+          <p>
+              En HTML se utilizan diferentes etiquetas para representar contenido en la página.
+              Selecciona las opciones que corresponden a etiquetas reales de HTML:
+          </p>
 
-  <label><input type="checkbox" name="q3" value="1"> &lt;p&gt; (párrafo)</label>
-  <label><input type="checkbox" name="q3" value="1"> &lt;h1&gt; (encabezado)</label>
-  <label><input type="checkbox" name="q3" value="0"> Excel (programa externo, no es una etiqueta HTML)</label>
-</div>
+          <label><input type="checkbox" name="q3" value="1"> &lt;p&gt; (párrafo)</label>
+          <label><input type="checkbox" name="q3" value="1"> &lt;h1&gt; (encabezado)</label>
+          <label><input type="checkbox" name="q3" value="0"> Excel (programa externo, no es una etiqueta HTML)</label>
+      </div>
 
-    <button type="button" onclick="calcular()">Enviar</button>
+      <div class="pregunta">
+          <p><strong>Pregunta 4</strong></p>
+          <p>¿Qué instrucción se utiliza para mostrar un mensaje en la consola del navegador para depurar código?</p>
+          <div class="options">
+              <label><input type="radio" name="q4" value="1"> console.log()</label>
+              <label><input type="radio" name="q4" value="0"> print.message()</label>
+              <label><input type="radio" name="q4" value="0"> alert.debug()</label>
+              <label><input type="radio" name="q4" value="0"> window.show()</label>
+          </div>
+ 
+      </div>
+
+      <div class="pregunta">
+          <p><strong>Pregunta 5</strong></p>
+          <p>¿Cuál es la forma correcta de declarar una variable cuyo valor NO va a cambiar nunca?</p>
+
+          <label><input type="radio" name="q5" value="0"> let miValor = 10;</label>
+          <label><input type="radio" name="q5" value="0"> var miValor = 10;</label>
+          <label><input type="radio" name="q5" value="1"> const miValor = 10;</label>
+          <label><input type="radio" name="q5" value="0"> static miValor = 10;</label>
+
+      </div>
+
+      <div class="pregunta">
+          <p><strong>Pregunta 6</strong></p>
+          <p>¿Qué símbolo se utiliza para escribir un comentario de una sola línea en JavaScript?</p>
+
+          <label><input type="radio" name="q6" value="0"> &lt;!-- --&gt;</label>
+          <label><input type="radio" name="q6" value="1"> //</label>
+          <label><input type="radio" name="q6" value="0"> #</label>
+          <label><input type="radio" name="q6" value="0"> static miValor = 10;</label>
+        
+      </div>
+
+      <button type="button" onclick="calcular()">Enviar</button>
 
   </form>
 
@@ -98,30 +132,7 @@
     <p>2026 Didácticas</p>
 </footer>
 
-<script>
-function calcular() {
-  let nota = 0;
-   // Pregunta 1
-  let q1 = document.querySelector('input[name="q1"]:checked');
-  if (q1) nota += parseInt(q1.value);
-
-  // Pregunta 2
-  let q2 = document.querySelector('select[name="q2"]').value;
-  nota += parseInt(q2);
-
-  // Pregunta 3
-  let q3 = document.querySelectorAll('input[name="q3"]:checked');
-  q3.forEach(el => nota += parseInt(el.value));
-
-  let resultado = document.getElementById("resultado");
-
-  if (nota >= 3) {
-    resultado.textContent = "Resultado: " + nota + " / 4 → SI (Aprobado)";
-  } else {
-    resultado.textContent = "Resultado: " + nota + " / 4 → NO (Reprobado)";
-  }
-}
-</script>
+<script src="js/main.js"></script>
 
 </body>
 </html>
