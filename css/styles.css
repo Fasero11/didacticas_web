@@ -468,42 +468,120 @@ footer {
 }
 
 /* =========================
-   TABLAS EN CONTENIDO
+   METODOLOGÍAS MODERNO
 ========================= */
-.contenido table {
+
+.metodologia-layout {
+  max-width: 1100px;
+}
+
+.metodologia-contenido {
+  max-width: 760px;
+}
+
+.hero-metodologia {
+  padding: 2.5rem;
+  border-radius: 22px;
+  margin-bottom: 1.5rem;
+}
+
+.hero-metodologia h2 {
+  font-size: clamp(2.3rem, 5vw, 4rem);
+  line-height: 1;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+
+.hero-metodologia p {
+  font-size: 1.1rem;
+  color: #4b5563;
+  max-width: 650px;
+}
+
+.metodo-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #e8eef7;
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 1.3rem;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.metodo-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 38px rgba(15, 23, 42, 0.1);
+}
+
+.metodo-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.9rem;
+  font-size: 1.5rem;
+  color: #111827;
+}
+
+.metodo-card p {
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.lista-moderna {
+  list-style: none;
+  margin: 1.2rem 0 0 0;
+  padding: 0;
   width: 100%;
-  border-collapse: collapse;
-  margin: 1.5rem 0;
-  border: 1px solid #e0e0e0;
-  border-radius: 10px;
-  overflow: hidden;
-  font-size: 0.95rem;
 }
 
-.contenido th {
-  background-color: #1f1f1f;
-  color: #fff;
-  text-align: left;
-  padding: 0.8rem;
+.lista-moderna li {
+  width: 100%;
+  padding: 1rem 1.1rem;
+  margin-bottom: 0.8rem;
+
+  background: #f8fafc;
+  border: 1px solid #eef2f7;
+  border-left: 4px solid #1a73e8;
+
+  border-radius: 12px;
+
+  color: #4b5563;
+  line-height: 1.7;
+
+  transition: all 0.2s ease;
 }
 
-.contenido td {
-  padding: 0.8rem;
-  border-bottom: 1px solid #eee;
-  color: #444;
-  vertical-align: top;
+/* Mejoras para la sidebar derecha */
+.sidebar {
+  background: #ffffff;
+  border: 1px solid #e8eef7;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
 }
 
-.contenido tr:last-child td {
-  border-bottom: none;
+.sidebar a {
+  border-radius: 0 8px 8px 0;
 }
 
-.contenido tr:hover {
-  background-color: rgba(26, 115, 232, 0.05);
+.sidebar a:hover {
+  background-color: rgba(26, 115, 232, 0.06);
 }
 
-.contenido td:nth-child(2) {
-  font-family: monospace;
-  font-size: 0.9rem;
-  background-color: #f7f7f7;
+/* Responsive */
+@media (max-width: 850px) {
+  .layout,
+  .layout-double {
+    flex-direction: column;
+  }
+
+  .sidebar,
+  .sidebar-left {
+    position: static;
+    width: 100%;
+  }
+
+  .hero-metodologia,
+  .metodo-card {
+    padding: 1.5rem;
+  }
 }
