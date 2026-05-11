@@ -9,7 +9,6 @@
 </head>
 <body>
 
-  <!-- Header -->
 <header>
   <h1>Didácticas</h1>
 
@@ -41,30 +40,137 @@
   </nav>
 </header>
 
-  <main>
+<main class="layout metodologia-layout">
 
-    <section class="metodologia">
+  <article class="contenido metodologia-contenido">
 
-      <h2 class="titulo-grande">Metodologías</h2>
+    <section class="hero-metodologia" id="inicio">
 
-      <p class="subtitulo">
-        Aquí puedes explorar los diferentes métodos de aprendizaje que utilizamos,
-        como el puzzle de Aronson y el aula invertida.
+      <h2>Metodologías a aplicar</h2>
+
+      <p>
+        Para impartir estos contenidos técnicos de forma dinámica y participativa,
+        se combinarán dos metodologías activas: el aula invertida y el puzzle de Aronson.
+      </p>
+    </section>
+
+    <section class="metodo-card" id="aula-invertida">
+
+      <h3>Flipped Classroom o Aula Invertida</h3>
+
+      <p>
+        Supone una inversión del método tradicional. Los alumnos estudiarán de forma
+        autónoma los conceptos teóricos previos a cada clase mediante recursos
+        facilitados por el docente, como vídeos o lecturas.
+      </p>
+
+      <p>
+        Esto permite que el tiempo presencial en el aula se aproveche para resolver
+        dudas, realizar prácticas grupales e iniciar debates.
+      </p>
+
+      <ul class="lista-moderna">
+        <li>Aumenta el interés del alumnado.</li>
+        <li>Favorece el aprendizaje personalizado.</li>
+        <li>Ayuda tanto a alumnos con facilidad como a quienes presentan más dificultades.</li>
+      </ul>
+    </section>
+
+    <section class="metodo-card" id="puzzle-aronson">
+
+      <h3>Puzzle de Aronson o Jigsaw</h3>
+
+      <p>
+        Es una técnica de aprendizaje cooperativo basada en roles, ideal para su
+        aplicación en Educación Secundaria.
+      </p>
+
+      <p>
+        Su objetivo es mejorar el rendimiento, fomentar la autonomía, madurar el
+        conocimiento y desarrollar habilidades sociales.
+      </p>
+
+      <p>
+        El alumnado se divide en grupos base o nodriza de cuatro miembros. Cada
+        integrante se especializará en un subtema, convirtiéndose en experto. Después,
+        se reunirá con los expertos de otros grupos para preparar la documentación y,
+        finalmente, volverá a su grupo base para explicar su parte al resto de
+        compañeros.
+      </p>
+
+      <ul class="lista-moderna">
+        <li>Promueve la cooperación entre iguales.</li>
+        <li>Reparte la responsabilidad del aprendizaje.</li>
+        <li>Permite que todos los alumnos aprendan el contenido completo.</li>
+      </ul>
+    </section>
+
+    <section class="metodo-card" id="desarrollo-sesiones">
+
+      <h3>Desarrollo de las sesiones</h3>
+
+      <p>
+        Antes de iniciar los módulos, el profesor dedicará un tiempo previo a explicar
+        la metodología de Aronson y a configurar los grupos base de cuatro miembros.
+      </p>
+
+      <p>
+        El curso se divide en tres bloques: HTML, JavaScript y CSS. Cada bloque contará
+        con cuatro clases o sesiones, correspondientes a los cuatro temas de cada materia.
+      </p>
+
+      <ul class="lista-moderna">
+        <li>
+          <strong>En casa:</strong> los alumnos revisan de forma autónoma el material
+          general del tema del día.
+        </li>
+        <li>
+          <strong>En clase, grupo de expertos:</strong> se agrupan con compañeros que
+          tienen el mismo rol para profundizar en su subtema.
+        </li>
+        <li>
+          <strong>En clase, grupo nodriza:</strong> regresan a su grupo original para
+          explicar los conceptos aprendidos.
+        </li>
+        <li>
+          <strong>Práctica final:</strong> realizan juntos una actividad, documento o
+          ejercicio final relacionado con el tema.
+        </li>
+      </ul>
+    </section>
+
+    <section class="metodo-card" id="autoevaluacion">
+
+      <h3>Autoevaluación</h3>
+
+      <p>
+        Además, la página web contará con un apartado de autoevaluación donde se podrá
+        contrastar el grado de adquisición de los contenidos, tanto por parte del
+        profesor como del propio alumno.
       </p>
 
       <div class="botones">
-        <a href="puzzle-aronson.html" class="btn">Puzzle de Aronson</a>
-        <a href="aula-invertida.html" class="btn">Aula invertida</a>
+        <a href="autoevaluacion.html" class="btn">Autoevaluación</a>
       </div>
-
     </section>
 
-  </main>
+  </article>
 
-  <!-- Footer -->
-  <footer>
-    <p>2026 Didácticas</p>
-  </footer>
+  <aside class="sidebar">
+    <h3>Índice</h3>
+
+    <a href="#inicio">Inicio</a>
+    <a href="#aula-invertida">Aula invertida</a>
+    <a href="#puzzle-aronson">Puzzle de Aronson</a>
+    <a href="#desarrollo-sesiones">Desarrollo de las sesiones</a>
+    <a href="#autoevaluacion">Autoevaluación</a>
+  </aside>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 Didácticas</p>
+</footer>
 
 </body>
 </html>
