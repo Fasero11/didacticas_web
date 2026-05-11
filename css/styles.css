@@ -302,7 +302,8 @@ section {
 ========================= */
 .contenido ol,
 .contenido ul {
-  margin: 1rem 0;
+  margin: 1rem 0 1.2rem 1.5rem;
+  padding-left: 1.2rem;
 }
 
 .contenido li {
