@@ -2,15 +2,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Introducción a CSS</title>
-  <link rel="stylesheet" href="css/styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Box Model</title>
+<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
 <header>
-  <h1>Didácticas</h1>
+<h1>Didácticas</h1>
 </header>
 
 <main class="layout-double">
@@ -44,7 +44,7 @@
   <div class="sidebar-group">
     <p class="sidebar-group-title">CSS</p>
 
-    <a href="contenido-intro_css.html" class="active">
+    <a href="contenido-intro_css.html">
       1. Introducción a CSS
     </a>
 
@@ -52,7 +52,7 @@
       2. Selectores CSS
     </a>
 
-    <a href="contenido-css-boxmodel.html">
+    <a href="contenido-css-boxmodel.html" class="active">
       3. Box Model y espaciado
     </a>
 
@@ -85,51 +85,53 @@
 
 <article class="contenido">
 
-<h2 id="inicio">Sesión 1: Introducción a CSS</h2>
+<h2 id="inicio">Sesión 3: Box Model y espaciado</h2>
 
 <p>
-CSS (Cascading Style Sheets) es el lenguaje utilizado para dar estilo y diseño visual a las páginas web.
+Todos los elementos HTML funcionan como cajas.
 </p>
 
-<h3 id="parte1">1. ¿Qué es CSS?</h3>
+<h3 id="parte1">1. Margin</h3>
 
 <p>
-CSS permite modificar colores, tamaños, márgenes, posiciones y otros aspectos visuales.
+El margin crea espacio exterior.
 </p>
 
-<h3 id="parte2">2. ¿Para qué sirve CSS?</h3>
+<h3 id="parte2">2. Padding</h3>
 
-<ul>
-<li>Aplicar colores</li>
-<li>Modificar tamaños</li>
-<li>Crear diseños modernos</li>
-<li>Adaptar páginas a móviles</li>
-</ul>
+<p>
+El padding crea espacio interior.
+</p>
 
-<h3 id="parte3">3. Ejemplo básico</h3>
+<h3 id="parte3">3. Border</h3>
+
+<p>
+El border añade bordes alrededor del contenido.
+</p>
 
 <pre><code>
-p {
-  color: blue;
-  font-size: 20px;
+div {
+  margin: 20px;
+  padding: 10px;
+  border: 2px solid black;
 }
 </code></pre>
 
 <div class="tabs">
 
 <div class="tab-buttons">
-<button onclick="openTab('tarea')">Tarea</button>
-<button onclick="openTab('respuesta')">Respuesta</button>
+<button onclick="openTab('tarea3')">Tarea</button>
+<button onclick="openTab('respuesta3')">Respuesta</button>
 </div>
 
-<div id="tarea" class="tab-content">
-<p><strong>Tarea:</strong> Cambia el color de un título usando CSS.</p>
+<div id="tarea3" class="tab-content">
+<p>Añade padding de 15px a una caja.</p>
 </div>
 
-<div id="respuesta" class="tab-content" style="display:none;">
+<div id="respuesta3" class="tab-content" style="display:none;">
 <pre><code>
-h1 {
-  color: red;
+.caja {
+  padding: 15px;
 }
 </code></pre>
 </div>
@@ -137,7 +139,8 @@ h1 {
 </div>
 
 <div class="nav-buttons">
-<a href="contenido-css-selectores.html" class="next">Siguiente →</a>
+<a href="contenido-css-selectores.html" class="prev">← Anterior</a>
+<a href="contenido-css-flexbox.html" class="next">Siguiente →</a>
 </div>
 
 </article>
@@ -145,9 +148,9 @@ h1 {
 <aside class="sidebar">
 <h3>Índice</h3>
 <a href="#inicio">Inicio</a>
-<a href="#parte1">1. ¿Qué es CSS?</a>
-<a href="#parte2">2. ¿Para qué sirve CSS?</a>
-<a href="#parte3">3. Ejemplo básico</a>
+<a href="#parte1">1. Margin</a>
+<a href="#parte2">2. Padding</a>
+<a href="#parte3">3. Border</a>
 </aside>
 
 </main>

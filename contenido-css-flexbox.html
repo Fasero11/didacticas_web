@@ -2,20 +2,20 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Introducción a CSS</title>
-  <link rel="stylesheet" href="css/styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flexbox</title>
+<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
 <header>
-  <h1>Didácticas</h1>
+<h1>Didácticas</h1>
 </header>
 
 <main class="layout-double">
 
-  <!-- 🔵 SIDEBAR IZQUIERDA: navegación entre páginas -->
+    <!-- 🔵 SIDEBAR IZQUIERDA: navegación entre páginas -->
 <aside class="sidebar-left">
   <h3>Sesiones</h3>
 
@@ -44,7 +44,7 @@
   <div class="sidebar-group">
     <p class="sidebar-group-title">CSS</p>
 
-    <a href="contenido-intro_css.html" class="active">
+    <a href="contenido-intro_css.html">
       1. Introducción a CSS
     </a>
 
@@ -56,7 +56,7 @@
       3. Box Model y espaciado
     </a>
 
-    <a href="contenido-css-flexbox.html">
+    <a href="contenido-css-flexbox.html" class="active">
       4. Flexbox y diseño responsive
     </a>
   </div>
@@ -85,51 +85,49 @@
 
 <article class="contenido">
 
-<h2 id="inicio">Sesión 1: Introducción a CSS</h2>
+<h2 id="inicio">Sesión 4: Flexbox y diseño responsive</h2>
 
 <p>
-CSS (Cascading Style Sheets) es el lenguaje utilizado para dar estilo y diseño visual a las páginas web.
+Flexbox es un sistema de diseño que facilita organizar elementos.
 </p>
 
-<h3 id="parte1">1. ¿Qué es CSS?</h3>
-
-<p>
-CSS permite modificar colores, tamaños, márgenes, posiciones y otros aspectos visuales.
-</p>
-
-<h3 id="parte2">2. ¿Para qué sirve CSS?</h3>
-
-<ul>
-<li>Aplicar colores</li>
-<li>Modificar tamaños</li>
-<li>Crear diseños modernos</li>
-<li>Adaptar páginas a móviles</li>
-</ul>
-
-<h3 id="parte3">3. Ejemplo básico</h3>
+<h3 id="parte1">1. display:flex</h3>
 
 <pre><code>
-p {
-  color: blue;
-  font-size: 20px;
+.container {
+  display: flex;
 }
 </code></pre>
+
+<h3 id="parte2">2. justify-content</h3>
+
+<p>
+Permite alinear elementos horizontalmente.
+</p>
+
+<h3 id="parte3">3. align-items</h3>
+
+<p>
+Permite alinear elementos verticalmente.
+</p>
 
 <div class="tabs">
 
 <div class="tab-buttons">
-<button onclick="openTab('tarea')">Tarea</button>
-<button onclick="openTab('respuesta')">Respuesta</button>
+<button onclick="openTab('tarea4')">Tarea</button>
+<button onclick="openTab('respuesta4')">Respuesta</button>
 </div>
 
-<div id="tarea" class="tab-content">
-<p><strong>Tarea:</strong> Cambia el color de un título usando CSS.</p>
+<div id="tarea4" class="tab-content">
+<p>Crea un contenedor flex.</p>
 </div>
 
-<div id="respuesta" class="tab-content" style="display:none;">
+<div id="respuesta4" class="tab-content" style="display:none;">
 <pre><code>
-h1 {
-  color: red;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </code></pre>
 </div>
@@ -137,7 +135,7 @@ h1 {
 </div>
 
 <div class="nav-buttons">
-<a href="contenido-css-selectores.html" class="next">Siguiente →</a>
+<a href="contenido-css-boxmodel.html" class="prev">← Anterior</a>
 </div>
 
 </article>
@@ -145,9 +143,9 @@ h1 {
 <aside class="sidebar">
 <h3>Índice</h3>
 <a href="#inicio">Inicio</a>
-<a href="#parte1">1. ¿Qué es CSS?</a>
-<a href="#parte2">2. ¿Para qué sirve CSS?</a>
-<a href="#parte3">3. Ejemplo básico</a>
+<a href="#parte1">1. display:flex</a>
+<a href="#parte2">2. justify-content</a>
+<a href="#parte3">3. align-items</a>
 </aside>
 
 </main>
