@@ -140,17 +140,28 @@ main {
 
 /* =========================
    LAYOUT SIMPLE
+   Espacio invisible izquierda / contenido centrado / sidebar derecha
 ========================= */
 .layout {
-  position: relative;
-
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 260px minmax(0, 760px) 260px;
+  justify-content: space-between;
+  align-items: start;
+  gap: 2rem;
 
   width: 100%;
 
   margin: 3rem 0;
   padding: 0 2.5rem;
+}
+
+.layout > .contenido {
+  grid-column: 2;
+}
+
+.layout > .sidebar {
+  position: sticky;
+  top: 2rem;
 }
 
 /* =========================
@@ -277,9 +288,9 @@ main {
 
 /* Sidebar derecha SIEMPRE al borde */
 .layout > .sidebar {
-  position: fixed;
-  right: 2.5rem;
-  top: 8rem;
+  position: sticky;
+  top: 2rem;
+  justify-self: end;
 }
 
 .layout-double > .sidebar {
