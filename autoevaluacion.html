@@ -106,16 +106,17 @@
 
       </div>
 
-      <div class="pregunta">
-          <p><strong>Pregunta 6</strong></p>
-          <p>¿Qué símbolo se utiliza para escribir un comentario de una sola línea en JavaScript?</p>
+ <div class="pregunta">
+    <p><strong>Pregunta 6</strong></p>
+    <p>¿Qué sintaxis se utiliza para escribir comentarios en JavaScript? Selecciona todas las correctas.</p>
 
-          <label><input type="radio" name="q6" value="0"> &lt;!-- --&gt;</label>
-          <label><input type="radio" name="q6" value="1"> //</label>
-          <label><input type="radio" name="q6" value="0"> #</label>
-          <label><input type="radio" name="q6" value="0"> static miValor = 10;</label>
-        
-      </div>
+    <select id="q6" name="q6" multiple size="4" class="multi-select">
+        <option value="1">//</option>
+        <option value="1">/* ... */</option>
+        <option value="0">&lt;!-- --&gt;</option>
+        <option value="0">#</option>
+    </select>
+</div>
 
       <button type="button" onclick="calcular()">Enviar</button>
 
