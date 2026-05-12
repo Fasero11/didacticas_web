@@ -346,6 +346,107 @@ completa esta actividad para practicar la integración de imágenes dentro de un
 </div>
 
 
+
+
+<h3 id="parte6">6. Videos en HTML</h3>
+
+<p>
+Además de imágenes y enlaces, HTML permite insertar videos directamente dentro
+de una página web para enriquecer el contenido visual e interactivo.
+</p>
+
+<p>
+Para ello se utiliza la etiqueta <code>&lt;video&gt;</code>, que permite reproducir
+archivos de video almacenados en el proyecto o provenientes de otras fuentes.
+</p>
+
+<p>
+Los atributos más importantes son:
+</p>
+
+<ul>
+  <li><code>src</code> — ruta del archivo de video</li>
+  <li><code>controls</code> — muestra controles de reproducción</li>
+  <li><code>width</code> — ancho del reproductor</li>
+  <li><code>height</code> — alto del reproductor</li>
+</ul>
+
+<p>
+Ejemplo de video almacenado dentro de la carpeta del proyecto:
+</p>
+
+<pre><code>
+&lt;video src="videos/mi-video.mp4" controls width="100%"&gt;
+  Tu navegador no soporta videos.
+&lt;/video&gt;
+</code></pre>
+
+<p>
+También puede utilizarse la etiqueta <code>&lt;source&gt;</code> para ofrecer
+diferentes formatos:
+</p>
+
+<pre><code>
+&lt;video controls width="100%"&gt;
+  &lt;source src="videos/mi-video.mp4" type="video/mp4"&gt;
+  &lt;source src="videos/mi-video.webm" type="video/webm"&gt;
+  Tu navegador no soporta videos.
+&lt;/video&gt;
+</code></pre>
+
+<p>
+Se recomienda guardar los videos en una carpeta específica como
+<code>videos/</code> dentro del proyecto para mantener una mejor organización.
+</p>
+
+<p>
+Ejemplo práctico de video insertado en la página:
+</p>
+
+<video controls width="100%">
+  <source src="video/video HTML.mp4" type="video/mp4">
+  Tu navegador no soporta videos.
+</video>
+
+<p>
+Ahora realiza la siguiente actividad práctica para insertar correctamente
+un video en tu página web.
+</p>
+
+<div class="tabs">
+
+  <div class="tab-buttons">
+    <button onclick="openTab('tareaVideo')">Tarea</button>
+    <button onclick="openTab('respuestaVideo')">Respuesta</button>
+  </div>
+
+  <!-- Tarea -->
+  <div id="tareaVideo" class="tab-content">
+    <p><strong>Tarea:</strong> Completa el siguiente código usando las etiquetas correctas:</p>
+
+<pre>
+&lt;_____ controls width="100%"&gt;
+  &lt;_____ src="videos/mi-video.mp4" type="video/mp4"&gt;
+  Tu navegador no soporta videos.
+&lt;/_____&gt;
+</pre>
+  </div>
+
+  <!-- Respuesta -->
+  <div id="respuestaVideo" class="tab-content" style="display:none;">
+    <p><strong>Respuesta:</strong></p>
+
+<pre>
+&lt;video controls width="100%"&gt;
+  &lt;source src="videos/mi-video.mp4" type="video/mp4"&gt;
+  Tu navegador no soporta videos.
+&lt;/video&gt;
+</pre>
+  </div>
+
+</div>
+
+
 <div class="nav-buttons">
   <a href="contenido-html-texto.html" class="prev">← Anterior</a>
   <a href="contenido-intro_css.html" class="next">Siguiente →</a>
@@ -365,8 +466,8 @@ completa esta actividad para practicar la integración de imágenes dentro de un
 <a href="#parte4">4. Imágenes en HTML</a>
 <a href="#parte5">5. Navegación hacia imágenes</a>
 <a href="#tarea5">Actividad: práctica de imágenes</a>
-</aside>
-
+<a href="#parte6">6. Videos en HTML</a>
+ <a href="#tareaVideo">Actividad: práctica de videos</a>
   </main>
 
   <footer>
