@@ -24,6 +24,8 @@ body {
   line-height: 1.7;
   background-color: #ffffff;
   color: #1f1f1f;
+
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -35,6 +37,7 @@ header {
   background-color: #1f1f1f;
   color: #fff;
   padding: 1rem;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -87,9 +90,11 @@ nav {
   left: 0;
   z-index: 1000;
   display: none;
+
   min-width: 150px;
   margin: 0;
   padding: 0.5rem 0;
+
   background-color: #1f1f1f;
   border-radius: 6px;
 }
@@ -120,8 +125,41 @@ main {
 }
 
 /* =========================
-   LAYOUT DOCUMENTACIÓN 3 COLUMNAS
-   Izquierda borde / contenido centro / derecha borde
+   SECCIONES GENERALES
+========================= */
+section {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #eee;
+}
+
+/* =========================
+   METODOLOGÍA
+========================= */
+.metodologia {
+  text-align: center;
+}
+
+.titulo-grande {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.subtitulo {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 2rem auto;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* =========================
+   LAYOUT CON DOS BARRAS
+   Izquierda / contenido / derecha
 ========================= */
 .layout-double {
   display: grid;
@@ -130,29 +168,29 @@ main {
   align-items: start;
   gap: 2rem;
 
-  width: 100vw;
+  width: 100%;
   max-width: none;
 
   margin: 3rem 0;
-  padding: 0 1.5rem;
+  padding: 0 2.5rem;
 }
 
 /* =========================
-   LAYOUT CON SOLO CONTENIDO + SIDEBAR DERECHA
-   Ejemplo: metodología
+   LAYOUT CON UNA BARRA DERECHA
+   Contenido + índice centrados
 ========================= */
 .layout {
   display: grid;
   grid-template-columns: minmax(0, 760px) 260px;
-  justify-content: end;
+  justify-content: center;
   align-items: start;
   gap: 2rem;
 
-  width: 100vw;
-  max-width: none;
+  width: 100%;
+  max-width: 1100px;
 
-  margin: 3rem 0;
-  padding: 0 1.5rem;
+  margin: 3rem auto;
+  padding: 0 2rem;
 }
 
 /* =========================
@@ -308,16 +346,6 @@ main {
   font-size: 1rem;
   color: #444;
   margin-bottom: 1rem;
-}
-
-/* =========================
-   SECCIONES GENERALES
-========================= */
-section {
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 10px;
-  border: 1px solid #eee;
 }
 
 /* =========================
@@ -485,34 +513,14 @@ button:hover {
 footer {
   text-align: center;
   padding: 1.5rem;
-  margin-top: 3rem;
+  margin-top: auto;
   background-color: #1f1f1f;
   color: #fff;
 }
 
 /* =========================
-   METODOLOGÍAS
+   METODOLOGÍAS MODERNO
 ========================= */
-.metodologia {
-  text-align: center;
-}
-
-.titulo-grande {
-  font-size: 3rem;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 1rem;
-  letter-spacing: -0.02em;
-}
-
-.subtitulo {
-  text-align: center;
-  max-width: 650px;
-  margin: 0 auto 2rem auto;
-  font-size: 1.1rem;
-  color: #555;
-}
-
 .hero-metodologia {
   padding: 2.5rem;
   border-radius: 22px;
@@ -571,12 +579,16 @@ footer {
   width: 100%;
   padding: 1rem 1.1rem;
   margin-bottom: 0.8rem;
+
   background: #f8fafc;
   border: 1px solid #eef2f7;
   border-left: 4px solid #1a73e8;
+
   border-radius: 12px;
+
   color: #4b5563;
   line-height: 1.7;
+
   transition: all 0.2s ease;
 }
 
