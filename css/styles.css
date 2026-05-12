@@ -13,7 +13,7 @@ html {
 
 html,
 body {
-  height: 100%;
+  min-height: 100%;
 }
 
 /* =========================
@@ -24,7 +24,6 @@ body {
   line-height: 1.7;
   background-color: #ffffff;
   color: #1f1f1f;
-
   display: flex;
   flex-direction: column;
 }
@@ -36,7 +35,6 @@ header {
   background-color: #1f1f1f;
   color: #fff;
   padding: 1rem;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -58,7 +56,6 @@ nav {
   list-style: none;
   display: flex;
   gap: 1.5rem;
-
   margin: 0;
   padding: 0;
 }
@@ -85,18 +82,14 @@ nav {
 ========================= */
 .submenu {
   list-style: none;
-
   position: absolute;
   top: 100%;
   left: 0;
   z-index: 1000;
-
   display: none;
-
   min-width: 150px;
   margin: 0;
   padding: 0.5rem 0;
-
   background-color: #1f1f1f;
   border-radius: 6px;
 }
@@ -123,62 +116,43 @@ nav {
    MAIN GENERAL
 ========================= */
 main {
-  width: 100%;
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1.5rem;
   flex: 1;
 }
 
 /* =========================
-   SECCIONES GENERALES
+   LAYOUT DOCUMENTACIÓN 3 COLUMNAS
+   Izquierda borde / contenido centro / derecha borde
 ========================= */
-section {
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 10px;
-  border: 1px solid #eee;
-}
-
-/* =========================
-   METODOLOGÍA
-========================= */
-.metodologia {
-  text-align: center;
-}
-
-.titulo-grande {
-  font-size: 3rem;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 1rem;
-  letter-spacing: -0.02em;
-}
-
-.subtitulo {
-  text-align: center;
-  max-width: 650px;
-  margin: 0 auto 2rem auto;
-  font-size: 1.1rem;
-  color: #555;
-}
-
-/* =========================
-   LAYOUT TIPO DOCUMENTACIÓN
-========================= */
-.layout,
 .layout-double {
   display: grid;
-  grid-template-columns: 240px minmax(0, 720px) 240px;
+  grid-template-columns: 260px minmax(0, 720px) 260px;
+  justify-content: space-between;
+  align-items: start;
   gap: 2rem;
 
-  width: 100%;
-  max-width: 1600px;
+  width: 100vw;
+  max-width: none;
 
-  margin: 3rem auto;
-  padding: 0 2rem;
+  margin: 3rem 0;
+  padding: 0 1.5rem;
+}
 
+/* =========================
+   LAYOUT CON SOLO CONTENIDO + SIDEBAR DERECHA
+   Ejemplo: metodología
+========================= */
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 760px) 260px;
+  justify-content: end;
   align-items: start;
+  gap: 2rem;
+
+  width: 100vw;
+  max-width: none;
+
+  margin: 3rem 0;
+  padding: 0 1.5rem;
 }
 
 /* =========================
@@ -194,7 +168,7 @@ section {
 }
 
 /* =========================
-   SIDEBAR IZQUIERDA (TEMAS)
+   SIDEBAR IZQUIERDA
 ========================= */
 .sidebar-left {
   background: #fff;
@@ -207,7 +181,6 @@ section {
   overflow-x: hidden;
 }
 
-/* Scroll visual de la sidebar izquierda */
 .sidebar-left::-webkit-scrollbar {
   width: 6px;
 }
@@ -272,7 +245,7 @@ section {
 }
 
 /* =========================
-   SIDEBAR DERECHA (ÍNDICE)
+   SIDEBAR DERECHA
 ========================= */
 .sidebar {
   background: #ffffff;
@@ -310,6 +283,11 @@ section {
 .contenido {
   width: 100%;
   max-width: 720px;
+  justify-self: center;
+}
+
+.metodologia-contenido {
+  max-width: 760px;
 }
 
 .contenido h2 {
@@ -330,6 +308,16 @@ section {
   font-size: 1rem;
   color: #444;
   margin-bottom: 1rem;
+}
+
+/* =========================
+   SECCIONES GENERALES
+========================= */
+section {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #eee;
 }
 
 /* =========================
@@ -503,14 +491,26 @@ footer {
 }
 
 /* =========================
-   METODOLOGÍAS MODERNO
+   METODOLOGÍAS
 ========================= */
-.metodologia-layout {
-  max-width: 1100px;
+.metodologia {
+  text-align: center;
 }
 
-.metodologia-contenido {
-  max-width: 760px;
+.titulo-grande {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.subtitulo {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 2rem auto;
+  font-size: 1.1rem;
+  color: #555;
 }
 
 .hero-metodologia {
@@ -571,16 +571,12 @@ footer {
   width: 100%;
   padding: 1rem 1.1rem;
   margin-bottom: 0.8rem;
-
   background: #f8fafc;
   border: 1px solid #eef2f7;
   border-left: 4px solid #1a73e8;
-
   border-radius: 12px;
-
   color: #4b5563;
   line-height: 1.7;
-
   transition: all 0.2s ease;
 }
 
@@ -591,7 +587,9 @@ footer {
   .layout,
   .layout-double {
     grid-template-columns: 1fr;
+    width: 100%;
     max-width: 900px;
+    margin: 2rem auto;
     padding: 0 1.5rem;
   }
 
@@ -603,7 +601,8 @@ footer {
     overflow: visible;
   }
 
-  .contenido {
+  .contenido,
+  .metodologia-contenido {
     max-width: 100%;
   }
 
