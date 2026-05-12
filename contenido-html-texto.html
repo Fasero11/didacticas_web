@@ -25,7 +25,7 @@
       </li>
 
       <li class="dropdown">
-        <a href="contenido-intro_html.html">Contenido</a>
+        <a href="contenido.html">Contenido</a>
         <ul class="submenu">
           <li><a href="contenido-intro_html.html">HTML</a></li>
           <li><a href="contenido-intro_css.html">CSS</a></li>
@@ -42,11 +42,13 @@
 
   <main class="layout-double">
 
-  <!-- 🔵 SIDEBAR IZQUIERDA: navegación entre páginas -->
+      <!-- 🔵 SIDEBAR IZQUIERDA: navegación entre páginas -->
   <aside class="sidebar-left">
     <h3>Sesiones</h3>
 
-    <!-- HTML -->
+   
+
+     <!-- HTML -->
     <div class="sidebar-group">
       <p class="sidebar-group-title">HTML</p>
 
@@ -59,7 +61,7 @@
       </a>
 
       <a href="contenido-html-texto.html" class="active">
-        3. Etiquetas de texto
+        3. Etiquetas de contenido en HTML: texto, listas y tablas
       </a>
 
       <a href="contenido-html-enlaces-imagenes.html">
@@ -114,7 +116,10 @@
     <article class="contenido">
 
    <!-- 3 -->
-<h2 id="inicio">Sesión 3: Etiquetas de texto en HTML</h2>
+<h2 id="inicio">Sesión 3: Etiquetas de contenido en HTML: texto, listas y tablas</h2>
+
+
+
 
 <p>
 Las etiquetas de texto son fundamentales en HTML porque permiten organizar,
@@ -155,7 +160,7 @@ Cada etiqueta tiene una función específica:
 Estas etiquetas permiten que el contenido sea más claro, ordenado y visualmente comprensible.
 </p>
 
-<h3 id="parte2">2. Importancia de las etiquetas de texto</h3>
+<h3 id="parte2">2. Etiquetas de texto en HTML</h3>
 
 <p>
 Sin etiquetas de texto, una página web mostraría toda la información de forma desordenada.
@@ -177,11 +182,12 @@ Las etiquetas ayudan a:
 Por ello, dominar estas etiquetas es esencial para cualquier desarrollador web.
 </p>
 
-<h3 id="parte3">3. Principales etiquetas de texto</h3>
+
 
 <p>
 HTML utiliza diferentes etiquetas para mostrar texto con significado.
 Por ejemplo, los títulos ayudan a organizar el contenido y los párrafos permiten separar ideas.
+Además, existen etiquetas para crear listas ordenadas, listas desordenadas y tablas.
 </p>
 
 <p>
@@ -198,61 +204,24 @@ A la izquierda aparece el código, y a la derecha el resultado visual dentro de 
 </p>
 
 <ul>
-  <li><code>&lt;h1&gt;</code> — crea un título principal grande</li>
-  <li><code>&lt;p&gt;</code> — muestra un párrafo</li>
+  <li><code>&lt;h1&gt;</code> — título principal</li>
+  <li><code>&lt;h2&gt;</code> — subtítulo de segundo nivel</li>
+  <li><code>&lt;h3&gt;</code> — subtítulo de tercer nivel</li>
+  <li><code>&lt;h4&gt;</code> — subtítulo de cuarto nivel</li>
+  <li><code>&lt;h5&gt;</code> — subtítulo de quinto nivel</li>
+  <li><code>&lt;h6&gt;</code> — subtítulo de sexto nivel</li>
+  <li><code>&lt;p&gt;</code> — crea un párrafo</li>
+  <li><code>&lt;br&gt;</code> — inserta un salto de línea</li>
+  <li><code>&lt;hr&gt;</code> — crea una línea horizontal divisoria</li>
   <li><code>&lt;a&gt;</code> — crea un enlace</li>
-  <li><code>&lt;i&gt;</code> — muestra texto en cursiva</li>
-  <li><code>&lt;em&gt;</code> — enfatiza texto</li>
-  <li><code>&lt;b&gt;</code> — muestra texto en negrita</li>
-  <li><code>&lt;strong&gt;</code> — resalta texto importante</li>
+  <li><code>&lt;b&gt;</code> — texto en negrita visual</li>
+  <li><code>&lt;strong&gt;</code> — texto importante</li>
+  <li><code>&lt;i&gt;</code> — texto en cursiva visual</li>
+  <li><code>&lt;em&gt;</code> — texto enfatizado</li>
+  <li><code>&lt;mark&gt;</code> — resalta texto</li>
+  <li><code>&lt;small&gt;</code> — texto más pequeño</li>
+  <li><code>&lt;code&gt;</code> — muestra código</li>
 </ul>
-
-<h3 id="parte4">4. Diferencias entre etiquetas similares</h3>
-
-<p>
-Algunas etiquetas pueden parecer similares visualmente, pero tienen diferencias semánticas:
-</p>
-
-<ul>
-  <li><strong>&lt;b&gt;</strong> solo cambia el estilo visual a negrita.</li>
-  <li><strong>&lt;strong&gt;</strong> indica importancia semántica.</li>
-  <li><strong>&lt;i&gt;</strong> aplica cursiva visual.</li>
-  <li><strong>&lt;em&gt;</strong> añade énfasis semántico.</li>
-</ul>
-
-<p>
-Esto significa que ciertas etiquetas no solo modifican la apariencia,
-sino también el significado del contenido.
-</p>
-
-<h3 id="parte5">5. Buenas prácticas</h3>
-
-<p>
-Para escribir contenido correctamente en HTML se recomienda:
-</p>
-
-<ul>
-  <li>Usar títulos de forma jerárquica</li>
-  <li>No abusar de negritas o cursivas</li>
-  <li>Utilizar <code>&lt;strong&gt;</code> para información importante</li>
-  <li>Separar claramente párrafos</li>
-  <li>Usar enlaces descriptivos</li>
-</ul>
-
-<p>
-Estas prácticas mejoran tanto la organización como la accesibilidad del sitio.
-</p>
-
-<h3 id="parte6">6. Resumen y actividad</h3>
-
-<p>
-Las etiquetas de texto permiten estructurar la información escrita en HTML,
-mejorando su presentación, organización y significado.
-</p>
-
-<p>
-Comprender estas etiquetas es esencial para crear páginas web claras y profesionales.
-</p>
 
 <p>
 A continuación, realiza la actividad práctica para identificar correctamente
@@ -267,7 +236,9 @@ las principales etiquetas de texto.
     <button onclick="openTab('respuesta3')">Respuesta</button>
   </div>
 
-  <!-- Tarea -->
+</div>
+
+<!-- Tarea -->
   <div id="tarea3" class="tab-content">
     <p><strong>Tarea:</strong> Completa el siguiente código usando las etiquetas correctas:</p>
 
@@ -313,7 +284,170 @@ las principales etiquetas de texto.
 </pre>
   </div>
 
+<h3 id="parte3">3. Etiquetas para listas ordenadas y desordenadas</h3>
+
+<p>
+Las listas permiten organizar información en elementos agrupados.
+</p>
+
+<ul>
+  <li><code>&lt;ul&gt;</code> — crea una lista desordenada (con viñetas)</li>
+  <li><code>&lt;ol&gt;</code> — crea una lista ordenada (numerada)</li>
+  <li><code>&lt;li&gt;</code> — define cada elemento de la lista</li>
+</ul>
+
+<p><strong>Ejemplo de lista desordenada:</strong></p>
+
+<pre>
+&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+  &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+<p><strong>Ejemplo de lista ordenada:</strong></p>
+
+<pre>
+&lt;ol&gt;
+  &lt;li&gt;Abrir el editor&lt;/li&gt;
+  &lt;li&gt;Escribir código&lt;/li&gt;
+  &lt;li&gt;Guardar el archivo&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+
+<p>
+A continuación, realiza la actividad práctica para identificar correctamente
+las etiquetas utilizadas en listas ordenadas y desordenadas en HTML.
+</p>
+<div class="tabs">
+
+  <!-- Botones -->
+  <div class="tab-buttons">
+    <button onclick="openTab('tareaListas')">Tarea</button>
+    <button onclick="openTab('respuestaListas')">Respuesta</button>
+  </div>
+
+  <!-- Tarea -->
+  <div id="tareaListas" class="tab-content">
+    <p><strong>Tarea:</strong> Completa el siguiente código usando las etiquetas correctas para listas:</p>
+
+<pre>
+&lt;_____&gt;
+  &lt;_____&gt;HTML&lt;/_____&gt;
+  &lt;_____&gt;CSS&lt;/_____&gt;
+  &lt;_____&gt;JavaScript&lt;/_____&gt;
+&lt;/_____&gt;
+
+&lt;_____&gt;
+  &lt;_____&gt;Abrir el editor&lt;/_____&gt;
+  &lt;_____&gt;Escribir código&lt;/_____&gt;
+  &lt;_____&gt;Guardar el archivo&lt;/_____&gt;
+&lt;/_____&gt;
+</pre>
+  </div>
+
+  <!-- Respuesta -->
+  <div id="respuestaListas" class="tab-content" style="display:none;">
+    <p><strong>Respuesta:</strong></p>
+
+<pre>
+&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+  &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Abrir el editor&lt;/li&gt;
+  &lt;li&gt;Escribir código&lt;/li&gt;
+  &lt;li&gt;Guardar el archivo&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+  </div>
+
 </div>
+
+
+<h3 id="parte4">4. Etiquetas para tablas en HTML</h3>
+
+<p>
+Las tablas sirven para organizar datos en filas y columnas.
+</p>
+
+<ul>
+  <li><code>&lt;table&gt;</code> — crea la tabla</li>
+  <li><code>&lt;tr&gt;</code> — crea una fila</li>
+  <li><code>&lt;th&gt;</code> — crea una celda de encabezado</li>
+  <li><code>&lt;td&gt;</code> — crea una celda de datos</li>
+</ul>
+
+
+
+
+<p>
+A continuación, realiza la actividad práctica para identificar correctamente
+las etiquetas utilizadas en listas ordenadas, listas desordenadas y tablas en HTML.
+</p>
+
+<div class="tabs">
+
+  <!-- Botones -->
+  <div class="tab-buttons">
+    <button onclick="openTab('tareaTablas')">Tarea</button>
+    <button onclick="openTab('respuestaTablas')">Respuesta</button>
+  </div>
+
+  <!-- Tarea -->
+  <div id="tareaTablas" class="tab-content">
+    <p><strong>Tarea:</strong> Completa el siguiente código usando las etiquetas correctas para tablas:</p>
+
+<pre>
+&lt;_____&gt;
+  &lt;_____&gt;
+    &lt;_____&gt;Lenguaje&lt;/_____&gt;
+    &lt;_____&gt;Uso&lt;/_____&gt;
+  &lt;/_____&gt;
+
+  &lt;_____&gt;
+    &lt;_____&gt;HTML&lt;/_____&gt;
+    &lt;_____&gt;Estructura&lt;/_____&gt;
+  &lt;/_____&gt;
+
+  &lt;_____&gt;
+    &lt;_____&gt;CSS&lt;/_____&gt;
+    &lt;_____&gt;Diseño&lt;/_____&gt;
+  &lt;/_____&gt;
+&lt;/_____&gt;
+</pre>
+  </div>
+
+  <!-- Respuesta -->
+  <div id="respuestaTablas" class="tab-content" style="display:none;">
+    <p><strong>Respuesta:</strong></p>
+
+<pre>
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Lenguaje&lt;/th&gt;
+    &lt;th&gt;Uso&lt;/th&gt;
+  &lt;/tr&gt;
+
+  &lt;tr&gt;
+    &lt;td&gt;HTML&lt;/td&gt;
+    &lt;td&gt;Estructura&lt;/td&gt;
+  &lt;/tr&gt;
+
+  &lt;tr&gt;
+    &lt;td&gt;CSS&lt;/td&gt;
+    &lt;td&gt;Diseño&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+  </div>
+
+</div>
+
 
 
 <div class="nav-buttons">
@@ -323,18 +457,16 @@ las principales etiquetas de texto.
 
     </article>
 
-    <!-- 📑 SIDEBAR DERECHA: índice interno -->
+  
    <aside class="sidebar">
   <h3>Índice</h3>
 
-<a href="#inicio">Inicio</a>
-<a href="#parte1">1. ¿Qué son las etiquetas de texto?</a>
-<a href="#parte2">2. Importancia de las etiquetas de texto</a>
-<a href="#parte3">3. Principales etiquetas de texto</a>
-<a href="#parte4">4. Diferencias entre etiquetas similares</a>
-<a href="#parte5">5. Buenas prácticas</a>
-<a href="#parte6">6. Resumen y actividad</a>
-</aside>
+  <a href="#inicio">Inicio</a>
+  <a href="#parte1">1. ¿Qué son las etiquetas de texto?</a>
+  <a href="#parte2">2. Etiquetas de texto en HTML</a>
+  <a href="#parte3">3. Etiquetas para listas ordenadas y desordenadas</a>
+  <a href="#parte4">4. Etiquetas para tablas en HTML</a>
+  </aside>
 
   </main>
 
