@@ -147,7 +147,7 @@ Permite alinear elementos verticalmente.
 <p>Crea un contenedor flex.</p>
 </div>
 
-<div id="respuesta4" class="tab-content" style="display:none;">
+<div id="respuesta4" class="tab-content hidden">
 <pre><code>
 .container {
   display: flex;
@@ -182,8 +182,12 @@ Permite alinear elementos verticalmente.
 <script>
 function openTab(tabId) {
   const tabs = document.querySelectorAll(".tab-content");
-  tabs.forEach(tab => tab.style.display = "none");
-  document.getElementById(tabId).style.display = "block";
+
+  tabs.forEach(tab => {
+    tab.classList.add("hidden");
+  });
+
+  document.getElementById(tabId).classList.remove("hidden");
 }
 </script>
 

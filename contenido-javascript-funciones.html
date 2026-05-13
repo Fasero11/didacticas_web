@@ -184,7 +184,7 @@
                     </ul>
                 </div>
 
-                <div id="respuesta" class="tab-content" style="display:none;">
+                <div id="respuesta" class="tab-content hidden">
                     <p><strong>Respuesta (ejemplo):</strong></p>
                     <img src="images/Código-función.PNG" width="600">
                 </div>
@@ -217,13 +217,17 @@
         <p>&copy; 2026 Mi Web</p>
     </footer>
 
-    <script>function openTab(tabId) {
-            const tabs = document.querySelectorAll(".tab-content");
-            tabs.forEach(tab => tab.style.display = "none");
+ <script>
+function openTab(tabId) {
+  const tabs = document.querySelectorAll(".tab-content");
 
-            document.getElementById(tabId).style.display = "block";
-        }</script>
+  tabs.forEach(tab => {
+    tab.classList.add("hidden");
+  });
 
+  document.getElementById(tabId).classList.remove("hidden");
+}
+</script>
 </body>
 
 </html>

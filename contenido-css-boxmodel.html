@@ -153,7 +153,7 @@ div {
 <p>Añade padding de 15px a una caja.</p>
 </div>
 
-<div id="respuesta3" class="tab-content" style="display:none;">
+<div id="respuesta3" class="tab-content hidden">
 <pre><code>
 .caja {
   padding: 15px;
@@ -187,8 +187,12 @@ div {
 <script>
 function openTab(tabId) {
   const tabs = document.querySelectorAll(".tab-content");
-  tabs.forEach(tab => tab.style.display = "none");
-  document.getElementById(tabId).style.display = "block";
+
+  tabs.forEach(tab => {
+    tab.classList.add("hidden");
+  });
+
+  document.getElementById(tabId).classList.remove("hidden");
 }
 </script>
 

@@ -151,7 +151,7 @@ p {
 <p><strong>Tarea:</strong> Cambia el color de un título usando CSS.</p>
 </div>
 
-<div id="respuesta" class="tab-content" style="display:none;">
+<div id="respuesta" class="tab-content hidden">
 <pre><code>
 h1 {
   color: red;
@@ -184,8 +184,12 @@ h1 {
 <script>
 function openTab(tabId) {
   const tabs = document.querySelectorAll(".tab-content");
-  tabs.forEach(tab => tab.style.display = "none");
-  document.getElementById(tabId).style.display = "block";
+
+  tabs.forEach(tab => {
+    tab.classList.add("hidden");
+  });
+
+  document.getElementById(tabId).classList.remove("hidden");
 }
 </script>
 

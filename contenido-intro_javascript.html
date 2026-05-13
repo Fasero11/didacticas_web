@@ -284,7 +284,7 @@
                     </ul>
                 </div>
 
-                <div id="respuesta" class="tab-content" style="display:none;">
+                <div id="respuesta" class="tab-content hidden">
                     <p><strong>Respuesta (ejemplo):</strong></p>
                     <ul>
                         <li>La etiqueta es &lt;script&gt; y el atributo es src="scripts/logica.js".</li>
@@ -322,13 +322,16 @@
     </footer>
 
     <script>
-        function openTab(tabId) {
-            const tabs = document.querySelectorAll(".tab-content");
-            tabs.forEach(tab => tab.style.display = "none");
+function openTab(tabId) {
+  const tabs = document.querySelectorAll(".tab-content");
 
-            document.getElementById(tabId).style.display = "block";
-        }
-    </script>
+  tabs.forEach(tab => {
+    tab.classList.add("hidden");
+  });
+
+  document.getElementById(tabId).classList.remove("hidden");
+}
+</script>
 
 </body>
 
