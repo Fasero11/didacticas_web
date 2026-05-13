@@ -305,7 +305,7 @@ A continuación puedes ver un video introductorio que explica su funcionamiento:
     </ul>
   </div>
 
-  <div id="respuesta" class="tab-content" style="display:none;">
+  <div id="respuesta" class="tab-content hidden">
     <p><strong>Respuesta (ejemplo):</strong></p>
     <ul>
       <li>HTML es un lenguaje de marcado.</li>
@@ -346,12 +346,15 @@ A continuación puedes ver un video introductorio que explica su funcionamiento:
   </footer>
 
 
-  <script>
+<script>
 function openTab(tabId) {
   const tabs = document.querySelectorAll(".tab-content");
-  tabs.forEach(tab => tab.style.display = "none");
 
-  document.getElementById(tabId).style.display = "block";
+  tabs.forEach(tab => {
+    tab.classList.add("hidden");
+  });
+
+  document.getElementById(tabId).classList.remove("hidden");
 }
 </script>
 </body>

@@ -262,7 +262,7 @@ las principales etiquetas de texto.
   </div>
 
   <!-- Respuesta -->
-  <div id="respuesta3" class="tab-content" style="display:none;">
+  <div id="respuesta3" class="tab-content hidden">
     <p><strong>Respuesta:</strong></p>
 
 <pre>
@@ -348,7 +348,7 @@ las etiquetas utilizadas en listas ordenadas y desordenadas en HTML.
   </div>
 
   <!-- Respuesta -->
-  <div id="respuestaListas" class="tab-content" style="display:none;">
+  <div id="respuestaListas" class="tab-content hidden">
     <p><strong>Respuesta:</strong></p>
 
 <pre>
@@ -423,7 +423,7 @@ las etiquetas utilizadas en listas ordenadas, listas desordenadas y tablas en HT
   </div>
 
   <!-- Respuesta -->
-  <div id="respuestaTablas" class="tab-content" style="display:none;">
+  <div id="respuestaTablas" class="tab-content hidden">
     <p><strong>Respuesta:</strong></p>
 
 <pre>
@@ -477,12 +477,15 @@ las etiquetas utilizadas en listas ordenadas, listas desordenadas y tablas en HT
   </footer>
 
 
-  <script>
+ <script>
 function openTab(tabId) {
   const tabs = document.querySelectorAll(".tab-content");
-  tabs.forEach(tab => tab.style.display = "none");
 
-  document.getElementById(tabId).style.display = "block";
+  tabs.forEach(tab => {
+    tab.classList.add("hidden");
+  });
+
+  document.getElementById(tabId).classList.remove("hidden");
 }
 </script>
 </body>

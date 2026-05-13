@@ -364,7 +364,7 @@ sobre la estructura básica de un documento HTML.
         </div>
 
 
-        <div id="respuesta2" class="tab-content" style="display:none;">
+        <div id="respuesta2" class="tab-content hidden">
           <p><strong>Respuesta:</strong></p>
 
           <pre>
@@ -406,14 +406,17 @@ sobre la estructura básica de un documento HTML.
   </footer>
 
 
-  <script>
-    function openTab(tabId) {
-      const tabs = document.querySelectorAll(".tab-content");
-      tabs.forEach(tab => tab.style.display = "none");
+ <script>
+function openTab(tabId) {
+  const tabs = document.querySelectorAll(".tab-content");
 
-      document.getElementById(tabId).style.display = "block";
-    }
-  </script>
+  tabs.forEach(tab => {
+    tab.classList.add("hidden");
+  });
+
+  document.getElementById(tabId).classList.remove("hidden");
+}
+</script>
 </body>
 
 </html>

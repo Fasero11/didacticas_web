@@ -237,7 +237,7 @@ correctamente los diferentes tipos de enlaces en HTML y su uso dentro de página
 </pre>
   </div>
 
-  <div id="respuesta4" class="tab-content" style="display:none;">
+  <div id="respuesta4" class="tab-content hidden">
     <p><strong>Respuesta:</strong></p>
 
 <pre>
@@ -332,7 +332,7 @@ completa esta actividad para practicar la integración de imágenes dentro de un
 </pre>
   </div>
 
-  <div id="respuesta5" class="tab-content" style="display:none;">
+  <div id="respuesta5" class="tab-content hidden">
     <p><strong>Respuesta:</strong></p>
 
 <pre>
@@ -433,7 +433,7 @@ un video en tu página web.
   </div>
 
   <!-- Respuesta -->
-  <div id="respuestaVideo" class="tab-content" style="display:none;">
+  <div id="respuestaVideo" class="tab-content hidden">
     <p><strong>Respuesta:</strong></p>
 
 <pre>
@@ -475,12 +475,15 @@ un video en tu página web.
   </footer>
 
 
-  <script>
+<script>
 function openTab(tabId) {
   const tabs = document.querySelectorAll(".tab-content");
-  tabs.forEach(tab => tab.style.display = "none");
 
-  document.getElementById(tabId).style.display = "block";
+  tabs.forEach(tab => {
+    tab.classList.add("hidden");
+  });
+
+  document.getElementById(tabId).classList.remove("hidden");
 }
 </script>
 </body>

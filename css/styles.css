@@ -665,3 +665,7 @@ button:hover {
 .multi-select option {
   padding: 8px 10px;
 }
+
+.hidden {
+  display: none;
+}
