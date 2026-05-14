@@ -7,41 +7,51 @@
     const q6 = document.querySelector('select[name="q6"]');
     const q6Seleccionadas = Array.from(q6.selectedOptions);
 
-    if (!q1 || q2 === "Incorrecto" || !q4 || !q5 || q6Seleccionadas.length === 0) {
+    if (!q1 || q2 === "" || !q4 || !q5 || q6Seleccionadas.length === 0) {
         alert("¡Ojo! Te faltan preguntas por responder.");
         return;
     }
 
     let nota = 0;
 
-    nota += parseInt(q1.value);
+    const mostrarFeedback = (id, esCorrecto, mensaje) => {
+        const el = document.getElementById(id);
+        el.innerHTML = esCorrecto ? `✅ Correcto: ${mensaje}` : `❌ Incorrecto. La respuesta era: ${mensaje}`;
+        el.style.color = esCorrecto ? "#28a745" : "#dc3545";
+        el.style.display = "block";
+    };
 
-    if (q2 === "1") {
-        nota += 1;
-    }
+    const q1Correcta = q1.value === "1";
+    if (q1Correcta) nota += 1;
+    mostrarFeedback("feedback-q1", q1Correcta, "Un lenguaje de marcado que se utiliza para estructurar el contenido de una página web.");
+
+    const q2Correcta = q2 === "1";
+    if (q2Correcta) nota += 1;
+    mostrarFeedback("feedback-q2", q2Correcta, "Para estructurar y organizar el contenido de una página web.");
 
     const q3Valores = Array.from(q3).map(el => el.value);
-    if (q3Valores.length === 2 && q3Valores.every(valor => valor === "1")) {
-        nota += 1;
-    }
+    const q3Correcta = q3Valores.length === 2 && q3Valores.every(v => v === "1");
+    if (q3Correcta) nota += 1;
+    mostrarFeedback("feedback-q3", q3Correcta, "&lt;p&gt; (párrafo) y &lt;h1&gt; (encabezado)");
 
-    nota += parseInt(q4.value);
-    nota += parseInt(q5.value);
+    const q4Correcta = q4.value === "1";
+    if (q4Correcta) nota += 1;
+    mostrarFeedback("feedback-q4", q4Correcta, "console.log()");
+
+    const q5Correcta = q5.value === "1";
+    if (q5Correcta) nota += 1;
+    mostrarFeedback("feedback-q5", q5Correcta, "const miValor = 10;");
 
     const q6Valores = q6Seleccionadas.map(el => el.value);
-    if (q6Valores.length === 2 && q6Valores.every(valor => valor === "1")) {
-        nota += 1;
-    }
+    const q6Correcta = q6Valores.length === 2 && q6Valores.every(v => v === "1");
+    if (q6Correcta) nota += 1;
+    mostrarFeedback("feedback-q6", q6Correcta, "// y /* ... */");
 
     const display = document.getElementById("resultado");
     const aprobado = nota >= 4;
 
     display.style.display = "block";
     display.className = aprobado ? "resultado-aprobado" : "resultado-suspenso";
-
-    display.innerHTML = `Puntuación: ${nota} / 6 <br> ${
-        aprobado
-            ? '¡Felicidades, has aprobado! 🎉'
-            : 'No has alcanzado la nota mínima. ¡Sigue repasando! 📚'
-    }`;
+    display.innerHTML = `Puntuación: ${nota} / 6 <br> ${aprobado ? '¡Felicidades! 🎉' : 'Sigue repasando 📚'
+        }`;
 }
