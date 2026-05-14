@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Didácticas</title>
+  <title>Guía de aprendizaje de desarrollo web</title>
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/styles.css">
@@ -11,40 +11,121 @@
 <body>
 
   <!-- Header -->
-<header>
-  <h1>Didácticas</h1>
+  <header>
+    <h1>Didácticas</h1>
 
-  <nav>
-    <ul class="menu">
-      <li><a href="index.html">Inicio</a></li>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
 
-      <li class="dropdown">
-        <a href="metodologia.html">Metodologías</a>
+        <li class="dropdown">
+          <a href="metodologia.html">Metodologías</a>
+        </li>
 
-      </li>
+        <li class="dropdown">
+          <a href="contenido-intro_html.html">Contenido</a>
+          <ul class="submenu">
+            <li><a href="contenido-intro_html.html">HTML</a></li>
+            <li><a href="contenido-intro_css.html">CSS</a></li>
+            <li><a href="contenido-intro_javascript.html">JavaScript</a></li>
+          </ul>
+        </li>
 
-      <li class="dropdown">
-        <a href="contenido-intro_html.html">Contenido</a>
-        <ul class="submenu">
-          <li><a href="contenido-intro_html.html">HTML</a></li>
-          <li><a href="contenido-intro_css.html">CSS</a></li>
-          <li><a href="contenido-intro_javascript.html">JavaScript</a></li>
-        </ul>
-      </li>
-
-      <li class="dropdown">
-        <a href="autoevaluacion.html">Autoevaluación</a>
-      </li>
-    </ul>
-  </nav>
-</header>
+        <li class="dropdown">
+          <a href="autoevaluacion.html">Autoevaluación</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
   <!-- Contenido principal -->
-  <main>
-    <section>
-      <h2>Bienvenido</h2>
-      <p>Esta es mi página principal.</p>
-    </section>
+  <main class="layout">
+    <article class="contenido">
+
+      <section class="hero-metodologia" id="inicio">
+        <h2>Guía de aprendizaje de desarrollo web</h2>
+        <p>
+          Esta plataforma ha sido diseñada como un recurso educativo para introducir a los usuarios
+          en el mundo del desarrollo web de una manera sencilla, visual y progresiva.
+        </p>
+      </section>
+
+      <section class="metodo-card" id="presentacion">
+        <h3>Presentación</h3>
+        <p>
+          El objetivo principal de esta web es servir como material didáctico para alumnos de enseñanza
+          preuniversitaria que quieran iniciarse en la creación de páginas web desde cero.
+        </p>
+        <p>
+          A lo largo de la página podrás aprender los fundamentos básicos de las tecnologías más importantes
+          utilizadas en el desarrollo web: HTML, CSS y JavaScript. Cada sección está pensada para explicar
+          los contenidos de forma clara y ordenada, facilitando el aprendizaje incluso a quienes no tienen
+          experiencia previa.
+        </p>
+        <p>
+          En esta web encontrarás contenidos organizados por temas, ejemplos prácticos y actividades de
+          autoevaluación que te permitirán comprobar tus conocimientos y avanzar paso a paso.
+        </p>
+      </section>
+
+      <section class="metodo-card" id="aprendizaje">
+        <h3>¿Qué aprenderás en esta web?</h3>
+
+        <ul class="lista-moderna">
+          <li>
+            <strong>HTML:</strong> aprenderás a crear la estructura básica de una página web utilizando
+            etiquetas, encabezados, párrafos, enlaces, imágenes y otros elementos fundamentales.
+          </li>
+          <li>
+            <strong>CSS:</strong> descubrirás cómo mejorar la apariencia visual de las páginas web aplicando
+            colores, diseños, tamaños, distribución de elementos y estilos modernos.
+          </li>
+          <li>
+            <strong>JavaScript:</strong> conocerás los conceptos básicos de programación e interactividad para
+            añadir dinamismo a las páginas web mediante funciones, variables y manipulación de elementos.
+          </li>
+        </ul>
+      </section>
+
+      <section class="metodo-card" id="explora">
+        <h3>Esperamos que disfrutes el aprendizaje</h3>
+        <p>
+          Te invitamos a explorar cada sección, practicar con los ejercicios y descubrir cómo se construyen
+          las páginas web modernas.
+        </p>
+        <p>
+          El aprendizaje del desarrollo web es una habilidad útil y creativa que abre las puertas a nuevas
+          oportunidades tecnológicas, académicas y profesionales.
+        </p>
+
+        <div class="botones">
+          <a class="btn" href="contenido-intro_html.html">Empezar con HTML</a>
+          <a class="btn" href="autoevaluacion.html">Ir a la autoevaluación</a>
+        </div>
+      </section>
+
+      <section class="metodo-card" id="autores">
+        <h3>Autores</h3>
+        <p>El proyecto ha sido desarrollado por:</p>
+        <ul>
+          <li>Daniel Escanciano Reyero</li>
+          <li>Raul Lara Gonzalez</li>
+          <li>Cristofer Tamaral Martin</li>
+          <li>Gonzalo Vega Pérez</li>
+          <li>Liudmila Zamorskaia</li>
+        </ul>
+      </section>
+
+    </article>
+
+    <aside class="sidebar">
+      <h3>En esta página</h3>
+      <a href="#inicio">Inicio</a>
+      <a href="#presentacion">Presentación</a>
+      <a href="#aprendizaje">¿Qué aprenderás?</a>
+      <a href="#explora">Explora la web</a>
+      <a href="#autores">Autores</a>
+    </aside>
   </main>
 
   <!-- Footer -->
