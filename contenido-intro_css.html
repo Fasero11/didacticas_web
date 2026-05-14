@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -19,7 +18,6 @@
 
         <li class="dropdown">
           <a href="metodologia.html">Metodologías</a>
-
         </li>
 
         <li class="dropdown">
@@ -40,68 +38,52 @@
 
 <main class="layout-double">
 
-  <!-- 🔵 SIDEBAR IZQUIERDA: navegación entre páginas -->
 <aside class="sidebar-left">
   <h3>Sesiones</h3>
 
-  <!-- HTML -->
   <div class="sidebar-group">
     <p class="sidebar-group-title">HTML</p>
-
     <a href="contenido-intro_html.html">
       1. Introducción a HTML
     </a>
-
     <a href="contenido-html-estructura.html">
       2. Estructura y etiquetas básicas
     </a>
-
     <a href="contenido-html-texto.html">
-      3. Etiquetas de texto
+      3. Etiquetas de contenido en HTML
     </a>
-
     <a href="contenido-html-enlaces-imagenes.html">
-      4. Enlaces e imágenes
+      4. Enlaces, imágenes y videos
     </a>
   </div>
 
-  <!-- CSS -->
   <div class="sidebar-group">
     <p class="sidebar-group-title">CSS</p>
-
     <a href="contenido-intro_css.html" class="active">
       1. Introducción a CSS
     </a>
-
     <a href="contenido-css-selectores.html">
       2. Selectores CSS
     </a>
-
     <a href="contenido-css-boxmodel.html">
       3. Box Model y espaciado
     </a>
-
     <a href="contenido-css-flexbox.html">
       4. Flexbox y diseño responsive
     </a>
   </div>
 
-  <!-- JavaScript -->
   <div class="sidebar-group">
     <p class="sidebar-group-title">JavaScript</p>
-
     <a href="contenido-intro_javascript.html">
       1. Introducción a JavaScript
     </a>
-
     <a href="contenido-javascript-sintaxis.html">
       2. Lógica y sintaxis base
     </a>
-
     <a href="contenido-javascript-dom.html">
       3. Interacción con el DOM
     </a>
-
     <a href="contenido-javascript-funciones.html">
       4. Funciones y reutilización
     </a>
@@ -113,82 +95,135 @@
 <h2 id="inicio">Sesión 1: Introducción a CSS</h2>
 
 <p>
-CSS (Cascading Style Sheets) es el lenguaje utilizado para dar estilo y diseño visual a las páginas web.
+CSS es el lenguaje que se utiliza para definir el aspecto visual de una página web. Mientras HTML organiza el contenido, CSS decide cómo se ve: colores, tamaños, márgenes, fuentes, distribución, sombras y adaptación a distintos dispositivos.
 </p>
 
-<h3 id="parte1">1. ¿Qué es CSS?</h3>
+<div class="demo-card demo-css-before-after" id="parte1">
+  <div>
+    <span class="demo-label">HTML sin CSS</span>
+    <div class="demo-box plain-demo">Título, texto y botón sin estilo</div>
+  </div>
+  <div>
+    <span class="demo-label">HTML con CSS</span>
+    <div class="demo-box styled-demo">
+      <strong>Página con estilo</strong>
+      <p>Colores, bordes, espacio y botón visual.</p>
+      <span>Comenzar</span>
+    </div>
+  </div>
+</div>
 
+<h3 id="parte2">1. Cambiar colores</h3>
 <p>
-CSS permite modificar colores, tamaños, márgenes, posiciones y otros aspectos visuales.
+Una de las funciones más básicas de CSS es cambiar el color del texto, del fondo o de los botones. Esto ayuda a destacar información importante y a crear una identidad visual.
 </p>
 
-<h3 id="parte2">2. ¿Para qué sirve CSS?</h3>
+<pre><code>h1 {
+  color: #1a73e8;
+}</code></pre>
 
-<ul>
-<li>Aplicar colores</li>
-<li>Modificar tamaños</li>
-<li>Crear diseños modernos</li>
-<li>Adaptar páginas a móviles</li>
-</ul>
+<div class="demo-card">
+  <p class="demo-title">Demostración de color</p>
+  <p>Texto normal sin destacar.</p>
+  <p class="demo-color-text">Este texto cambia de color gracias a CSS.</p>
+  <div class="demo-color-row">
+    <span class="demo-color-box color-blue">Azul</span>
+    <span class="demo-color-box color-green">Verde</span>
+    <span class="demo-color-box color-purple">Morado</span>
+  </div>
+</div>
 
-<h3 id="parte3">3. Ejemplo básico</h3>
+<h3 id="parte3">2. Modificar tamaños</h3>
+<p>
+CSS también permite cambiar el tamaño de textos, cajas, imágenes o botones. Esto sirve para crear jerarquía visual: los títulos suelen ser más grandes que los párrafos, y los elementos importantes pueden ocupar más espacio.
+</p>
 
-<pre><code>
-p {
-  color: blue;
-  font-size: 20px;
-}
-</code></pre>
+<pre><code>.titulo {
+  font-size: 32px;
+}</code></pre>
+
+<div class="demo-card">
+  <p class="demo-title">Demostración de tamaño</p>
+  <p class="demo-small">Texto pequeño</p>
+  <p class="demo-medium">Texto mediano</p>
+  <p class="demo-large">Texto grande</p>
+</div>
+
+<h3 id="parte4">3. Crear cajas visuales</h3>
+<p>
+Con CSS se pueden transformar bloques simples en tarjetas, avisos, botones o secciones completas. Para ello se combinan propiedades como <code>background</code>, <code>border</code>, <code>border-radius</code>, <code>padding</code> y <code>box-shadow</code>.
+</p>
+
+<pre><code>.tarjeta {
+  background: white;
+  border: 1px solid #e8eef7;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}</code></pre>
+
+<div class="demo-card demo-card-grid">
+  <div class="mini-card simple-card">Caja simple</div>
+  <div class="mini-card visual-card">Caja con estilo CSS</div>
+</div>
+
+<h3 id="parte5">4. Separar contenido y diseño</h3>
+<p>
+Una ventaja importante de CSS es que permite mantener el contenido en el archivo HTML y el diseño en un archivo externo, normalmente llamado <code>styles.css</code>. Así, una misma hoja de estilos puede aplicarse a muchas páginas.
+</p>
+
+<pre><code>&lt;link rel="stylesheet" href="css/styles.css"&gt;</code></pre>
+
+<div class="demo-note">
+  <strong>Idea clave:</strong> HTML responde a “qué contenido hay” y CSS responde a “cómo se muestra ese contenido”.
+</div>
 
 <div class="tabs">
+  <div class="tab-buttons">
+    <button onclick="openTab('tarea-css-intro')">Tarea</button>
+    <button onclick="openTab('respuesta-css-intro')">Respuesta</button>
+  </div>
 
-<div class="tab-buttons">
-<button onclick="openTab('tarea')">Tarea</button>
-<button onclick="openTab('respuesta')">Respuesta</button>
-</div>
+  <div id="tarea-css-intro" class="tab-content">
+    <p><strong>Tarea:</strong> Crea una regla CSS para que un título sea azul, tenga tamaño de 32px y aparezca centrado.</p>
+  </div>
 
-<div id="tarea" class="tab-content">
-<p><strong>Tarea:</strong> Cambia el color de un título usando CSS.</p>
-</div>
-
-<div id="respuesta" class="tab-content hidden">
-<pre><code>
-h1 {
-  color: red;
-}
-</code></pre>
-</div>
-
+  <div id="respuesta-css-intro" class="tab-content hidden">
+<pre><code>h1 {
+  color: #1a73e8;
+  font-size: 32px;
+  text-align: center;
+}</code></pre>
+  </div>
 </div>
 
 <div class="nav-buttons">
-<a href="contenido-css-selectores.html" class="next">Siguiente →</a>
+  <a href="contenido-css-selectores.html" class="next">Siguiente →</a>
 </div>
 
 </article>
 
 <aside class="sidebar">
-<h3>Índice</h3>
+  <h3>Índice</h3>
 <a href="#inicio">Inicio</a>
-<a href="#parte1">1. ¿Qué es CSS?</a>
-<a href="#parte2">2. ¿Para qué sirve CSS?</a>
-<a href="#parte3">3. Ejemplo básico</a>
+<a href="#parte1">Demostración inicial</a>
+<a href="#parte2">1. Cambiar colores</a>
+<a href="#parte3">2. Modificar tamaños</a>
+<a href="#parte4">3. Crear cajas visuales</a>
+<a href="#parte5">4. Separar contenido y diseño</a>
+<a href="#tarea-css-intro">Actividad práctica</a>
 </aside>
 
 </main>
 
 <footer>
-<p>&copy; 2026 Mi Web</p>
+  <p>&copy; 2026 Mi Web</p>
 </footer>
 
 <script>
 function openTab(tabId) {
   const tabs = document.querySelectorAll(".tab-content");
-
-  tabs.forEach(tab => {
-    tab.classList.add("hidden");
-  });
-
+  tabs.forEach(tab => tab.classList.add("hidden"));
   document.getElementById(tabId).classList.remove("hidden");
 }
 </script>

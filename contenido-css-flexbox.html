@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Flexbox</title>
-<link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox y diseño responsive</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
@@ -19,7 +18,6 @@
 
         <li class="dropdown">
           <a href="metodologia.html">Metodologías</a>
-
         </li>
 
         <li class="dropdown">
@@ -40,68 +38,52 @@
 
 <main class="layout-double">
 
-    <!-- 🔵 SIDEBAR IZQUIERDA: navegación entre páginas -->
 <aside class="sidebar-left">
   <h3>Sesiones</h3>
 
-  <!-- HTML -->
   <div class="sidebar-group">
     <p class="sidebar-group-title">HTML</p>
-
     <a href="contenido-intro_html.html">
       1. Introducción a HTML
     </a>
-
     <a href="contenido-html-estructura.html">
       2. Estructura y etiquetas básicas
     </a>
-
     <a href="contenido-html-texto.html">
-      3. Etiquetas de texto
+      3. Etiquetas de contenido en HTML
     </a>
-
     <a href="contenido-html-enlaces-imagenes.html">
-      4. Enlaces e imágenes
+      4. Enlaces, imágenes y videos
     </a>
   </div>
 
-  <!-- CSS -->
   <div class="sidebar-group">
     <p class="sidebar-group-title">CSS</p>
-
     <a href="contenido-intro_css.html">
       1. Introducción a CSS
     </a>
-
     <a href="contenido-css-selectores.html">
       2. Selectores CSS
     </a>
-
     <a href="contenido-css-boxmodel.html">
       3. Box Model y espaciado
     </a>
-
     <a href="contenido-css-flexbox.html" class="active">
       4. Flexbox y diseño responsive
     </a>
   </div>
 
-  <!-- JavaScript -->
   <div class="sidebar-group">
     <p class="sidebar-group-title">JavaScript</p>
-
     <a href="contenido-intro_javascript.html">
       1. Introducción a JavaScript
     </a>
-
     <a href="contenido-javascript-sintaxis.html">
       2. Lógica y sintaxis base
     </a>
-
     <a href="contenido-javascript-dom.html">
       3. Interacción con el DOM
     </a>
-
     <a href="contenido-javascript-funciones.html">
       4. Funciones y reutilización
     </a>
@@ -113,80 +95,152 @@
 <h2 id="inicio">Sesión 4: Flexbox y diseño responsive</h2>
 
 <p>
-Flexbox es un sistema de diseño que facilita organizar elementos.
+Flexbox es un sistema de CSS pensado para organizar elementos en filas o columnas de forma sencilla. Es especialmente útil para crear menús, tarjetas, botones alineados y diseños que se adaptan mejor a distintos tamaños de pantalla.
 </p>
 
-<h3 id="parte1">1. display:flex</h3>
+<h3 id="parte1">1. display: flex</h3>
+<p>
+Al aplicar <code>display: flex</code> a un contenedor, sus elementos hijos dejan de colocarse como bloques independientes y pasan a organizarse en una misma línea por defecto.
+</p>
 
-<pre><code>
-.container {
+<pre><code>.contenedor {
   display: flex;
-}
-</code></pre>
+}</code></pre>
 
-<h3 id="parte2">2. justify-content</h3>
+<div class="demo-card">
+  <p class="demo-title">Sin flex</p>
+  <div class="no-flex-demo">
+    <span>1</span><span>2</span><span>3</span>
+  </div>
+  <p class="demo-title">Con flex</p>
+  <div class="flex-demo-row">
+    <span>1</span><span>2</span><span>3</span>
+  </div>
+</div>
 
+<h3 id="parte2">2. justify-content: alineación horizontal</h3>
 <p>
-Permite alinear elementos horizontalmente.
+La propiedad <code>justify-content</code> controla cómo se distribuyen los elementos en el eje principal. Puede centrarlos, separarlos o llevarlos al inicio o al final.
 </p>
 
-<h3 id="parte3">3. align-items</h3>
+<pre><code>.contenedor {
+  display: flex;
+  justify-content: space-between;
+}</code></pre>
 
+<div class="demo-card justify-demo">
+  <p><strong>flex-start</strong></p>
+  <div class="flex-line start"><span>A</span><span>B</span><span>C</span></div>
+  <p><strong>center</strong></p>
+  <div class="flex-line center"><span>A</span><span>B</span><span>C</span></div>
+  <p><strong>space-between</strong></p>
+  <div class="flex-line between"><span>A</span><span>B</span><span>C</span></div>
+</div>
+
+<h3 id="parte3">3. align-items: alineación vertical</h3>
 <p>
-Permite alinear elementos verticalmente.
+La propiedad <code>align-items</code> controla la alineación en el eje contrario. Es muy útil cuando queremos centrar elementos verticalmente dentro de una caja.
 </p>
+
+<pre><code>.contenedor {
+  display: flex;
+  align-items: center;
+}</code></pre>
+
+<div class="demo-card align-demo">
+  <div class="align-line align-start"><span>A</span><span>B</span><span>C</span></div>
+  <div class="align-line align-center"><span>A</span><span>B</span><span>C</span></div>
+  <div class="align-line align-end"><span>A</span><span>B</span><span>C</span></div>
+</div>
+
+<h3 id="parte4">4. flex-wrap y diseño responsive</h3>
+<p>
+Con <code>flex-wrap</code>, los elementos pueden saltar a una nueva línea cuando no caben. Esto permite crear diseños más adaptables a pantallas pequeñas.
+</p>
+
+<pre><code>.tarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}</code></pre>
+
+<div class="demo-card wrap-demo">
+  <div>HTML</div>
+  <div>CSS</div>
+  <div>JavaScript</div>
+  <div>Responsive</div>
+  <div>Diseño</div>
+  <div>Web</div>
+</div>
+
+<h3 id="parte5">5. Ejemplo completo: tarjetas con Flexbox</h3>
+<p>
+El siguiente ejemplo combina <code>display: flex</code>, <code>gap</code>, <code>flex-wrap</code> y estilos visuales para crear tarjetas ordenadas y adaptables.
+</p>
+
+<div class="demo-card card-flex-demo">
+  <article>
+    <strong>HTML</strong>
+    <p>Estructura</p>
+  </article>
+  <article>
+    <strong>CSS</strong>
+    <p>Diseño visual</p>
+  </article>
+  <article>
+    <strong>JS</strong>
+    <p>Interacción</p>
+  </article>
+</div>
 
 <div class="tabs">
+  <div class="tab-buttons">
+    <button onclick="openTab('tarea-css-flex')">Tarea</button>
+    <button onclick="openTab('respuesta-css-flex')">Respuesta</button>
+  </div>
 
-<div class="tab-buttons">
-<button onclick="openTab('tarea4')">Tarea</button>
-<button onclick="openTab('respuesta4')">Respuesta</button>
-</div>
+  <div id="tarea-css-flex" class="tab-content">
+    <p><strong>Tarea:</strong> Crea un contenedor flex que centre sus elementos, tenga separación entre ellos y permita que pasen a otra línea si no caben.</p>
+  </div>
 
-<div id="tarea4" class="tab-content">
-<p>Crea un contenedor flex.</p>
-</div>
-
-<div id="respuesta4" class="tab-content hidden">
-<pre><code>
-.container {
+  <div id="respuesta-css-flex" class="tab-content hidden">
+<pre><code>.contenedor {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-</code></pre>
-</div>
-
+  flex-wrap: wrap;
+  gap: 12px;
+}</code></pre>
+  </div>
 </div>
 
 <div class="nav-buttons">
-<a href="contenido-css-boxmodel.html" class="prev">← Anterior</a>
+  <a href="contenido-css-boxmodel.html" class="prev">← Anterior</a>
 </div>
 
 </article>
 
 <aside class="sidebar">
-<h3>Índice</h3>
+  <h3>Índice</h3>
 <a href="#inicio">Inicio</a>
 <a href="#parte1">1. display:flex</a>
 <a href="#parte2">2. justify-content</a>
 <a href="#parte3">3. align-items</a>
+<a href="#parte4">4. flex-wrap</a>
+<a href="#parte5">5. Ejemplo completo</a>
+<a href="#tarea-css-flex">Actividad práctica</a>
 </aside>
 
 </main>
 
 <footer>
-<p>&copy; 2026 Mi Web</p>
+  <p>&copy; 2026 Mi Web</p>
 </footer>
 
 <script>
 function openTab(tabId) {
   const tabs = document.querySelectorAll(".tab-content");
-
-  tabs.forEach(tab => {
-    tab.classList.add("hidden");
-  });
-
+  tabs.forEach(tab => tab.classList.add("hidden"));
   document.getElementById(tabId).classList.remove("hidden");
 }
 </script>

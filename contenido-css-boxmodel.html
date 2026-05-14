@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Box Model</title>
-<link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Model y espaciado</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
@@ -19,7 +18,6 @@
 
         <li class="dropdown">
           <a href="metodologia.html">Metodologías</a>
-
         </li>
 
         <li class="dropdown">
@@ -40,68 +38,52 @@
 
 <main class="layout-double">
 
-  <!-- 🔵 SIDEBAR IZQUIERDA: navegación entre páginas -->
 <aside class="sidebar-left">
   <h3>Sesiones</h3>
 
-  <!-- HTML -->
   <div class="sidebar-group">
     <p class="sidebar-group-title">HTML</p>
-
     <a href="contenido-intro_html.html">
       1. Introducción a HTML
     </a>
-
     <a href="contenido-html-estructura.html">
       2. Estructura y etiquetas básicas
     </a>
-
     <a href="contenido-html-texto.html">
-      3. Etiquetas de texto
+      3. Etiquetas de contenido en HTML
     </a>
-
     <a href="contenido-html-enlaces-imagenes.html">
-      4. Enlaces e imágenes
+      4. Enlaces, imágenes y videos
     </a>
   </div>
 
-  <!-- CSS -->
   <div class="sidebar-group">
     <p class="sidebar-group-title">CSS</p>
-
     <a href="contenido-intro_css.html">
       1. Introducción a CSS
     </a>
-
     <a href="contenido-css-selectores.html">
       2. Selectores CSS
     </a>
-
     <a href="contenido-css-boxmodel.html" class="active">
       3. Box Model y espaciado
     </a>
-
     <a href="contenido-css-flexbox.html">
       4. Flexbox y diseño responsive
     </a>
   </div>
 
-  <!-- JavaScript -->
   <div class="sidebar-group">
     <p class="sidebar-group-title">JavaScript</p>
-
     <a href="contenido-intro_javascript.html">
       1. Introducción a JavaScript
     </a>
-
     <a href="contenido-javascript-sintaxis.html">
       2. Lógica y sintaxis base
     </a>
-
     <a href="contenido-javascript-dom.html">
       3. Interacción con el DOM
     </a>
-
     <a href="contenido-javascript-funciones.html">
       4. Funciones y reutilización
     </a>
@@ -113,85 +95,124 @@
 <h2 id="inicio">Sesión 3: Box Model y espaciado</h2>
 
 <p>
-Todos los elementos HTML funcionan como cajas.
+En CSS, casi todos los elementos se comportan como cajas. Cada caja está formada por cuatro partes: el contenido, el padding, el borde y el margen. Entender este modelo ayuda a controlar mejor la separación y el tamaño de los elementos en una página web.
 </p>
 
-<h3 id="parte1">1. Margin</h3>
+<h3 id="parte1">1. Las partes del Box Model</h3>
 
-<p>
-El margin crea espacio exterior.
-</p>
+<div class="box-model-demo">
+  <div class="box-margin">
+    margin
+    <div class="box-border">
+      border
+      <div class="box-padding">
+        padding
+        <div class="box-content">contenido</div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<h3 id="parte2">2. Padding</h3>
-
-<p>
-El padding crea espacio interior.
-</p>
-
-<h3 id="parte3">3. Border</h3>
-
-<p>
-El border añade bordes alrededor del contenido.
-</p>
-
-<pre><code>
-div {
+<pre><code>.caja {
   margin: 20px;
-  padding: 10px;
-  border: 2px solid black;
-}
-</code></pre>
+  border: 3px solid #1a73e8;
+  padding: 20px;
+}</code></pre>
+
+<h3 id="parte2">2. Margin: espacio exterior</h3>
+<p>
+El <code>margin</code> crea espacio fuera del elemento. Sirve para separar una caja de otros elementos cercanos.
+</p>
+
+<div class="demo-card margin-demo">
+  <div class="demo-square">Sin margen</div>
+  <div class="demo-square with-margin">Con margen</div>
+  <div class="demo-square">Otra caja</div>
+</div>
+
+<h3 id="parte3">3. Padding: espacio interior</h3>
+<p>
+El <code>padding</code> crea espacio dentro del elemento, entre el contenido y el borde. Hace que el texto no quede pegado a los límites de la caja.
+</p>
+
+<div class="demo-card padding-demo">
+  <div class="padding-box no-padding">Sin padding</div>
+  <div class="padding-box with-padding">Con padding: el texto respira mejor</div>
+</div>
+
+<h3 id="parte4">4. Border: borde de la caja</h3>
+<p>
+El <code>border</code> dibuja una línea alrededor del elemento. Puede cambiar de grosor, color y estilo.
+</p>
+
+<div class="demo-card border-demo">
+  <div class="border-box border-solid">solid</div>
+  <div class="border-box border-dashed">dashed</div>
+  <div class="border-box border-rounded">rounded</div>
+</div>
+
+<h3 id="parte5">5. Box-sizing</h3>
+<p>
+La propiedad <code>box-sizing</code> permite controlar cómo se calcula el tamaño real de una caja. Con <code>border-box</code>, el ancho incluye contenido, padding y borde, por lo que suele ser más fácil diseñar layouts estables.
+</p>
+
+<pre><code>* {
+  box-sizing: border-box;
+}</code></pre>
+
+<div class="demo-card sizing-demo">
+  <div class="sizing-box content-box-demo">content-box<br><small>padding + borde aumentan el tamaño</small></div>
+  <div class="sizing-box border-box-demo">border-box<br><small>todo cabe en el ancho definido</small></div>
+</div>
 
 <div class="tabs">
+  <div class="tab-buttons">
+    <button onclick="openTab('tarea-css-box')">Tarea</button>
+    <button onclick="openTab('respuesta-css-box')">Respuesta</button>
+  </div>
 
-<div class="tab-buttons">
-<button onclick="openTab('tarea3')">Tarea</button>
-<button onclick="openTab('respuesta3')">Respuesta</button>
-</div>
+  <div id="tarea-css-box" class="tab-content">
+    <p><strong>Tarea:</strong> Crea una clase <code>.caja</code> con margen exterior de 20px, padding interior de 15px, borde azul de 2px y esquinas redondeadas.</p>
+  </div>
 
-<div id="tarea3" class="tab-content">
-<p>Añade padding de 15px a una caja.</p>
-</div>
-
-<div id="respuesta3" class="tab-content hidden">
-<pre><code>
-.caja {
+  <div id="respuesta-css-box" class="tab-content hidden">
+<pre><code>.caja {
+  margin: 20px;
   padding: 15px;
-}
-</code></pre>
-</div>
-
+  border: 2px solid #1a73e8;
+  border-radius: 10px;
+}</code></pre>
+  </div>
 </div>
 
 <div class="nav-buttons">
-<a href="contenido-css-selectores.html" class="prev">← Anterior</a>
-<a href="contenido-css-flexbox.html" class="next">Siguiente →</a>
+  <a href="contenido-css-selectores.html" class="prev">← Anterior</a>
+  <a href="contenido-css-flexbox.html" class="next">Siguiente →</a>
 </div>
 
 </article>
 
 <aside class="sidebar">
-<h3>Índice</h3>
+  <h3>Índice</h3>
 <a href="#inicio">Inicio</a>
-<a href="#parte1">1. Margin</a>
-<a href="#parte2">2. Padding</a>
-<a href="#parte3">3. Border</a>
+<a href="#parte1">1. Partes del Box Model</a>
+<a href="#parte2">2. Margin</a>
+<a href="#parte3">3. Padding</a>
+<a href="#parte4">4. Border</a>
+<a href="#parte5">5. Box-sizing</a>
+<a href="#tarea-css-box">Actividad práctica</a>
 </aside>
 
 </main>
 
 <footer>
-<p>&copy; 2026 Mi Web</p>
+  <p>&copy; 2026 Mi Web</p>
 </footer>
 
 <script>
 function openTab(tabId) {
   const tabs = document.querySelectorAll(".tab-content");
-
-  tabs.forEach(tab => {
-    tab.classList.add("hidden");
-  });
-
+  tabs.forEach(tab => tab.classList.add("hidden"));
   document.getElementById(tabId).classList.remove("hidden");
 }
 </script>

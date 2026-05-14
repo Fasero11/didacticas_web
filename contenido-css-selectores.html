@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Selectores CSS</title>
-<link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selectores CSS</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
@@ -19,7 +18,6 @@
 
         <li class="dropdown">
           <a href="metodologia.html">Metodologías</a>
-
         </li>
 
         <li class="dropdown">
@@ -40,68 +38,52 @@
 
 <main class="layout-double">
 
-  <!-- 🔵 SIDEBAR IZQUIERDA: navegación entre páginas -->
 <aside class="sidebar-left">
   <h3>Sesiones</h3>
 
-  <!-- HTML -->
   <div class="sidebar-group">
     <p class="sidebar-group-title">HTML</p>
-
     <a href="contenido-intro_html.html">
       1. Introducción a HTML
     </a>
-
     <a href="contenido-html-estructura.html">
       2. Estructura y etiquetas básicas
     </a>
-
     <a href="contenido-html-texto.html">
-      3. Etiquetas de texto
+      3. Etiquetas de contenido en HTML
     </a>
-
     <a href="contenido-html-enlaces-imagenes.html">
-      4. Enlaces e imágenes
+      4. Enlaces, imágenes y videos
     </a>
   </div>
 
-  <!-- CSS -->
   <div class="sidebar-group">
     <p class="sidebar-group-title">CSS</p>
-
     <a href="contenido-intro_css.html">
       1. Introducción a CSS
     </a>
-
     <a href="contenido-css-selectores.html" class="active">
       2. Selectores CSS
     </a>
-
     <a href="contenido-css-boxmodel.html">
       3. Box Model y espaciado
     </a>
-
     <a href="contenido-css-flexbox.html">
       4. Flexbox y diseño responsive
     </a>
   </div>
 
-  <!-- JavaScript -->
   <div class="sidebar-group">
     <p class="sidebar-group-title">JavaScript</p>
-
     <a href="contenido-intro_javascript.html">
       1. Introducción a JavaScript
     </a>
-
     <a href="contenido-javascript-sintaxis.html">
       2. Lógica y sintaxis base
     </a>
-
     <a href="contenido-javascript-dom.html">
       3. Interacción con el DOM
     </a>
-
     <a href="contenido-javascript-funciones.html">
       4. Funciones y reutilización
     </a>
@@ -113,83 +95,148 @@
 <h2 id="inicio">Sesión 2: Selectores CSS</h2>
 
 <p>
-Los selectores permiten elegir qué elementos HTML serán modificados.
+Los selectores CSS sirven para indicar qué elementos de una página queremos modificar. Gracias a ellos podemos aplicar estilos a todos los párrafos, a una clase concreta, a un elemento con un identificador único o a elementos que están dentro de otros.
 </p>
 
 <h3 id="parte1">1. Selector de etiqueta</h3>
+<p>
+El selector de etiqueta aplica estilos a todos los elementos HTML de ese tipo. Por ejemplo, si escribimos <code>p</code>, la regla afectará a todos los párrafos de la página.
+</p>
 
-<pre><code>
-p {
+<pre><code>p {
   color: green;
-}
-</code></pre>
+}</code></pre>
+
+<div class="demo-card selector-demo etiqueta-demo">
+  <p>Este párrafo se ve afectado por el selector de etiqueta.</p>
+  <p>Este también, porque también es un elemento &lt;p&gt;.</p>
+</div>
 
 <h3 id="parte2">2. Selector de clase</h3>
+<p>
+El selector de clase se escribe con un punto delante del nombre. Es muy útil porque permite aplicar el mismo estilo a varios elementos sin importar qué etiqueta HTML utilicen.
+</p>
 
-<pre><code>
-.texto {
-  font-size: 24px;
-}
-</code></pre>
+<pre><code>.destacado {
+  background: #e8f0fe;
+  color: #1a73e8;
+}</code></pre>
+
+<div class="demo-card selector-demo">
+  <p>Texto normal.</p>
+  <p class="demo-destacado">Texto con clase <code>.destacado</code>.</p>
+  <div class="demo-destacado">Caja con la misma clase <code>.destacado</code>.</div>
+</div>
 
 <h3 id="parte3">3. Selector de ID</h3>
+<p>
+El selector de ID se escribe con una almohadilla. Se utiliza para seleccionar un único elemento concreto de la página. Es habitual usarlo para secciones importantes o elementos que no se repiten.
+</p>
 
-<pre><code>
-#titulo {
-  color: purple;
-}
-</code></pre>
+<pre><code>#aviso {
+  border-left: 5px solid orange;
+}</code></pre>
+
+<div class="demo-card selector-demo">
+  <p>Mensaje normal.</p>
+  <p id="demo-aviso">Este mensaje simula un elemento seleccionado por ID.</p>
+</div>
+
+<h3 id="parte4">4. Selectores combinados</h3>
+<p>
+También podemos combinar selectores para aplicar estilos solo a elementos que cumplen una condición concreta. Por ejemplo, podemos modificar únicamente los enlaces que están dentro de un menú.
+</p>
+
+<pre><code>.menu-ejemplo a {
+  color: white;
+  background: #1f1f1f;
+}</code></pre>
+
+<div class="demo-card">
+  <div class="menu-ejemplo">
+    <a href="#">Inicio</a>
+    <a href="#">Contenido</a>
+    <a href="#">Contacto</a>
+  </div>
+  <p><a href="#">Este enlace está fuera del menú y no tiene el mismo estilo.</a></p>
+</div>
+
+<h3 id="parte5">5. Resumen visual</h3>
+
+<table class="tabla-css">
+  <tr>
+    <th>Selector</th>
+    <th>Ejemplo</th>
+    <th>Cuándo usarlo</th>
+  </tr>
+  <tr>
+    <td>Etiqueta</td>
+    <td><code>p</code></td>
+    <td>Para modificar todos los elementos de un mismo tipo.</td>
+  </tr>
+  <tr>
+    <td>Clase</td>
+    <td><code>.tarjeta</code></td>
+    <td>Para reutilizar estilos en varios elementos.</td>
+  </tr>
+  <tr>
+    <td>ID</td>
+    <td><code>#principal</code></td>
+    <td>Para modificar un elemento único.</td>
+  </tr>
+  <tr>
+    <td>Combinado</td>
+    <td><code>nav a</code></td>
+    <td>Para seleccionar elementos dentro de otros elementos.</td>
+  </tr>
+</table>
 
 <div class="tabs">
+  <div class="tab-buttons">
+    <button onclick="openTab('tarea-css-selectores')">Tarea</button>
+    <button onclick="openTab('respuesta-css-selectores')">Respuesta</button>
+  </div>
 
-<div class="tab-buttons">
-<button onclick="openTab('tarea2')">Tarea</button>
-<button onclick="openTab('respuesta2')">Respuesta</button>
-</div>
+  <div id="tarea-css-selectores" class="tab-content">
+    <p><strong>Tarea:</strong> Escribe una regla CSS para que todos los elementos con la clase <code>.importante</code> tengan fondo amarillo y texto en negrita.</p>
+  </div>
 
-<div id="tarea2" class="tab-content">
-<p>Escribe un selector de clase llamado .caja</p>
-</div>
-
-<div id="respuesta2" class="tab-content hidden">
-<pre><code>
-.caja {
-  background: lightgray;
-}
-</code></pre>
-</div>
-
+  <div id="respuesta-css-selectores" class="tab-content hidden">
+<pre><code>.importante {
+  background-color: yellow;
+  font-weight: bold;
+}</code></pre>
+  </div>
 </div>
 
 <div class="nav-buttons">
-<a href="contenido-intro_css.html" class="prev">← Anterior</a>
-<a href="contenido-css-boxmodel.html" class="next">Siguiente →</a>
+  <a href="contenido-intro_css.html" class="prev">← Anterior</a>
+  <a href="contenido-css-boxmodel.html" class="next">Siguiente →</a>
 </div>
 
 </article>
 
 <aside class="sidebar">
-<h3>Índice</h3>
+  <h3>Índice</h3>
 <a href="#inicio">Inicio</a>
 <a href="#parte1">1. Selector de etiqueta</a>
 <a href="#parte2">2. Selector de clase</a>
 <a href="#parte3">3. Selector de ID</a>
+<a href="#parte4">4. Selectores combinados</a>
+<a href="#parte5">5. Resumen visual</a>
+<a href="#tarea-css-selectores">Actividad práctica</a>
 </aside>
 
 </main>
 
 <footer>
-<p>&copy; 2026 Mi Web</p>
+  <p>&copy; 2026 Mi Web</p>
 </footer>
 
 <script>
 function openTab(tabId) {
   const tabs = document.querySelectorAll(".tab-content");
-
-  tabs.forEach(tab => {
-    tab.classList.add("hidden");
-  });
-
+  tabs.forEach(tab => tab.classList.add("hidden"));
   document.getElementById(tabId).classList.remove("hidden");
 }
 </script>
