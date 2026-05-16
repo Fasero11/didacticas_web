@@ -180,19 +180,66 @@ Una ventaja importante de CSS es que permite mantener el contenido en el archivo
 
 <div class="tabs">
   <div class="tab-buttons">
-    <button onclick="openTab('tarea-css-intro')">Tarea</button>
-    <button onclick="openTab('respuesta-css-intro')">Respuesta</button>
+    <button onclick="openTab('tarea-css-intro')">Tarea cooperativa</button>
+    <button onclick="openTab('respuesta-css-intro')">Respuesta modelo</button>
   </div>
 
   <div id="tarea-css-intro" class="tab-content">
-    <p><strong>Tarea:</strong> Crea una regla CSS para que un título sea azul, tenga tamaño de 32px y aparezca centrado.</p>
+    <p><strong>Tarea cooperativa mediante puzzle de Aronson:</strong> En grupos de 4, cread una pequeña sección web llamada <code>.presentacion-css</code>. Cada alumno se convierte primero en experto de una parte, la trabaja con compañeros de otros grupos que tengan el mismo rol y después vuelve a su grupo base para enseñar su parte y unir el resultado final.</p>
+
+    <ol>
+      <li><strong>Experto 1 - ¿Qué es CSS?</strong> Redacta una explicación breve que compare una página HTML sin estilos con una página con CSS. Añade una clase <code>.sin-css</code> y otra <code>.con-css</code> para que la diferencia sea visible.</li>
+      <li><strong>Experto 2 - Colores:</strong> Define los colores principales de la sección. Crea estilos para un título, un texto destacado y un botón usando <code>color</code> y <code>background-color</code>.</li>
+      <li><strong>Experto 3 - Tamaños y cajas visuales:</strong> Ajusta el tamaño del título y transforma un bloque simple en una tarjeta usando <code>font-size</code>, <code>padding</code>, <code>border-radius</code> y <code>box-shadow</code>.</li>
+      <li><strong>Experto 4 - Separar contenido y diseño:</strong> Comprueba que el HTML enlaza correctamente con <code>css/styles.css</code> mediante <code>&lt;link&gt;</code> y explica por qué es mejor separar el contenido del diseño.</li>
+    </ol>
+
+    <p><strong>Producto final del grupo:</strong> una mini sección HTML con estilos CSS donde se vea claramente qué aporta CSS a una página web.</p>
   </div>
 
   <div id="respuesta-css-intro" class="tab-content hidden">
-<pre><code>h1 {
+<pre><code>&lt;!-- HTML --&gt;
+&lt;section class="presentacion-css"&gt;
+  &lt;h2&gt;CSS transforma una página web&lt;/h2&gt;
+  &lt;p class="destacado-css"&gt;HTML organiza el contenido y CSS mejora su aspecto visual.&lt;/p&gt;
+  &lt;div class="tarjeta-css"&gt;
+    &lt;p class="sin-css"&gt;Antes: bloque simple sin diseño.&lt;/p&gt;
+    &lt;p class="con-css"&gt;Después: bloque con colores, espacio y sombra.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;button class="boton-css"&gt;Ver ejemplo&lt;/button&gt;
+&lt;/section&gt;
+
+/* CSS */
+.presentacion-css {
+  background-color: #f4f8ff;
+  padding: 24px;
+  border-radius: 18px;
+}
+
+.presentacion-css h2 {
   color: #1a73e8;
   font-size: 32px;
   text-align: center;
+}
+
+.destacado-css {
+  color: #174ea6;
+  font-weight: bold;
+}
+
+.tarjeta-css {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.boton-css {
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
 }</code></pre>
   </div>
 </div>
@@ -211,7 +258,7 @@ Una ventaja importante de CSS es que permite mantener el contenido en el archivo
 <a href="#parte3">2. Modificar tamaños</a>
 <a href="#parte4">3. Crear cajas visuales</a>
 <a href="#parte5">4. Separar contenido y diseño</a>
-<a href="#tarea-css-intro">Actividad práctica</a>
+<a href="#tarea-css-intro">Actividad cooperativa</a>
 </aside>
 
 </main>

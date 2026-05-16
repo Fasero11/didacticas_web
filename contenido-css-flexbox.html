@@ -195,22 +195,53 @@ El siguiente ejemplo combina <code>display: flex</code>, <code>gap</code>, <code
 
 <div class="tabs">
   <div class="tab-buttons">
-    <button onclick="openTab('tarea-css-flex')">Tarea</button>
-    <button onclick="openTab('respuesta-css-flex')">Respuesta</button>
+    <button onclick="openTab('tarea-css-flex')">Tarea cooperativa</button>
+    <button onclick="openTab('respuesta-css-flex')">Respuesta modelo</button>
   </div>
 
   <div id="tarea-css-flex" class="tab-content">
-    <p><strong>Tarea:</strong> Crea un contenedor flex que centre sus elementos, tenga separación entre ellos y permita que pasen a otra línea si no caben.</p>
+    <p><strong>Tarea cooperativa mediante puzzle de Aronson:</strong> En grupos de 4, cread una fila de tarjetas responsive para mostrar contenidos de HTML, CSS y JavaScript. Cada alumno se especializa en una propiedad clave de Flexbox, la practica con su grupo de expertos y después enseña al grupo base cómo integrarla.</p>
+
+    <ol>
+      <li><strong>Experto 1 - ¿Qué es Flexbox?</strong> Activa el sistema flexible con <code>display: flex</code> y explica cómo cambia la colocación de los elementos.</li>
+      <li><strong>Experto 2 - Alineación horizontal:</strong> Usa <code>justify-content</code> para centrar o distribuir las tarjetas en el eje principal.</li>
+      <li><strong>Experto 3 - Alineación vertical:</strong> Usa <code>align-items</code> para controlar la alineación en el eje contrario y mejorar la presentación.</li>
+      <li><strong>Experto 4 - Diseño responsive:</strong> Añade <code>flex-wrap</code> y <code>gap</code> para que las tarjetas pasen a otra línea cuando no quepan.</li>
+    </ol>
+
+    <p><strong>Producto final del grupo:</strong> un contenedor flexible, centrado, con separación entre tarjetas y adaptable a pantallas pequeñas.</p>
   </div>
 
   <div id="respuesta-css-flex" class="tab-content hidden">
-<pre><code>.contenedor {
+<pre><code>&lt;!-- HTML --&gt;
+&lt;section class="contenedor-flex"&gt;
+  &lt;article&gt;HTML&lt;/article&gt;
+  &lt;article&gt;CSS&lt;/article&gt;
+  &lt;article&gt;JavaScript&lt;/article&gt;
+&lt;/section&gt;
+
+/* CSS */
+.contenedor-flex {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   flex-wrap: wrap;
   gap: 12px;
-}</code></pre>
+}
+
+.contenedor-flex article {
+  width: 180px;
+  padding: 20px;
+  border-radius: 14px;
+  background: #f4f8ff;
+  text-align: center;
+}
+
+/* Reparto de expertos:
+   Experto 1: display: flex.
+   Experto 2: justify-content.
+   Experto 3: align-items.
+   Experto 4: flex-wrap y gap. */</code></pre>
   </div>
 </div>
 
@@ -228,7 +259,7 @@ El siguiente ejemplo combina <code>display: flex</code>, <code>gap</code>, <code
 <a href="#parte3">3. align-items</a>
 <a href="#parte4">4. flex-wrap</a>
 <a href="#parte5">5. Ejemplo completo</a>
-<a href="#tarea-css-flex">Actividad práctica</a>
+<a href="#tarea-css-flex">Actividad cooperativa</a>
 </aside>
 
 </main>

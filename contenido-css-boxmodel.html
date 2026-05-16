@@ -167,21 +167,53 @@ La propiedad <code>box-sizing</code> permite controlar cómo se calcula el tama�
 
 <div class="tabs">
   <div class="tab-buttons">
-    <button onclick="openTab('tarea-css-box')">Tarea</button>
-    <button onclick="openTab('respuesta-css-box')">Respuesta</button>
+    <button onclick="openTab('tarea-css-box')">Tarea cooperativa</button>
+    <button onclick="openTab('respuesta-css-box')">Respuesta modelo</button>
   </div>
 
   <div id="tarea-css-box" class="tab-content">
-    <p><strong>Tarea:</strong> Crea una clase <code>.caja</code> con margen exterior de 20px, padding interior de 15px, borde azul de 2px y esquinas redondeadas.</p>
+    <p><strong>Tarea cooperativa mediante puzzle de Aronson:</strong> En grupos de 4, construid una tarjeta de contenido llamada <code>.caja-producto</code>. Cada alumno se especializa en una parte del Box Model, la contrasta con su grupo de expertos y después vuelve al grupo base para montar una caja final equilibrada.</p>
+
+    <ol>
+      <li><strong>Experto 1 - Concepto de caja y margin:</strong> Explica qué partes forman una caja CSS y añade <code>margin</code> para separar la tarjeta de otros elementos.</li>
+      <li><strong>Experto 2 - Padding:</strong> Añade espacio interior para que el texto no quede pegado al borde. Justifica cómo cambia la legibilidad.</li>
+      <li><strong>Experto 3 - Border:</strong> Diseña el borde de la tarjeta modificando grosor, color, estilo y redondeo.</li>
+      <li><strong>Experto 4 - Box-sizing:</strong> Aplica <code>box-sizing: border-box</code> y explica por qué facilita controlar el tamaño real de la caja.</li>
+    </ol>
+
+    <p><strong>Producto final del grupo:</strong> una tarjeta donde se identifiquen claramente margen, relleno, borde y cálculo del tamaño.</p>
   </div>
 
   <div id="respuesta-css-box" class="tab-content hidden">
-<pre><code>.caja {
+<pre><code>&lt;!-- HTML --&gt;
+&lt;article class="caja-producto"&gt;
+  &lt;h2&gt;Tarjeta con Box Model&lt;/h2&gt;
+  &lt;p&gt;Esta caja utiliza margen, padding, borde y box-sizing.&lt;/p&gt;
+&lt;/article&gt;
+
+/* CSS */
+* {
+  box-sizing: border-box;
+}
+
+.caja-producto {
+  width: 320px;
   margin: 20px;
   padding: 15px;
   border: 2px solid #1a73e8;
   border-radius: 10px;
-}</code></pre>
+  background: #f4f8ff;
+}
+
+.caja-producto h2 {
+  margin-top: 0;
+}
+
+/* Reparto de expertos:
+   Experto 1: margin y concepto de caja.
+   Experto 2: padding.
+   Experto 3: border y border-radius.
+   Experto 4: box-sizing. */</code></pre>
   </div>
 </div>
 
@@ -200,7 +232,7 @@ La propiedad <code>box-sizing</code> permite controlar cómo se calcula el tama�
 <a href="#parte3">3. Padding</a>
 <a href="#parte4">4. Border</a>
 <a href="#parte5">5. Box-sizing</a>
-<a href="#tarea-css-box">Actividad práctica</a>
+<a href="#tarea-css-box">Actividad cooperativa</a>
 </aside>
 
 </main>
