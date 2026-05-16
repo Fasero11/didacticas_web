@@ -19,7 +19,7 @@
 
     const mostrarFeedback = (id, esCorrecto, mensaje) => {
         const el = document.getElementById(id);
-        el.innerHTML = esCorrecto ? `✅ Correcto: ${mensaje}` : `❌ Incorrecto. La respuesta era: ${mensaje}`;
+        el.innerHTML = esCorrecto ? `✅ Correcto (+1 punto): ${mensaje}` : `❌ Incorrecto (+0 puntos). La respuesta era: ${mensaje}`;
         el.style.color = esCorrecto ? "#28a745" : "#dc3545";
         el.style.display = "block";
     };
