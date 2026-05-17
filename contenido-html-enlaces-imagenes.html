@@ -42,7 +42,7 @@
 
   <main class="layout-double">
 
-  <!-- 🔵 SIDEBAR IZQUIERDA: navegación entre páginas -->
+  <!-- Sidebar izquierda -->
   <aside class="sidebar-left">
     <h3>Sesiones</h3>
 
@@ -110,11 +110,11 @@
     </div>
   </aside>
 
-    <!-- 📄 CONTENIDO CENTRAL -->
+    <!-- Contenido central -->
     <article class="contenido">
 
     
-<!-- 4 -->
+
 <h2 id="inicio">Sesión 4: Enlaces e imágenes en HTML</h2>
 
 <p>
@@ -218,8 +218,8 @@ correctamente los diferentes tipos de enlaces en HTML y su uso dentro de página
 <div class="tabs">
 
   <div class="tab-buttons">
-    <button onclick="openTab('tarea4')">Tarea</button>
-    <button onclick="openTab('respuesta4')">Respuesta</button>
+    <button onclick="openTab(this, \'tarea4\')">Tarea</button>
+    <button onclick="openTab(this, \'respuesta4\')">Respuesta</button>
   </div>
 
   <div id="tarea4" class="tab-content">
@@ -263,8 +263,8 @@ Para funcionar correctamente, esta etiqueta necesita principalmente:
 </p>
 
 <ul>
-  <li><code>src</code> — ruta o dirección de la imagen</li>
-  <li><code>alt</code> — descripción alternativa</li>
+  <li><code>src</code> - ruta o dirección de la imagen</li>
+  <li><code>alt</code> - descripción alternativa</li>
 </ul>
 
 <p>
@@ -311,8 +311,8 @@ completa esta actividad para practicar la integración de imágenes dentro de un
 <div class="tabs">
 
   <div class="tab-buttons">
-    <button onclick="openTab('tarea5')">Tarea</button>
-    <button onclick="openTab('respuesta5')">Respuesta</button>
+    <button onclick="openTab(this, \'tarea5\')">Tarea</button>
+    <button onclick="openTab(this, \'respuesta5\')">Respuesta</button>
   </div>
 
   <div id="tarea5" class="tab-content">
@@ -365,10 +365,10 @@ Los atributos más importantes son:
 </p>
 
 <ul>
-  <li><code>src</code> — ruta del archivo de video</li>
-  <li><code>controls</code> — muestra controles de reproducción</li>
-  <li><code>width</code> — ancho del reproductor</li>
-  <li><code>height</code> — alto del reproductor</li>
+  <li><code>src</code> - ruta del archivo de video</li>
+  <li><code>controls</code> - muestra controles de reproducción</li>
+  <li><code>width</code> - ancho del reproductor</li>
+  <li><code>height</code> - alto del reproductor</li>
 </ul>
 
 <p>
@@ -416,8 +416,8 @@ un video en tu página web.
 <div class="tabs">
 
   <div class="tab-buttons">
-    <button onclick="openTab('tareaVideo')">Tarea</button>
-    <button onclick="openTab('respuestaVideo')">Respuesta</button>
+    <button onclick="openTab(this, \'tareaVideo\')">Tarea</button>
+    <button onclick="openTab(this, \'respuestaVideo\')">Respuesta</button>
   </div>
 
   <!-- Tarea -->
@@ -447,6 +447,44 @@ un video en tu página web.
 </div>
 
 
+
+<h3 id="preguntas-aronson">Preguntas para el puzzle de Aronson</h3>
+
+<div class="tabs">
+  <div class="tab-buttons">
+    <button onclick="openTab(this, 'tarea-coop-contenido-html-enlaces-imagenes')">Tarea cooperativa</button>
+    <button onclick="openTab(this, 'respuesta-coop-contenido-html-enlaces-imagenes')">Respuesta modelo</button>
+  </div>
+
+  <div id="tarea-coop-contenido-html-enlaces-imagenes" class="tab-content">
+    <p><strong>Tarea cooperativa mediante puzzle de Aronson:</strong> En grupos de 4, cada alumno trabaja una microtarea distinta. Primero se reúne con compañeros que tienen el mismo rol para convertirse en experto y después vuelve a su grupo base para explicar su parte y construir el producto final común.</p>
+
+    <ol>
+      <li><strong>Experto 1 - Enlaces y sus tipos:</strong> Explica cómo se usa la etiqueta <code>&lt;a&gt;</code> y el atributo <code>href</code> para crear enlaces externos, internos o de correo electrónico.</li>
+      <li><strong>Experto 2 - Enlaces internos y anclas:</strong> Explica cómo funcionan los identificadores <code>id</code> y cómo permiten desplazarse dentro de una misma página.</li>
+      <li><strong>Experto 3 - Imágenes y navegación:</strong> Explica cómo insertar una imagen con <code>&lt;img&gt;</code>, qué función tienen <code>src</code> y <code>alt</code>, y cómo dirigir un enlace hacia una imagen.</li>
+      <li><strong>Experto 4 - Vídeos en HTML:</strong> Explica cómo insertar contenido audiovisual con <code>&lt;video&gt;</code>, <code>&lt;source&gt;</code> y atributos como <code>controls</code> o <code>src</code>.</li>
+    </ol>
+
+    <p><strong>Producto final del grupo:</strong> una página sencilla que incluya navegación interna, un enlace externo, una imagen con texto alternativo y un vídeo con controles.</p>
+  </div>
+
+  <div id="respuesta-coop-contenido-html-enlaces-imagenes" class="tab-content hidden">
+    <p><strong>Respuesta modelo:</strong></p>
+<pre><code>&lt;a href="https://www.w3schools.com"&gt;Enlace externo&lt;/a&gt;
+&lt;a href="mailto:correo@email.com"&gt;Enviar correo&lt;/a&gt;
+&lt;a href="#imagen-html"&gt;Ir a la imagen&lt;/a&gt;
+
+&lt;h3 id="imagen-html"&gt;Imagen HTML&lt;/h3&gt;
+&lt;img src="images/ejemplo-html.jpg" alt="Ejemplo de código HTML"&gt;
+
+&lt;video controls width="100%"&gt;
+  &lt;source src="videos/mi-video.mp4" type="video/mp4"&gt;
+  Tu navegador no soporta videos.
+&lt;/video&gt;</code></pre>
+  </div>
+</div>
+
 <div class="nav-buttons">
   <a href="contenido-html-texto.html" class="prev">← Anterior</a>
   <a href="contenido-intro_css.html" class="next">Siguiente →</a>
@@ -454,7 +492,7 @@ un video en tu página web.
 
     </article>
 
-    <!-- 📑 SIDEBAR DERECHA: índice interno -->
+    <!-- Sidebar derecha -->
    <aside class="sidebar">
   <h3>Índice</h3>
 
@@ -468,6 +506,9 @@ un video en tu página web.
 <a href="#tarea5">Actividad: práctica de imágenes</a>
 <a href="#parte6">6. Videos en HTML</a>
  <a href="#tareaVideo">Actividad: práctica de videos</a>
+<a href="#preguntas-aronson">Preguntas Aronson</a>
+</aside>
+
   </main>
 
   <footer>
@@ -476,14 +517,15 @@ un video en tu página web.
 
 
 <script>
-function openTab(tabId) {
-  const tabs = document.querySelectorAll(".tab-content");
+function openTab(button, tabId) {
+  const tabsContainer = button.closest(".tabs");
+  const tabs = tabsContainer.querySelectorAll(".tab-content");
 
   tabs.forEach(tab => {
     tab.classList.add("hidden");
   });
 
-  document.getElementById(tabId).classList.remove("hidden");
+  tabsContainer.querySelector("#" + tabId).classList.remove("hidden");
 }
 </script>
 </body>

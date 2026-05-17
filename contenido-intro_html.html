@@ -42,7 +42,7 @@
 
   <main class="layout-double">
 
-  <!-- 🔵 SIDEBAR IZQUIERDA: navegación entre páginas -->
+  <!-- Sidebar izquierda -->
   <aside class="sidebar-left">
     <h3>Sesiones</h3>
 
@@ -111,7 +111,7 @@
     </div>
   </aside>
 
-    <!-- 📄 CONTENIDO CENTRAL -->
+    <!-- Contenido central -->
     <article class="contenido">
 
      <h2 id="inicio">Sesión 1: Introducción a HTML</h2>
@@ -288,10 +288,10 @@ A continuación puedes ver un video introductorio que explica su funcionamiento:
 
 <div class="tabs">
 
-  <!-- Кнопки -->
+  <!-- Botones -->
   <div class="tab-buttons">
-    <button onclick="openTab('tarea')">Tarea</button>
-    <button onclick="openTab('respuesta')">Respuesta</button>
+    <button onclick="openTab(this, \'tarea\')">Tarea</button>
+    <button onclick="openTab(this, \'respuesta\')">Respuesta</button>
   </div>
 
 
@@ -318,13 +318,49 @@ A continuación puedes ver un video introductorio que explica su funcionamiento:
 </div>
 
 
+
+<h3 id="preguntas-aronson">Preguntas para el puzzle de Aronson</h3>
+
+<div class="tabs">
+  <div class="tab-buttons">
+    <button onclick="openTab(this, 'tarea-coop-contenido-intro-html')">Tarea cooperativa</button>
+    <button onclick="openTab(this, 'respuesta-coop-contenido-intro-html')">Respuesta modelo</button>
+  </div>
+
+  <div id="tarea-coop-contenido-intro-html" class="tab-content">
+    <p><strong>Tarea cooperativa mediante puzzle de Aronson:</strong> En grupos de 4, cada alumno trabaja una microtarea distinta. Primero se reúne con compañeros que tienen el mismo rol para convertirse en experto y después vuelve a su grupo base para explicar su parte y construir el producto final común.</p>
+
+    <ol>
+      <li><strong>Experto 1 - ¿Qué es HTML?:</strong> Explica que HTML es un lenguaje de marcado, no de programación, y que se utiliza para definir la estructura de una página web.</li>
+      <li><strong>Experto 2 - Función y uso de HTML:</strong> Explica para qué sirve HTML, cómo organiza contenidos e inserta recursos multimedia, y menciona ejemplos como blogs, páginas educativas o tiendas online.</li>
+      <li><strong>Experto 3 - Usuarios y ventajas:</strong> Indica qué perfiles suelen utilizar HTML, como desarrolladores front-end, diseñadores o docentes, y resume las ventajas de aprenderlo.</li>
+      <li><strong>Experto 4 - HTML en la web moderna:</strong> Explica cómo HTML trabaja junto con CSS para el diseño visual y con JavaScript para añadir interactividad.</li>
+    </ol>
+
+    <p><strong>Producto final del grupo:</strong> una explicación conjunta sobre qué papel cumple HTML dentro de una página web actual, integrando las cuatro aportaciones de los expertos.</p>
+  </div>
+
+  <div id="respuesta-coop-contenido-intro-html" class="tab-content hidden">
+    <p><strong>Respuesta modelo:</strong></p>
+<pre><code>HTML es un lenguaje de marcado que organiza la estructura de una página web.
+No es un lenguaje de programación porque no ejecuta lógica ni cálculos.
+
+Se utiliza para crear títulos, párrafos, enlaces, imágenes y vídeos en páginas
+como blogs, tiendas online o sitios educativos.
+
+Lo usan desarrolladores, diseñadores, docentes y estudiantes porque es la base
+del desarrollo web. En una web moderna, HTML aporta la estructura, CSS el diseño
+visual y JavaScript la interactividad.</code></pre>
+  </div>
+</div>
+
 <div class="nav-buttons">
   <a href="contenido-html-estructura.html" class="next">Siguiente →</a>
 </div>
 
     </article>
 
-    <!-- 📑 SIDEBAR DERECHA: índice interno -->
+    <!-- Sidebar derecha -->
    <aside class="sidebar">
   <h3>Índice</h3>
 
@@ -337,6 +373,7 @@ A continuación puedes ver un video introductorio que explica su funcionamiento:
 <a href="#parte6">6. HTML en el desarrollo web moderno</a>
 <a href="#parte7">7. Resumen</a>
 <a href="#parte8">8. Video y actividad</a>
+<a href="#preguntas-aronson">Preguntas Aronson</a>
 </aside>
 
   </main>
@@ -347,14 +384,15 @@ A continuación puedes ver un video introductorio que explica su funcionamiento:
 
 
 <script>
-function openTab(tabId) {
-  const tabs = document.querySelectorAll(".tab-content");
+function openTab(button, tabId) {
+  const tabsContainer = button.closest(".tabs");
+  const tabs = tabsContainer.querySelectorAll(".tab-content");
 
   tabs.forEach(tab => {
     tab.classList.add("hidden");
   });
 
-  document.getElementById(tabId).classList.remove("hidden");
+  tabsContainer.querySelector("#" + tabId).classList.remove("hidden");
 }
 </script>
 </body>

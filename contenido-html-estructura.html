@@ -41,7 +41,7 @@
 
   <main class="layout-double">
 
-  <!-- 🔵 SIDEBAR IZQUIERDA: navegación entre páginas -->
+  <!-- Sidebar izquierda -->
   <aside class="sidebar-left">
     <h3>Sesiones</h3>
 
@@ -110,10 +110,10 @@
     </div>
   </aside>
 
-    <!-- 📄 CONTENIDO CENTRAL -->
+    <!-- Contenido central -->
     <article class="contenido">
 
-      <!-- 2 -->
+      
 <h2 id="inicio">Sesión 2: Estructura y etiquetas básicas</h2>
 
 <p>
@@ -338,6 +338,7 @@ El uso correcto de estas etiquetas mejora la organización del documento
 y hace que la página sea más clara tanto para desarrolladores como para navegadores.
 </p>
 
+<p>
 A continuación, realiza la actividad práctica propuesta para comprobar tu comprensión
 sobre la estructura básica de un documento HTML.
 </p>
@@ -345,8 +346,8 @@ sobre la estructura básica de un documento HTML.
       <div class="tabs">
 
         <div class="tab-buttons">
-          <button onclick="openTab('tarea2')">Tarea</button>
-          <button onclick="openTab('respuesta2')">Respuesta</button>
+          <button onclick="openTab(this, \'tarea2\')">Tarea</button>
+          <button onclick="openTab(this, \'respuesta2\')">Respuesta</button>
         </div>
 
 
@@ -379,14 +380,56 @@ sobre la estructura básica de un documento HTML.
       </div>
 
 
-      <div class="nav-buttons">
+      
+<h3 id="preguntas-aronson">Preguntas para el puzzle de Aronson</h3>
+
+<div class="tabs">
+  <div class="tab-buttons">
+    <button onclick="openTab(this, 'tarea-coop-contenido-html-estructura')">Tarea cooperativa</button>
+    <button onclick="openTab(this, 'respuesta-coop-contenido-html-estructura')">Respuesta modelo</button>
+  </div>
+
+  <div id="tarea-coop-contenido-html-estructura" class="tab-content">
+    <p><strong>Tarea cooperativa mediante puzzle de Aronson:</strong> En grupos de 4, cada alumno trabaja una microtarea distinta. Primero se reúne con compañeros que tienen el mismo rol para convertirse en experto y después vuelve a su grupo base para explicar su parte y construir el producto final común.</p>
+
+    <ol>
+      <li><strong>Experto 1 - Importancia y partes principales:</strong> Explica por qué la estructura HTML funciona como el esqueleto de la página y qué papel tienen <code>&lt;!DOCTYPE html&gt;</code> y <code>&lt;html&gt;</code>.</li>
+      <li><strong>Experto 2 - El elemento <code>&lt;head&gt;</code>:</strong> Describe qué información interna contiene el <code>&lt;head&gt;</code>, usando ejemplos como <code>&lt;title&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;link&gt;</code> y <code>&lt;script&gt;</code>.</li>
+      <li><strong>Experto 3 - El contenedor <code>&lt;body&gt;</code>:</strong> Explica que el <code>&lt;body&gt;</code> agrupa el contenido visible de la página y relaciona su organización con etiquetas como <code>&lt;nav&gt;</code> o <code>&lt;aside&gt;</code>.</li>
+      <li><strong>Experto 4 - Elementos visibles del <code>&lt;body&gt;</code>:</strong> Describe ejemplos de contenido que puede aparecer dentro del <code>&lt;body&gt;</code>, como títulos, párrafos, imágenes, enlaces, listas o vídeos.</li>
+    </ol>
+
+    <p><strong>Producto final del grupo:</strong> una plantilla básica de documento HTML comentada, donde cada experto justifique la parte que ha explicado.</p>
+  </div>
+
+  <div id="respuesta-coop-contenido-html-estructura" class="tab-content hidden">
+    <p><strong>Respuesta modelo:</strong></p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Mi página&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/styles.css"&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;nav&gt;Menú de navegación&lt;/nav&gt;
+    &lt;h1&gt;Título principal&lt;/h1&gt;
+    &lt;p&gt;Contenido visible de la página.&lt;/p&gt;
+    &lt;aside&gt;Información complementaria&lt;/aside&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  </div>
+</div>
+
+<div class="nav-buttons">
         <a href="contenido-intro_html.html" class="prev">← Anterior</a>
         <a href="contenido-html-texto.html" class="next">Siguiente →</a>
       </div>
 
     </article>
 
-    <!-- 📑 SIDEBAR DERECHA: índice interno -->
+    <!-- Sidebar derecha -->
     <aside class="sidebar">
       <h3>Índice</h3>
 <a href="#inicio">Inicio</a>
@@ -397,7 +440,8 @@ sobre la estructura básica de un documento HTML.
 <a href="#parte5">5. Elementos dentro de &lt;body&gt;</a>
 <a href="#parte6">6. Etiquetas semánticas de organización</a>
 <a href="#tarea2">Actividad práctica</a>
-    </aside>
+    <a href="#preguntas-aronson">Preguntas Aronson</a>
+</aside>
 
   </main>
 
@@ -407,14 +451,15 @@ sobre la estructura básica de un documento HTML.
 
 
  <script>
-function openTab(tabId) {
-  const tabs = document.querySelectorAll(".tab-content");
+function openTab(button, tabId) {
+  const tabsContainer = button.closest(".tabs");
+  const tabs = tabsContainer.querySelectorAll(".tab-content");
 
   tabs.forEach(tab => {
     tab.classList.add("hidden");
   });
 
-  document.getElementById(tabId).classList.remove("hidden");
+  tabsContainer.querySelector("#" + tabId).classList.remove("hidden");
 }
 </script>
 </body>
