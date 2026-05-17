@@ -1,15 +1,11 @@
-/* =========================
-   RESET
-========================= */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* =========================
-   BASE
-========================= */
+/* Base */
 body {
   font-family: system-ui, sans-serif;
   line-height: 1.7;
@@ -20,9 +16,7 @@ body {
   flex-direction: column;
 }
 
-/* =========================
-   HEADER
-========================= */
+/* Header */
 header {
   background-color: #1f1f1f;
   color: #fff;
@@ -37,9 +31,7 @@ header h1 {
   font-size: 1.5rem;
 }
 
-/* =========================
-   NAV
-========================= */
+/* Nav */
 nav {
   position: relative;
 }
@@ -67,16 +59,12 @@ nav {
   color: #dcdcdc;
 }
 
-/* =========================
-   SUBMENU
-========================= */
+/* Submenu */
 .submenu {
-  list-style: none;
-
   position: absolute;
   top: 100%;
   left: 0;
-  z-index: 1000;
+  z-index: 1000;  /* Para que aparezca encima de todo lo demás  */
 
   display: none;
 
@@ -99,71 +87,53 @@ nav {
   display: block;
 }
 
-/* =========================
-   MAIN GENERAL
-========================= */
+/* Main General */
 main {
   flex: 1;
 }
 
-/* =========================
-   LAYOUT DOBLE
-========================= */
+/* Layout Doble */
 .layout-double {
-  display: grid;
-  grid-template-columns:
-    260px
-    minmax(0, 720px)
-    260px;
-
-  justify-content: space-between;
-  align-items: start;
-
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   gap: 2rem;
 
   width: 100%;
-
-  margin: 3rem 0;
+  margin: 3rem auto;
   padding: 0 2.5rem;
 }
 
-/* =========================
-   LAYOUT SIMPLE
-   Espacio invisible izquierda / contenido centrado / sidebar derecha
-========================= */
+/* Layout simple */
 .layout {
-  display: grid;
-  grid-template-columns: 260px minmax(0, 760px) 260px;
-  justify-content: space-between;
-  align-items: start;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   gap: 2rem;
 
   width: 100%;
-
-  margin: 3rem 0;
+  margin: 3rem auto;
   padding: 0 2.5rem;
 }
 
-.layout > .contenido {
-  grid-column: 2;
+.layout::before {
+  content: "";
+  flex: 0 0 260px;
 }
+
 
 .layout > .sidebar {
   position: sticky;
   top: 2rem;
 }
 
-/* =========================
-   CONTENIDO
-========================= */
+/* Contenido */
 .contenido {
   width: 100%;
   max-width: 760px;
 }
 
-/* =========================
-   SIDEBARS BASE
-========================= */
+/* Sidebars Base */
 .sidebar-left,
 .sidebar {
   position: sticky;
@@ -174,11 +144,10 @@ main {
   font-size: 0.9rem;
 }
 
-/* =========================
-   SIDEBAR IZQUIERDA
-========================= */
+/* Sidebar Izquierda */
 .sidebar-left {
   width: 260px;
+  flex: 0 0 260px;
 
   background: #fff;
   border: 1px solid #eee;
@@ -248,21 +217,20 @@ main {
 .sidebar-left a:hover {
   color: #1a73e8;
   border-left-color: #1a73e8;
-  background-color: rgba(26, 115, 232, 0.06);
+  background-color: #eef5ff;
 }
 
 .sidebar-left a.active {
   color: #1a73e8;
   border-left-color: #1a73e8;
-  background-color: rgba(26, 115, 232, 0.1);
+  background-color: #e8f0fe;
   font-weight: 600;
 }
 
-/* =========================
-   SIDEBAR DERECHA
-========================= */
+/* Sidebar Derecha */
 .sidebar {
   width: 260px;
+  flex: 0 0 260px;
 
   background: #ffffff;
   border: 1px solid #e8eef7;
@@ -270,19 +238,15 @@ main {
 
   padding: 1rem;
 
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 2px 8px #eeeeee;
 }
 
-/* Sidebar derecha SIEMPRE al borde */
+/* Sidebar derecha */
 .layout > .sidebar {
   position: sticky;
   top: 2rem;
-  justify-self: end;
 }
 
-.layout-double > .sidebar {
-  justify-self: end;
-}
 
 .sidebar h3 {
   margin-bottom: 1rem;
@@ -304,12 +268,10 @@ main {
 .sidebar a:hover {
   color: #1a73e8;
   border-left-color: #1a73e8;
-  background-color: rgba(26, 115, 232, 0.06);
+  background-color: #eef5ff;
 }
 
-/* =========================
-   SECCIONES
-========================= */
+/* Secciones */
 section {
   background: #fff;
   padding: 1.5rem;
@@ -317,9 +279,7 @@ section {
   border: 1px solid #eee;
 }
 
-/* =========================
-   CONTENIDO TIPOGRAFÍA
-========================= */
+/* Contenido Tipografía */
 .contenido h2 {
   font-size: 2.2rem;
   font-weight: 700;
@@ -344,9 +304,7 @@ section {
   margin-bottom: 1rem;
 }
 
-/* =========================
-   LISTAS
-========================= */
+/* Listas */
 .contenido ol,
 .contenido ul {
   margin: 1rem 0 1.2rem 1.5rem;
@@ -358,9 +316,7 @@ section {
   line-height: 1.7;
 }
 
-/* =========================
-   TABS
-========================= */
+/* Tabs */
 .tabs {
   margin-top: 30px;
 }
@@ -388,13 +344,16 @@ section {
 
 .tab-content {
   border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: #ffffff;
 }
 
-/* =========================
-   BOTONES
-========================= */
+.tab-content.hidden {
+  display: none;
+}
+
+/* Botones */
 .botones {
   display: flex;
   justify-content: center;
@@ -422,12 +381,9 @@ section {
 
 .btn:hover {
   background-color: #333;
-  transform: translateY(-1px);
 }
 
-/* =========================
-   NAV ENTRE PÁGINAS
-========================= */
+/* Nav Entre Páginas */
 .nav-buttons {
   display: flex;
   justify-content: space-between;
@@ -447,9 +403,7 @@ section {
   text-decoration: underline;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* Footer */
 footer {
   margin-top: auto;
 
@@ -461,9 +415,7 @@ footer {
   padding: 1.5rem;
 }
 
-/* =========================
-   METODOLOGÍA
-========================= */
+/* Metodología */
 .hero-metodologia {
   padding: 2.5rem;
   border-radius: 22px;
@@ -471,7 +423,7 @@ footer {
 }
 
 .hero-metodologia h2 {
-  font-size: clamp(2.3rem, 5vw, 4rem);
+  font-size: 3rem;
 
   line-height: 1;
 
@@ -513,29 +465,28 @@ footer {
   border-radius: 12px;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* Responsive */
 @media (max-width: 1100px) {
   .layout,
   .layout-double {
-    display: flex;
     flex-direction: column;
+    align-items: stretch;
 
-    width: 100%;
     max-width: 900px;
-
     margin: 2rem auto;
     padding: 0 1.5rem;
   }
 
+  .layout::before {
+    display: none;
+  }
+
   .sidebar,
   .sidebar-left {
-    position: static !important;
-
+    position: static;
     width: 100%;
+    flex: none;
     max-height: none;
-
     overflow: visible;
   }
 
@@ -549,48 +500,61 @@ footer {
   }
 }
 
-/* =========================
-   AUTOEVALUACIÓN / FORMULARIO
-========================= */
+/* Autoevaluación */
 .quiz-container {
   width: 75vw;
   max-width: 1000px;
   margin: 40px auto;
-  padding: 40px 40px 40px 60px;
-  background: #ffffff;
+  padding: 2rem;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
   border-radius: 12px;
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px #eeeeee;
 }
 
+.quiz-container h2,
 .quiz-container h3 {
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 1.5rem;
 }
 
 .pregunta {
-  margin-bottom: 25px;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border: 1px solid #eeeeee;
+  border-radius: 8px;
+  background-color: #fafafa;
 }
 
 .pregunta p {
-  margin-bottom: 10px;
+  margin-bottom: 0.8rem;
+  color: #333333;
+  font-weight: 600;
 }
 
 label {
   display: block;
-  margin-bottom: 8px;
-  padding-left: 5px;
+  margin-bottom: 0.5rem;
+  padding-left: 0.3rem;
   cursor: pointer;
 }
 
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 0.4rem;
+}
+
 select {
-  margin-top: 10px;
-  padding: 5px;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
 }
 
 button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: #2c7be5;
+  margin-top: 1rem;
+  padding: 0.7rem 1.2rem;
+  background-color: #1f1f1f;
   color: white;
   border: none;
   border-radius: 5px;
@@ -598,14 +562,14 @@ button {
 }
 
 button:hover {
-  background: #1a5bb8;
+  background-color: #333333;
 }
 
 #resultado {
   display: none;
-  padding: 15px;
+  padding: 1rem;
   border-radius: 8px;
-  margin-top: 20px;
+  margin-top: 1.5rem;
   text-align: center;
   font-weight: bold;
 }
@@ -624,9 +588,10 @@ button:hover {
 
 .multi-select {
   width: 360px;
+  max-width: 100%;
   height: 150px;
   padding: 8px;
-  font-size: 16px;
+  font-size: 1rem;
   border: 1px solid #cfd8dc;
   border-radius: 6px;
   background-color: #ffffff;
@@ -642,9 +607,7 @@ button:hover {
   display: none;
 }
 
-/* =========================
-   DEMOSTRACIONES VISUALES CSS
-========================= */
+/* Demostraciones Visuales Css */
 pre {
   background: #0f172a;
   color: #e5e7eb;
@@ -672,7 +635,7 @@ code {
   border-radius: 18px;
   padding: 1.2rem;
   margin: 1.2rem 0 1.8rem;
-  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 2px 8px #e0e0e0;
 }
 
 .demo-title {
@@ -690,9 +653,13 @@ code {
 }
 
 .demo-css-before-after {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
+}
+
+.demo-css-before-after > div {
+  flex: 1 1 250px;
 }
 
 .demo-box {
@@ -710,7 +677,7 @@ code {
   border: 1px solid #c7d2fe;
   border-radius: 18px;
   color: #1e293b;
-  box-shadow: 0 10px 22px rgba(26, 115, 232, 0.14);
+  box-shadow: 0 2px 8px #d6dce8;
 }
 
 .styled-demo strong {
@@ -761,9 +728,13 @@ code {
 .demo-large { font-size: 1.8rem !important; font-weight: 800; color: #111827 !important; }
 
 .demo-card-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
+}
+
+.demo-card-grid > div {
+  flex: 1 1 220px;
 }
 
 .mini-card {
@@ -782,7 +753,7 @@ code {
   border-radius: 18px;
   color: #1a73e8;
   font-weight: 800;
-  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+  box-shadow: 0 2px 8px #d8d8d8;
 }
 
 .demo-note {
@@ -838,7 +809,7 @@ code {
   margin: 1rem 0 1.6rem;
   overflow: hidden;
   border-radius: 14px;
-  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 2px 8px #eeeeee;
 }
 
 .tabla-css th,
@@ -989,13 +960,14 @@ code {
 .flex-line.between { justify-content: space-between; }
 
 .align-demo {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
 .align-line {
   display: flex;
+  flex: 1 1 180px;
   gap: 0.5rem;
   height: 150px;
   background: #e8eef7;
@@ -1027,7 +999,7 @@ code {
   background: #fff;
   color: #1f1f1f;
   border: 1px solid #e8eef7;
-  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 2px 8px #eeeeee;
 }
 
 .card-flex-demo article strong {
@@ -1040,11 +1012,6 @@ code {
 }
 
 @media (max-width: 700px) {
-  .demo-css-before-after,
-  .demo-card-grid,
-  .align-demo {
-    grid-template-columns: 1fr;
-  }
 
   .sizing-box {
     width: 100%;
