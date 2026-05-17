@@ -13,7 +13,7 @@
 
   <!-- Header -->
   <header>
-    <h1>Didácticas de la Informática y Tecnología</h1>
+    <h1>Didácticas</h1>
 
     <nav>
       <ul class="menu">
@@ -44,39 +44,78 @@
 
   <!-- 🔵 SIDEBAR IZQUIERDA: navegación entre páginas -->
   <aside class="sidebar-left">
-  <h3>Sesiones</h3>
+    <h3>Sesiones</h3>
 
-  <div class="sidebar-group">
-    <p class="sidebar-group-title">HTML</p>
-    <a href="contenido-intro_html.html">1. Introducción a HTML</a>
-    <a href="contenido-html-estructura.html">2. Estructura y etiquetas básicas</a>
-    <a href="contenido-html-texto.html">3. Etiquetas de contenido en HTML: texto, listas y tablas</a>
-    <a href="contenido-html-enlaces-imagenes.html" class="active">4. Enlaces, imágenes y videos</a>
-  </div>
+    <!-- HTML -->
+    <div class="sidebar-group">
+      <p class="sidebar-group-title">HTML</p>
 
-  <div class="sidebar-group">
-    <p class="sidebar-group-title">CSS</p>
-    <a href="contenido-intro_css.html">5. Introducción a CSS</a>
-    <a href="contenido-css-selectores.html">6. Selectores CSS</a>
-    <a href="contenido-css-boxmodel.html">7. Box Model y espaciado</a>
-    <a href="contenido-css-flexbox.html">8. Flexbox y diseño responsive</a>
-  </div>
+      <a href="contenido-intro_html.html">
+        1. Introducción a HTML
+      </a>
 
-  <div class="sidebar-group">
-    <p class="sidebar-group-title">JavaScript</p>
-    <a href="contenido-intro_javascript.html">9. Introducción a JavaScript</a>
-    <a href="contenido-javascript-sintaxis.html">10. Lógica y sintaxis base</a>
-    <a href="contenido-javascript-dom.html">11. Interacción con el DOM</a>
-    <a href="contenido-javascript-funciones.html">12. Funciones y reutilización</a>
-  </div>
-</aside>
+      <a href="contenido-html-estructura.html">
+        2. Estructura y etiquetas básicas
+      </a>
+
+      <a href="contenido-html-texto.html">
+        3. Etiquetas de contenido en HTML: texto, listas y tablas
+      </a>
+
+      <a href="contenido-html-enlaces-imagenes.html" class="active">
+        4. Enlaces, imágenes y videos
+      </a>
+    </div>
+
+    <!-- CSS -->
+    <div class="sidebar-group">
+      <p class="sidebar-group-title">CSS</p>
+
+      <a href="contenido-intro_css.html">
+        1. Introducción a CSS
+      </a>
+
+      <a href="contenido-css-selectores.html">
+        2. Selectores CSS
+      </a>
+
+      <a href="contenido-css-boxmodel.html">
+        3. Box Model y espaciado
+      </a>
+
+      <a href="contenido-css-flexbox.html">
+        4. Flexbox y diseño responsive
+      </a>
+    </div>
+
+    <!-- JavaScript -->
+    <div class="sidebar-group">
+      <p class="sidebar-group-title">JavaScript</p>
+
+      <a href="contenido-intro_javascript.html">
+        1. Introducción a JavaScript
+      </a>
+
+      <a href="contenido-javascript-sintaxis.html">
+        2. Lógica y sintaxis base
+      </a>
+
+      <a href="contenido-javascript-dom.html">
+        3. Interacción con el DOM
+      </a>
+
+      <a href="contenido-javascript-funciones.html">
+        4. Funciones y reutilización
+      </a>
+    </div>
+  </aside>
 
     <!-- 📄 CONTENIDO CENTRAL -->
     <article class="contenido">
 
     
 <!-- 4 -->
-<h2 id="inicio">Sesión 4: Enlaces, imágenes y videos</h2>
+<h2 id="inicio">Sesión 4: Enlaces e imágenes en HTML</h2>
 
 <p>
 Los enlaces y las imágenes son elementos esenciales en cualquier página web.
@@ -177,40 +216,236 @@ correctamente los diferentes tipos de enlaces en HTML y su uso dentro de página
 </p>
 
 <div class="tabs">
+
   <div class="tab-buttons">
-    <button onclick="openTab('tarea-coop-contenido-html-enlaces-imagenes')">Tarea cooperativa</button>
-    <button onclick="openTab('respuesta-coop-contenido-html-enlaces-imagenes')">Respuesta modelo</button>
+    <button onclick="openTab('tarea4')">Tarea</button>
+    <button onclick="openTab('respuesta4')">Respuesta</button>
   </div>
 
-  <div id="tarea-coop-contenido-html-enlaces-imagenes" class="tab-content">
-    <p><strong>Tarea cooperativa mediante puzzle de Aronson:</strong> En grupos de 4, cada alumno trabaja una microtarea distinta. Primero se reúne con compañeros que tienen el mismo rol para convertirse en experto y después vuelve a su grupo base para explicar su parte y construir el producto final común.</p>
+  <div id="tarea4" class="tab-content">
+    <p><strong>Tarea:</strong> Completa los siguientes enlaces con la información correcta:</p>
+
+<pre>
+&lt;!-- Enlace externo --&gt;
+&lt;a href="__________"&gt;Ir a Google&lt;/a&gt;
+
+&lt;!-- Enlace interno --&gt;
+&lt;a href="__________"&gt;Ir a la página de contacto&lt;/a&gt;
+
+&lt;!-- Enlace de correo --&gt;
+&lt;a href="__________"&gt;Enviar un correo&lt;/a&gt;
+</pre>
+  </div>
+
+  <div id="respuesta4" class="tab-content hidden">
+    <p><strong>Respuesta:</strong></p>
+
+<pre>
+&lt;a href="https://google.com"&gt;Ir a Google&lt;/a&gt;
+
+&lt;a href="contacto.html"&gt;Ir a la página de contacto&lt;/a&gt;
+
+&lt;a href="mailto:correo@email.com"&gt;Enviar un correo&lt;/a&gt;
+</pre>
+  </div>
+
+</div>
+
+<h3 id="parte4">4. Imágenes en HTML</h3>
+
+<p>
+Las imágenes permiten añadir contenido visual a una página web y se insertan
+mediante la etiqueta <code>&lt;img&gt;</code>.
+</p>
+
+<p>
+Para funcionar correctamente, esta etiqueta necesita principalmente:
+</p>
+
+<ul>
+  <li><code>src</code> — ruta o dirección de la imagen</li>
+  <li><code>alt</code> — descripción alternativa</li>
+</ul>
+
+<p>
+Ejemplo:
+</p>
+
+<pre><code>&lt;img src="imagen.jpg" alt="Descripción de la imagen"&gt;</code></pre>
+
+<p>
+El atributo <code>alt</code> es importante para la accesibilidad y para mostrar
+información si la imagen no se carga correctamente.
+</p>
+
+<h3 id="parte5">5. Navegación hacia imágenes</h3>
+
+<p>
+Las imágenes también pueden formar parte de sistemas de navegación interna,
+permitiendo al usuario desplazarse rápidamente hacia secciones específicas.
+</p>
+
+<p>
+Por ejemplo:
+</p>
+
+<p>
+<a href="#ejemplo-imagen">Ir al ejemplo de imagen</a>
+</p>
+
+<h4 id="ejemplo-imagen">Ejemplo de imagen</h4>
+
+<img src="https://hostpro.ua/wiki/wp-content/uploads/2024/09/%D0%AF%D0%BA-%D0%B2%D1%81%D1%82%D0%B0%D0%B2%D0%B8%D1%82%D0%B8-%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D1%83-%D1%82%D0%B0-%D1%84%D0%BE%D0%BD%D0%BE%D0%B2%D0%B5-%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F-%D0%B2-HTML.png" 
+alt="Ejemplo de imagen HTML" width="100%">
+
+<p>
+Este sistema resulta especialmente útil en páginas largas o educativas,
+donde el usuario necesita localizar rápidamente ejemplos o recursos específicos.
+</p>
+
+<p>
+Ahora que conoces cómo insertar imágenes y crear navegación interna mediante anclas,
+completa esta actividad para practicar la integración de imágenes dentro de una página HTML.
+</p>
+
+<div class="tabs">
+
+  <div class="tab-buttons">
+    <button onclick="openTab('tarea5')">Tarea</button>
+    <button onclick="openTab('respuesta5')">Respuesta</button>
+  </div>
+
+  <div id="tarea5" class="tab-content">
+    <p><strong>Tarea:</strong></p>
 
     <ol>
-      <li><strong>Experto 1 - Enlaces y sus tipos:</strong> Crea un enlace externo, uno interno y uno de correo usando <code>&lt;a&gt;</code> y el atributo <code>href</code>. Explica la diferencia entre ellos.</li>
-      <li><strong>Experto 2 - Enlaces internos y anclas:</strong> Añade un índice con enlaces que lleven a secciones de la misma página mediante identificadores <code>id</code>.</li>
-      <li><strong>Experto 3 - Imágenes y navegación:</strong> Inserta una imagen con <code>src</code> y <code>alt</code>. Después crea un enlace que lleve directamente a esa imagen o sección visual.</li>
-      <li><strong>Experto 4 - Videos en HTML:</strong> Inserta un vídeo con <code>&lt;video&gt;</code>, <code>&lt;source&gt;</code> y <code>controls</code>. Explica qué función cumple cada atributo o etiqueta.</li>
+      <li>Inserta una imagen usando la etiqueta <code>&lt;img&gt;</code>.</li>
+      <li>Añade un título con <code>id</code> para la imagen.</li>
+      <li>Crea un enlace que lleve a la imagen.</li>
     </ol>
 
-    <p><strong>Producto final del grupo:</strong> una pequeña práctica conjunta donde aparezcan integradas las cuatro aportaciones y cada miembro pueda justificar su decisión.</p>
+<pre>
+&lt;a href="#__________"&gt;Ir a la imagen&lt;/a&gt;
+
+&lt;h3 id="__________"&gt;Mi imagen&lt;/h3&gt;
+&lt;img src="__________" alt="__________"&gt;
+</pre>
   </div>
 
-  <div id="respuesta-coop-contenido-html-enlaces-imagenes" class="tab-content hidden">
-    <p><strong>Respuesta modelo:</strong></p>
-<pre><code>&lt;nav&gt;
-  &lt;a href="#imagen-principal"&gt;Ir a la imagen&lt;/a&gt;
-  &lt;a href="contacto.html"&gt;Contacto&lt;/a&gt;
-  &lt;a href="mailto:correo@email.com"&gt;Enviar correo&lt;/a&gt;
-&lt;/nav&gt;
+  <div id="respuesta5" class="tab-content hidden">
+    <p><strong>Respuesta:</strong></p>
 
-&lt;h2 id="imagen-principal"&gt;Imagen principal&lt;/h2&gt;
-&lt;img src="images/ejemplo.jpg" alt="Ejemplo de imagen HTML"&gt;
+<pre>
+&lt;a href="#imagen"&gt;Ir a la imagen&lt;/a&gt;
 
+&lt;h3 id="imagen"&gt;Mi imagen&lt;/h3&gt;
+&lt;img src="imagen.jpg" alt="Mi imagen"&gt;
+</pre>
+  </div>
+
+</div>
+
+
+
+
+<h3 id="parte6">6. Videos en HTML</h3>
+
+<p>
+Además de imágenes y enlaces, HTML permite insertar videos directamente dentro
+de una página web para enriquecer el contenido visual e interactivo.
+</p>
+
+<p>
+Para ello se utiliza la etiqueta <code>&lt;video&gt;</code>, que permite reproducir
+archivos de video almacenados en el proyecto o provenientes de otras fuentes.
+</p>
+
+<p>
+Los atributos más importantes son:
+</p>
+
+<ul>
+  <li><code>src</code> — ruta del archivo de video</li>
+  <li><code>controls</code> — muestra controles de reproducción</li>
+  <li><code>width</code> — ancho del reproductor</li>
+  <li><code>height</code> — alto del reproductor</li>
+</ul>
+
+<p>
+Ejemplo de video almacenado dentro de la carpeta del proyecto:
+</p>
+
+<pre><code>
+&lt;video src="videos/mi-video.mp4" controls width="100%"&gt;
+  Tu navegador no soporta videos.
+&lt;/video&gt;
+</code></pre>
+
+<p>
+También puede utilizarse la etiqueta <code>&lt;source&gt;</code> para ofrecer
+diferentes formatos:
+</p>
+
+<pre><code>
 &lt;video controls width="100%"&gt;
   &lt;source src="videos/mi-video.mp4" type="video/mp4"&gt;
-&lt;/video&gt;</code></pre>
+  &lt;source src="videos/mi-video.webm" type="video/webm"&gt;
+  Tu navegador no soporta videos.
+&lt;/video&gt;
+</code></pre>
+
+<p>
+Se recomienda guardar los videos en una carpeta específica como
+<code>videos/</code> dentro del proyecto para mantener una mejor organización.
+</p>
+
+<p>
+Ejemplo práctico de video insertado en la página:
+</p>
+
+<video controls width="100%">
+  <source src="video/video HTML.mp4" type="video/mp4">
+  Tu navegador no soporta videos.
+</video>
+
+<p>
+Ahora realiza la siguiente actividad práctica para insertar correctamente
+un video en tu página web.
+</p>
+
+<div class="tabs">
+
+  <div class="tab-buttons">
+    <button onclick="openTab('tareaVideo')">Tarea</button>
+    <button onclick="openTab('respuestaVideo')">Respuesta</button>
   </div>
+
+  <!-- Tarea -->
+  <div id="tareaVideo" class="tab-content">
+    <p><strong>Tarea:</strong> Completa el siguiente código usando las etiquetas correctas:</p>
+
+<pre>
+&lt;_____ controls width="100%"&gt;
+  &lt;_____ src="videos/mi-video.mp4" type="video/mp4"&gt;
+  Tu navegador no soporta videos.
+&lt;/_____&gt;
+</pre>
+  </div>
+
+  <!-- Respuesta -->
+  <div id="respuestaVideo" class="tab-content hidden">
+    <p><strong>Respuesta:</strong></p>
+
+<pre>
+&lt;video controls width="100%"&gt;
+  &lt;source src="videos/mi-video.mp4" type="video/mp4"&gt;
+  Tu navegador no soporta videos.
+&lt;/video&gt;
+</pre>
+  </div>
+
 </div>
+
 
 <div class="nav-buttons">
   <a href="contenido-html-texto.html" class="prev">← Anterior</a>
@@ -227,16 +462,16 @@ correctamente los diferentes tipos de enlaces en HTML y su uso dentro de página
 <a href="#parte1">1. ¿Qué son los enlaces en HTML?</a>
 <a href="#parte2">2. Tipos principales de enlaces</a>
 <a href="#parte3">3. Enlaces internos y anclas</a>
-
+<a href="#tarea4">Actividad: práctica de enlaces</a>
 <a href="#parte4">4. Imágenes en HTML</a>
 <a href="#parte5">5. Navegación hacia imágenes</a>
-
+<a href="#tarea5">Actividad: práctica de imágenes</a>
 <a href="#parte6">6. Videos en HTML</a>
- 
+ <a href="#tareaVideo">Actividad: práctica de videos</a>
   </main>
 
   <footer>
-    <p> Didácticas de la Informática y la Tecnología - Grupo A (2026)</p>
+    <p>&copy; 2026 Mi Web</p>
   </footer>
 
 
