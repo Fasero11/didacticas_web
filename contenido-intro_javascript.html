@@ -44,76 +44,37 @@
 
           <!-- 🔵 SIDEBAR IZQUIERDA: navegación entre páginas -->
         <aside class="sidebar-left">
-        <h3>Sesiones</h3>
+  <h3>Sesiones</h3>
 
-        <!-- HTML -->
-        <div class="sidebar-group">
-            <p class="sidebar-group-title">HTML</p>
+  <div class="sidebar-group">
+    <p class="sidebar-group-title">HTML</p>
+    <a href="contenido-intro_html.html">1. Introducción a HTML</a>
+    <a href="contenido-html-estructura.html">2. Estructura y etiquetas básicas</a>
+    <a href="contenido-html-texto.html">3. Etiquetas de contenido en HTML: texto, listas y tablas</a>
+    <a href="contenido-html-enlaces-imagenes.html">4. Enlaces, imágenes y videos</a>
+  </div>
 
-            <a href="contenido-intro_html.html">
-            1. Introducción a HTML
-            </a>
+  <div class="sidebar-group">
+    <p class="sidebar-group-title">CSS</p>
+    <a href="contenido-intro_css.html">5. Introducción a CSS</a>
+    <a href="contenido-css-selectores.html">6. Selectores CSS</a>
+    <a href="contenido-css-boxmodel.html">7. Box Model y espaciado</a>
+    <a href="contenido-css-flexbox.html">8. Flexbox y diseño responsive</a>
+  </div>
 
-            <a href="contenido-html-estructura.html">
-            2. Estructura y etiquetas básicas
-            </a>
-
-            <a href="contenido-html-texto.html">
-            3. Etiquetas de texto
-            </a>
-
-            <a href="contenido-html-enlaces-imagenes.html">
-            4. Enlaces e imágenes
-            </a>
-        </div>
-
-        <!-- CSS -->
-        <div class="sidebar-group">
-            <p class="sidebar-group-title">CSS</p>
-
-            <a href="contenido-intro_css.html">
-            1. Introducción a CSS
-            </a>
-
-            <a href="contenido-css-selectores.html">
-            2. Selectores CSS
-            </a>
-
-            <a href="contenido-css-boxmodel.html">
-            3. Box Model y espaciado
-            </a>
-
-            <a href="contenido-css-flexbox.html">
-            4. Flexbox y diseño responsive
-            </a>
-        </div>
-
-        <!-- JavaScript -->
-        <div class="sidebar-group">
-            <p class="sidebar-group-title">JavaScript</p>
-
-            <a href="contenido-intro_javascript.html" class="active">
-            1. Introducción a JavaScript
-            </a>
-
-            <a href="contenido-javascript-sintaxis.html">
-            2. Lógica y sintaxis base
-            </a>
-
-            <a href="contenido-javascript-dom.html">
-            3. Interacción con el DOM
-            </a>
-
-            <a href="contenido-javascript-funciones.html">
-            4. Funciones y reutilización
-            </a>
-        </div>
-        </aside>
+  <div class="sidebar-group">
+    <p class="sidebar-group-title">JavaScript</p>
+    <a href="contenido-intro_javascript.html" class="active">9. Introducción a JavaScript</a>
+    <a href="contenido-javascript-sintaxis.html">10. Lógica y sintaxis base</a>
+    <a href="contenido-javascript-dom.html">11. Interacción con el DOM</a>
+    <a href="contenido-javascript-funciones.html">12. Funciones y reutilización</a>
+  </div>
+</aside>
 
         <!-- 📄 CONTENIDO CENTRAL -->
         <article class="contenido">
 
-            <h2 id="inicio">Sesión 1: Introducción a JavaScript </h2>
+            <h2 id="inicio">Sesión 9: Introducción a JavaScript</h2>
 
             <p>
                 JavaScript es el lenguaje que permite convertir páginas web estáticas en experiencias interactivas y
@@ -263,41 +224,42 @@
             <img src="images/Introducción-JavaScript.png" width="600">
 
             <div class="tabs">
+  <div class="tab-buttons">
+    <button onclick="openTab('tarea-coop-contenido-intro-javascript')">Tarea cooperativa</button>
+    <button onclick="openTab('respuesta-coop-contenido-intro-javascript')">Respuesta modelo</button>
+  </div>
 
-                <!-- Кнопки -->
-                <div class="tab-buttons">
-                    <button onclick="openTab('tarea')">Tarea</button>
-                    <button onclick="openTab('respuesta')">Respuesta</button>
-                </div>
+  <div id="tarea-coop-contenido-intro-javascript" class="tab-content">
+    <p><strong>Tarea cooperativa mediante puzzle de Aronson:</strong> En grupos de 4, cada alumno trabaja una microtarea distinta. Primero se reúne con compañeros que tienen el mismo rol para convertirse en experto y después vuelve a su grupo base para explicar su parte y construir el producto final común.</p>
 
+    <ol>
+      <li><strong>Experto 1 - ¿Qué es JavaScript?:</strong> Explica qué aporta JavaScript a una página web y pon dos ejemplos de interactividad que no se podrían conseguir solo con HTML.</li>
+      <li><strong>Experto 2 - Integración con HTML:</strong> Indica cómo conectar un archivo externo <code>script.js</code> mediante <code>&lt;script src="..."&gt;</code> y dónde conviene colocarlo.</li>
+      <li><strong>Experto 3 - Consola del navegador:</strong> Usa <code>console.log()</code> para comprobar que el archivo funciona y explica cómo abrir la consola del navegador.</li>
+      <li><strong>Experto 4 - Comentarios en código:</strong> Añade un comentario de una línea y otro multilínea para documentar el código sin que el navegador los ejecute.</li>
+    </ol>
 
-                <div id="tarea" class="tab-content">
-                    <p><strong>Tarea:</strong> Imagina que estás creando tu primera página interactiva. 
-                    Responde a las siguientes cuestiones:</p>
-                    <ul>
-                        <li>¿Qué etiqueta y atributo usarías para vincular un archivo llamado logica.js que 
-                        está dentro de una carpeta llamada scripts?</li>
-                        <li>Si quieres que un mensaje aparezca en la pestaña "Console" del navegador para
-                        verificar que el archivo funciona, ¿qué instrucción debes escribir?</li>
-                        <li>¿Cómo escribirías un comentario de una sola línea indicando que esa parte del
-                        código es "Configuración inicial"?</li>
-                    </ul>
-                </div>
+    <p><strong>Producto final del grupo:</strong> una pequeña práctica conjunta donde aparezcan integradas las cuatro aportaciones y cada miembro pueda justificar su decisión.</p>
+  </div>
 
-                <div id="respuesta" class="tab-content hidden">
-                    <p><strong>Respuesta (ejemplo):</strong></p>
-                    <ul>
-                        <li>La etiqueta es &lt;script&gt; y el atributo es src="scripts/logica.js".</li>
-                        <li>La instrucción es console.log("Mensaje de verificación");.</li>
-                        <li>Se escribe como // Configuración inicial.</li>
-                    </ul>
-                </div>
+  <div id="respuesta-coop-contenido-intro-javascript" class="tab-content hidden">
+    <p><strong>Respuesta modelo:</strong></p>
+<pre><code>&lt;script src="scripts/script.js"&gt;&lt;/script&gt;
 
-            </div>
+// Configuración inicial
+console.log("JavaScript conectado correctamente");
 
-            <div class="nav-buttons">
-                <a href="contenido-javascript-sintaxis.html" class="next">Siguiente →</a>
-            </div>
+/*
+  Este bloque sirve para explicar
+  varias líneas del código.
+*/</code></pre>
+  </div>
+</div>
+
+<div class="nav-buttons">
+  <a href="contenido-css-flexbox.html" class="prev">← Anterior</a>
+  <a href="contenido-javascript-sintaxis.html" class="next">Siguiente →</a>
+</div>
 
         </article>
 

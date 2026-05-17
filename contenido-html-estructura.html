@@ -43,72 +43,32 @@
 
   <!-- 🔵 SIDEBAR IZQUIERDA: navegación entre páginas -->
   <aside class="sidebar-left">
-    <h3>Sesiones</h3>
+  <h3>Sesiones</h3>
 
-    <!-- HTML -->
-    <div class="sidebar-group">
-      <p class="sidebar-group-title">HTML</p>
+  <div class="sidebar-group">
+    <p class="sidebar-group-title">HTML</p>
+    <a href="contenido-intro_html.html">1. Introducción a HTML</a>
+    <a href="contenido-html-estructura.html" class="active">2. Estructura y etiquetas básicas</a>
+    <a href="contenido-html-texto.html">3. Etiquetas de contenido en HTML: texto, listas y tablas</a>
+    <a href="contenido-html-enlaces-imagenes.html">4. Enlaces, imágenes y videos</a>
+  </div>
 
-      <a href="contenido-intro_html.html">
-        1. Introducción a HTML
-      </a>
+  <div class="sidebar-group">
+    <p class="sidebar-group-title">CSS</p>
+    <a href="contenido-intro_css.html">5. Introducción a CSS</a>
+    <a href="contenido-css-selectores.html">6. Selectores CSS</a>
+    <a href="contenido-css-boxmodel.html">7. Box Model y espaciado</a>
+    <a href="contenido-css-flexbox.html">8. Flexbox y diseño responsive</a>
+  </div>
 
-      <a href="contenido-html-estructura.html" class="active">
-        2. Estructura y etiquetas básicas
-      </a>
-
-      <a href="contenido-html-texto.html">
-        3. Etiquetas de contenido en HTML: texto, listas y tablas
-      </a>
-
-
-      <a href="contenido-html-enlaces-imagenes.html">
-        4. Enlaces, imágenes y videos
-      </a>
-    </div>
-
-    <!-- CSS -->
-    <div class="sidebar-group">
-      <p class="sidebar-group-title">CSS</p>
-
-      <a href="contenido-intro_css.html">
-        1. Introducción a CSS
-      </a>
-
-      <a href="contenido-css-selectores.html">
-        2. Selectores CSS
-      </a>
-
-      <a href="contenido-css-boxmodel.html">
-        3. Box Model y espaciado
-      </a>
-
-      <a href="contenido-css-flexbox.html">
-        4. Flexbox y diseño responsive
-      </a>
-    </div>
-
-    <!-- JavaScript -->
-    <div class="sidebar-group">
-      <p class="sidebar-group-title">JavaScript</p>
-
-      <a href="contenido-intro_javascript.html">
-        1. Introducción a JavaScript
-      </a>
-
-      <a href="contenido-javascript-sintaxis.html">
-        2. Lógica y sintaxis base
-      </a>
-
-      <a href="contenido-javascript-dom.html">
-        3. Interacción con el DOM
-      </a>
-
-      <a href="contenido-javascript-funciones.html">
-        4. Funciones y reutilización
-      </a>
-    </div>
-  </aside>
+  <div class="sidebar-group">
+    <p class="sidebar-group-title">JavaScript</p>
+    <a href="contenido-intro_javascript.html">9. Introducción a JavaScript</a>
+    <a href="contenido-javascript-sintaxis.html">10. Lógica y sintaxis base</a>
+    <a href="contenido-javascript-dom.html">11. Interacción con el DOM</a>
+    <a href="contenido-javascript-funciones.html">12. Funciones y reutilización</a>
+  </div>
+</aside>
 
     <!-- 📄 CONTENIDO CENTRAL -->
     <article class="contenido">
@@ -343,46 +303,48 @@ sobre la estructura básica de un documento HTML.
 </p>
 
       <div class="tabs">
+  <div class="tab-buttons">
+    <button onclick="openTab('tarea-coop-contenido-html-estructura')">Tarea cooperativa</button>
+    <button onclick="openTab('respuesta-coop-contenido-html-estructura')">Respuesta modelo</button>
+  </div>
 
-        <div class="tab-buttons">
-          <button onclick="openTab('tarea2')">Tarea</button>
-          <button onclick="openTab('respuesta2')">Respuesta</button>
-        </div>
+  <div id="tarea-coop-contenido-html-estructura" class="tab-content">
+    <p><strong>Tarea cooperativa mediante puzzle de Aronson:</strong> En grupos de 4, cada alumno trabaja una microtarea distinta. Primero se reúne con compañeros que tienen el mismo rol para convertirse en experto y después vuelve a su grupo base para explicar su parte y construir el producto final común.</p>
 
+    <ol>
+      <li><strong>Experto 1 - Importancia y partes principales:</strong> Ordena y explica la función de <code>&lt;!DOCTYPE html&gt;</code>, <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code> y <code>&lt;body&gt;</code> dentro de un documento HTML.</li>
+      <li><strong>Experto 2 - El elemento &lt;head&gt;:</strong> Completa la parte interna de una página usando <code>&lt;title&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;link&gt;</code> y, si procede, <code>&lt;script&gt;</code>.</li>
+      <li><strong>Experto 3 - El contenedor &lt;body&gt;:</strong> Diseña la estructura visible de una página usando etiquetas de organización como <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code> y <code>&lt;aside&gt;</code>.</li>
+      <li><strong>Experto 4 - Elementos del body:</strong> Añade contenido visible con títulos, párrafos e imágenes, explicando qué etiqueta has usado y por qué.</li>
+    </ol>
 
-        <div id="tarea2" class="tab-content">
-          <p><strong>Tarea:</strong></p>
+    <p><strong>Producto final del grupo:</strong> una pequeña práctica conjunta donde aparezcan integradas las cuatro aportaciones y cada miembro pueda justificar su decisión.</p>
+  </div>
 
-          <p>Ordena correctamente las siguientes partes:</p>
+  <div id="respuesta-coop-contenido-html-estructura" class="tab-content hidden">
+    <p><strong>Respuesta modelo:</strong></p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Página del grupo&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/styles.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;nav&gt;Menú&lt;/nav&gt;
+    &lt;section&gt;
+      &lt;h1&gt;Contenido visible&lt;/h1&gt;
+      &lt;p&gt;Texto de la página.&lt;/p&gt;
+    &lt;/section&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  </div>
+</div>
 
-          <ul>
-            <li>&lt;body&gt;</li>
-            <li>&lt;html&gt;</li>
-            <li>&lt;!DOCTYPE html&gt;</li>
-            <li>&lt;head&gt;</li>
-          </ul>
-        </div>
-
-
-        <div id="respuesta2" class="tab-content hidden">
-          <p><strong>Respuesta:</strong></p>
-
-          <pre>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;&lt;/head&gt;
-  &lt;body&gt;&lt;/body&gt;
-&lt;/html&gt;
-    </pre>
-        </div>
-
-      </div>
-
-
-      <div class="nav-buttons">
-        <a href="contenido-intro_html.html" class="prev">← Anterior</a>
-        <a href="contenido-html-texto.html" class="next">Siguiente →</a>
-      </div>
+<div class="nav-buttons">
+  <a href="contenido-intro_html.html" class="prev">← Anterior</a>
+  <a href="contenido-html-texto.html" class="next">Siguiente →</a>
+</div>
 
     </article>
 
@@ -396,8 +358,9 @@ sobre la estructura básica de un documento HTML.
 <a href="#parte4">4. Elementos dentro de &lt;head&gt;</a>
 <a href="#parte5">5. Elementos dentro de &lt;body&gt;</a>
 <a href="#parte6">6. Etiquetas semánticas de organización</a>
-<a href="#tarea2">Actividad práctica</a>
-    </aside>
+
+    <a href="#tarea-coop-contenido-html-estructura">Actividad cooperativa</a>
+</aside>
 
   </main>
 

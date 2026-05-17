@@ -44,76 +44,37 @@
 
           <!-- 🔵 SIDEBAR IZQUIERDA: navegación entre páginas -->
         <aside class="sidebar-left">
-        <h3>Sesiones</h3>
+  <h3>Sesiones</h3>
 
-        <!-- HTML -->
-        <div class="sidebar-group">
-            <p class="sidebar-group-title">HTML</p>
+  <div class="sidebar-group">
+    <p class="sidebar-group-title">HTML</p>
+    <a href="contenido-intro_html.html">1. Introducción a HTML</a>
+    <a href="contenido-html-estructura.html">2. Estructura y etiquetas básicas</a>
+    <a href="contenido-html-texto.html">3. Etiquetas de contenido en HTML: texto, listas y tablas</a>
+    <a href="contenido-html-enlaces-imagenes.html">4. Enlaces, imágenes y videos</a>
+  </div>
 
-            <a href="contenido-intro_html.html">
-            1. Introducción a HTML
-            </a>
+  <div class="sidebar-group">
+    <p class="sidebar-group-title">CSS</p>
+    <a href="contenido-intro_css.html">5. Introducción a CSS</a>
+    <a href="contenido-css-selectores.html">6. Selectores CSS</a>
+    <a href="contenido-css-boxmodel.html">7. Box Model y espaciado</a>
+    <a href="contenido-css-flexbox.html">8. Flexbox y diseño responsive</a>
+  </div>
 
-            <a href="contenido-html-estructura.html">
-            2. Estructura y etiquetas básicas
-            </a>
-
-            <a href="contenido-html-texto.html">
-            3. Etiquetas de texto
-            </a>
-
-            <a href="contenido-html-enlaces-imagenes.html">
-            4. Enlaces e imágenes
-            </a>
-        </div>
-
-        <!-- CSS -->
-        <div class="sidebar-group">
-            <p class="sidebar-group-title">CSS</p>
-
-            <a href="contenido-intro_css.html">
-            1. Introducción a CSS
-            </a>
-
-            <a href="contenido-css-selectores.html">
-            2. Selectores CSS
-            </a>
-
-            <a href="contenido-css-boxmodel.html">
-            3. Box Model y espaciado
-            </a>
-
-            <a href="contenido-css-flexbox.html">
-            4. Flexbox y diseño responsive
-            </a>
-        </div>
-
-        <!-- JavaScript -->
-        <div class="sidebar-group">
-            <p class="sidebar-group-title">JavaScript</p>
-
-            <a href="contenido-intro_javascript.html">
-            1. Introducción a JavaScript
-            </a>
-
-            <a href="contenido-javascript-sintaxis.html">
-            2. Lógica y sintaxis base
-            </a>
-
-            <a href="contenido-javascript-dom.html">
-            3. Interacción con el DOM
-            </a>
-
-            <a href="contenido-javascript-funciones.html" class="active">
-            4. Funciones y reutilización
-            </a>
-        </div>
-        </aside>
+  <div class="sidebar-group">
+    <p class="sidebar-group-title">JavaScript</p>
+    <a href="contenido-intro_javascript.html">9. Introducción a JavaScript</a>
+    <a href="contenido-javascript-sintaxis.html">10. Lógica y sintaxis base</a>
+    <a href="contenido-javascript-dom.html">11. Interacción con el DOM</a>
+    <a href="contenido-javascript-funciones.html" class="active">12. Funciones y reutilización</a>
+  </div>
+</aside>
 
         <!-- 📄 CONTENIDO CENTRAL -->
         <article class="contenido">
 
-            <h2 id="inicio">Sesión 4: Funciones y reutilización </h2>
+            <h2 id="inicio">Sesión 12: Funciones y reutilización</h2>
 
             <h3 id="parte1">1. ¿Qué es una función?</h3>
             <p>Una función es un bloque de código reutilizable diseñado para realizar una tarea específica. 
@@ -164,37 +125,38 @@
             <a href="https://www.w3schools.com/js/js_functions.asp" target="_blank">W3Schools</a>
 
             <div class="tabs">
+  <div class="tab-buttons">
+    <button onclick="openTab('tarea-coop-contenido-javascript-funciones')">Tarea cooperativa</button>
+    <button onclick="openTab('respuesta-coop-contenido-javascript-funciones')">Respuesta modelo</button>
+  </div>
 
-                <!-- Кнопки -->
-                <div class="tab-buttons">
-                    <button onclick="openTab('tarea')">Tarea</button>
-                    <button onclick="openTab('respuesta')">Respuesta</button>
-                </div>
+  <div id="tarea-coop-contenido-javascript-funciones" class="tab-content">
+    <p><strong>Tarea cooperativa mediante puzzle de Aronson:</strong> En grupos de 4, cada alumno trabaja una microtarea distinta. Primero se reúne con compañeros que tienen el mismo rol para convertirse en experto y después vuelve a su grupo base para explicar su parte y construir el producto final común.</p>
 
+    <ol>
+      <li><strong>Experto 1 - ¿Qué es una función?:</strong> Explica una función como un bloque reutilizable y detecta una situación donde evitaría repetir código.</li>
+      <li><strong>Experto 2 - Estructura de una función:</strong> Crea una función con <code>function</code>, nombre descriptivo, paréntesis y llaves. Explica cada parte.</li>
+      <li><strong>Experto 3 - Parámetros y argumentos:</strong> Crea una función que reciba un parámetro y llámala con un argumento real. Explica la diferencia entre ambos.</li>
+      <li><strong>Experto 4 - Valor de retorno:</strong> Crea una función que use <code>return</code> para devolver un resultado y después muestra ese resultado en consola.</li>
+    </ol>
 
-                <div id="tarea" class="tab-content">
-                    <p>
-                        <strong>Tarea:</strong> Realiza la siguiente función:
-                    </p>
-                    <ul>
-                        <li>Crea una función llamada saludarUsuario que realice lo siguiente:</li>
-                        <li>Debe recibir un parámetro llamado nombre.</li>
-                        <li>Dentro de la función, debe mostrar en la consola un mensaje que diga: "Hola, [nombre], bienvenido a JavaScript".</li>
-                        <li>Llamar a la función pasando tu propio nombre como argumento para verificar que funciona.</li>
-                    </ul>
-                </div>
+    <p><strong>Producto final del grupo:</strong> una pequeña práctica conjunta donde aparezcan integradas las cuatro aportaciones y cada miembro pueda justificar su decisión.</p>
+  </div>
 
-                <div id="respuesta" class="tab-content hidden">
-                    <p><strong>Respuesta (ejemplo):</strong></p>
-                    <img src="images/Código-función.PNG" width="600">
-                </div>
+  <div id="respuesta-coop-contenido-javascript-funciones" class="tab-content hidden">
+    <p><strong>Respuesta modelo:</strong></p>
+<pre><code>function saludarUsuario(nombre) {
+  return `Hola, ${nombre}, bienvenido a JavaScript`;
+}
 
-            </div>
+const mensaje = saludarUsuario("Ana");
+console.log(mensaje);</code></pre>
+  </div>
+</div>
 
-
-            <div class="nav-buttons">
-                <a href="contenido-javascript-dom.html" class="prev">← Anterior</a>                
-            </div>
+<div class="nav-buttons">
+  <a href="contenido-javascript-dom.html" class="prev">← Anterior</a>
+</div>
 
         </article>
 
